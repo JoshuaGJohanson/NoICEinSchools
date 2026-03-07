@@ -8,445 +8,13 @@
     name="description"
     content="Protecting student safety, due process, and uninterrupted access to education by urging school districts to require a judicial warrant before immigration enforcement enters school property."
   />
-  <style>
-    :root {
-      --navy: #12324a;
-      --navy-dark: #0b2233;
-      --blue: #2563eb;
-      --blue-dark: #1d4ed8;
-      --sky: #eaf3fb;
-      --text: #1f2937;
-      --muted: #5b6472;
-      --white: #ffffff;
-      --border: #d8e2ec;
-      --card: #f8fbfe;
-      --shadow: 0 16px 40px rgba(10, 34, 51, 0.12);
-      --radius: 18px;
-      --max: 1180px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--text);
-      background: var(--white);
-      line-height: 1.6;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(100% - 2rem, var(--max));
-      margin: 0 auto;
-    }
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(255, 255, 255, 0.96);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(18, 50, 74, 0.08);
-    }
-
-    .site-header .container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      padding: 0.9rem 0;
-    }
-
-    .brand {
-      font-weight: 800;
-      color: var(--navy);
-      letter-spacing: 0.02em;
-      white-space: nowrap;
-    }
-
-    .nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      align-items: center;
-      justify-content: flex-end;
-    }
-
-    .nav a {
-      color: var(--navy);
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
-
-    .nav a:hover,
-    .nav a:focus {
-      color: var(--blue-dark);
-    }
-
-    .hero {
-      position: relative;
-      min-height: 82vh;
-      display: flex;
-      align-items: center;
-      color: var(--white);
-      background:
-        linear-gradient(rgba(7, 25, 38, 0.60), rgba(7, 25, 38, 0.60)),
-        url("assets/images/hero-classroom.jpg") center/cover no-repeat;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(7, 25, 38, 0.15), rgba(7, 25, 38, 0.45));
-      pointer-events: none;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      max-width: 720px;
-      padding: 5rem 0;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      margin-bottom: 1rem;
-      padding: 0.35rem 0.8rem;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.14);
-      border: 1px solid rgba(255, 255, 255, 0.22);
-      font-size: 0.88rem;
-      font-weight: 700;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      margin: 0 0 1rem;
-      font-size: clamp(2.5rem, 6vw, 4.4rem);
-      line-height: 1.05;
-    }
-
-    .hero p {
-      margin: 0;
-      font-size: 1.12rem;
-      max-width: 60ch;
-      color: rgba(255, 255, 255, 0.96);
-    }
-
-    .hero-actions {
-      margin-top: 2rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.9rem;
-    }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 48px;
-      padding: 0.85rem 1.3rem;
-      border-radius: 999px;
-      font-weight: 700;
-      transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
-    }
-
-    .button:hover,
-    .button:focus {
-      transform: translateY(-1px);
-    }
-
-    .button-primary {
-      background: var(--blue);
-      color: var(--white);
-    }
-
-    .button-primary:hover,
-    .button-primary:focus {
-      background: var(--blue-dark);
-    }
-
-    .button-secondary {
-      background: rgba(255, 255, 255, 0.14);
-      border: 1px solid rgba(255, 255, 255, 0.28);
-      color: var(--white);
-    }
-
-    .button-light {
-      background: var(--white);
-      color: var(--navy);
-      border: 1px solid rgba(18, 50, 74, 0.08);
-    }
-
-    section {
-      padding: 5rem 0;
-    }
-
-    .section-header {
-      max-width: 760px;
-      margin-bottom: 2rem;
-    }
-
-    .section-header h2 {
-      margin: 0 0 0.8rem;
-      font-size: clamp(2rem, 4vw, 3rem);
-      line-height: 1.1;
-      color: var(--navy);
-    }
-
-    .section-header p {
-      margin: 0;
-      font-size: 1.05rem;
-      color: var(--muted);
-    }
-
-    .split {
-      display: grid;
-      grid-template-columns: 1.15fr 1fr;
-      gap: 2rem;
-      align-items: center;
-    }
-
-    .split.reverse {
-      grid-template-columns: 1fr 1.15fr;
-    }
-
-    .image-card {
-      overflow: hidden;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      background: var(--white);
-    }
-
-    .image-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      aspect-ratio: 4 / 3;
-    }
-
-    .panel {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-    }
-
-    .panel h3 {
-      margin-top: 0;
-      margin-bottom: 0.8rem;
-      font-size: 1.35rem;
-      color: var(--navy);
-    }
-
-    .panel p:last-child,
-    .panel ul:last-child {
-      margin-bottom: 0;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.25rem;
-    }
-
-    .card h3 {
-      margin: 0 0 0.6rem;
-      color: var(--navy);
-      font-size: 1.1rem;
-    }
-
-    .card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.97rem;
-    }
-
-    .policy-list,
-    .action-list {
-      margin: 1rem 0 0;
-      padding-left: 1.2rem;
-    }
-
-    .policy-list li,
-    .action-list li {
-      margin-bottom: 0.75rem;
-    }
-
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-
-    .feature {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: 0 8px 24px rgba(10, 34, 51, 0.06);
-    }
-
-    .feature img {
-      width: 100%;
-      aspect-ratio: 16 / 10;
-      object-fit: cover;
-    }
-
-    .feature-body {
-      padding: 1rem 1rem 1.2rem;
-    }
-
-    .feature h3 {
-      margin: 0 0 0.5rem;
-      color: var(--navy);
-      font-size: 1.1rem;
-    }
-
-    .feature p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.96rem;
-    }
-
-    .cta {
-      background:
-        linear-gradient(rgba(18, 50, 74, 0.80), rgba(18, 50, 74, 0.80)),
-        url("assets/images/public-school-exterior.jpg") center/cover no-repeat;
-      color: var(--white);
-      border-radius: 28px;
-      overflow: hidden;
-    }
-
-    .cta .container {
-      padding: 4rem 0;
-    }
-
-    .cta h2 {
-      margin-top: 0;
-      margin-bottom: 1rem;
-      font-size: clamp(2rem, 4vw, 3rem);
-    }
-
-    .cta p {
-      max-width: 64ch;
-      margin: 0;
-      color: rgba(255, 255, 255, 0.94);
-    }
-
-    .cta-actions {
-      margin-top: 1.8rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.9rem;
-    }
-
-    .site-footer {
-      background: var(--navy-dark);
-      color: rgba(255, 255, 255, 0.9);
-      padding: 2rem 0;
-      margin-top: 4rem;
-    }
-
-    .site-footer .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 1rem;
-      align-items: center;
-    }
-
-    .site-footer p {
-      margin: 0;
-    }
-
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .footer-links a {
-      color: rgba(255, 255, 255, 0.9);
-    }
-
-    .footer-links a:hover,
-    .footer-links a:focus {
-      color: var(--white);
-    }
-
-    @media (max-width: 980px) {
-      .split,
-      .split.reverse,
-      .cards,
-      .feature-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        min-height: 72vh;
-      }
-
-      .site-header .container {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .nav {
-        justify-content: flex-start;
-      }
-    }
-
-    @media (max-width: 640px) {
-      section {
-        padding: 4rem 0;
-      }
-
-      .hero-content {
-        padding: 4rem 0;
-      }
-
-      h1 {
-        font-size: clamp(2.2rem, 10vw, 3.3rem);
-      }
-
-      .hero p,
-      .section-header p {
-        font-size: 1rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
+    <div class="container header-inner">
       <a class="brand" href="#top">No ICE in Schools</a>
       <nav class="nav" aria-label="Primary navigation">
         <a href="#why">Why It Matters</a>
@@ -468,7 +36,7 @@
             policies help protect student well-being, preserve trust, and keep the
             focus where it belongs: education.
           </p>
-          <div class="hero-actions">
+          <div class="button-row">
             <a class="button button-primary" href="#action">Support a Warrant Policy</a>
             <a class="button button-secondary" href="#policy">See What We Are Asking For</a>
           </div>
@@ -476,7 +44,7 @@
       </div>
     </section>
 
-    <section id="why">
+    <section id="why" class="section">
       <div class="container">
         <div class="section-header">
           <h2>Why this matters</h2>
@@ -495,6 +63,7 @@
               loading="lazy"
             />
           </div>
+
           <div class="panel">
             <h3>A school cannot do its job when children are afraid to come to class.</h3>
             <p>
@@ -503,7 +72,7 @@
               to focus. Parents may pull back from conferences and school contact. Teachers end
               up managing trauma on top of instruction.
             </p>
-            <ul class="policy-list">
+            <ul class="styled-list">
               <li><strong>Attendance:</strong> Fear can cause students to miss school or leave early.</li>
               <li><strong>Learning:</strong> Stress makes it harder to concentrate and participate.</li>
               <li><strong>Trust:</strong> Families may avoid school communication when they feel unsafe.</li>
@@ -512,7 +81,7 @@
           </div>
         </div>
 
-        <div class="cards">
+        <div class="cards-grid">
           <article class="card">
             <h3>Attendance</h3>
             <p>
@@ -520,18 +89,21 @@
               school could expose their family to enforcement.
             </p>
           </article>
+
           <article class="card">
             <h3>Learning</h3>
             <p>
               Stress and uncertainty drain attention, energy, and classroom engagement.
             </p>
           </article>
+
           <article class="card">
             <h3>Trust</h3>
             <p>
               Families need confidence that schools exist to educate and support students.
             </p>
           </article>
+
           <article class="card">
             <h3>Well-being</h3>
             <p>
@@ -542,9 +114,9 @@
       </div>
     </section>
 
-    <section aria-label="Student perspective">
+    <section class="section">
       <div class="container">
-        <div class="split reverse">
+        <div class="split split-reverse">
           <div class="panel">
             <h3>This is an education issue.</h3>
             <p>
@@ -558,6 +130,7 @@
               allowing immigration enforcement onto school property fits the basic mission of schools.
             </p>
           </div>
+
           <div class="image-card">
             <img
               src="assets/images/student-portrait.jpg"
@@ -569,7 +142,7 @@
       </div>
     </section>
 
-    <section id="policy">
+    <section id="policy" class="section">
       <div class="container">
         <div class="section-header">
           <h2>What policy are we asking for?</h2>
@@ -588,13 +161,14 @@
               loading="lazy"
             />
           </div>
+
           <div class="panel">
             <h3>The basic principle</h3>
             <p>
               Schools are for learning, safety, and child well-being. Immigration enforcement
               should not be allowed onto school property unless officers present a valid judicial warrant.
             </p>
-            <ul class="policy-list">
+            <ul class="styled-list">
               <li>Require a judicial warrant before allowing immigration enforcement onto campus.</li>
               <li>Direct staff to contact district leadership and legal counsel immediately.</li>
               <li>Protect student records and personal information.</li>
@@ -604,7 +178,7 @@
           </div>
         </div>
 
-        <div class="panel" style="margin-top: 1.5rem;">
+        <div class="panel panel-spaced">
           <h3>What this policy does not do</h3>
           <p>
             It does not tell schools to ignore the law. It does not stop officers acting with valid
@@ -615,9 +189,9 @@
       </div>
     </section>
 
-    <section aria-label="Learning and safety">
+    <section class="section">
       <div class="container">
-        <div class="split reverse">
+        <div class="split split-reverse">
           <div class="panel">
             <h3>Schools deserve a higher threshold.</h3>
             <p>
@@ -625,12 +199,13 @@
               protect student records, and rely on trust between families and educators. Requiring
               a judicial warrant respects that reality.
             </p>
-            <ul class="policy-list">
+            <ul class="styled-list">
               <li><strong>Children are uniquely vulnerable.</strong> Students depend on adults at school to protect them.</li>
               <li><strong>Education depends on trust.</strong> Families need to know schools are not shortcuts for enforcement.</li>
               <li><strong>Privacy already matters in schools.</strong> Student information is treated differently for a reason.</li>
             </ul>
           </div>
+
           <div class="image-card">
             <img
               src="assets/images/students-studying-group.jpg"
@@ -642,7 +217,7 @@
       </div>
     </section>
 
-    <section id="districts">
+    <section id="districts" class="section">
       <div class="container">
         <div class="section-header">
           <h2>What responsible districts can do</h2>
@@ -701,7 +276,7 @@
       </div>
     </section>
 
-    <section id="action">
+    <section id="action" class="section">
       <div class="container">
         <div class="section-header">
           <h2>Help keep schools focused on learning</h2>
@@ -719,15 +294,17 @@
               loading="lazy"
             />
           </div>
+
           <div class="panel">
             <h3>Take action locally</h3>
-            <ul class="action-list">
+            <ul class="styled-list">
               <li><strong>Contact your district:</strong> Ask leaders to adopt a clear judicial-warrant policy.</li>
               <li><strong>Share the issue:</strong> Help others understand this is about education, safety, and lawful process.</li>
               <li><strong>Organize locally:</strong> Work with parents, students, and educators to advocate for written protections.</li>
               <li><strong>Know your rights:</strong> Learn what protections already exist and where gaps still need to be fixed.</li>
             </ul>
-            <div class="hero-actions">
+
+            <div class="button-row">
               <a class="button button-primary" href="#">Contact Us</a>
               <a class="button button-light" href="#">Start a Campaign</a>
               <a class="button button-light" href="#">Know Your Rights</a>
@@ -738,13 +315,13 @@
     </section>
 
     <section class="cta" aria-label="Closing call to action">
-      <div class="container">
+      <div class="container cta-inner">
         <h2>Protecting education, due process, and student safety.</h2>
         <p>
           Clear school policies can reduce fear, preserve trust, and keep the focus on
           learning. A judicial-warrant requirement is a practical step districts can take now.
         </p>
-        <div class="cta-actions">
+        <div class="button-row">
           <a class="button button-primary" href="#action">Get Involved</a>
           <a class="button button-light" href="#policy">Review the Policy</a>
         </div>
@@ -753,7 +330,7 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container">
+    <div class="container footer-inner">
       <p><strong>No ICE in Schools</strong> — Schools should be places of learning, not fear.</p>
       <div class="footer-links">
         <a href="#why">Why It Matters</a>
