@@ -43,6 +43,10 @@
   justify-content: flex-end;
 }
 
+.nav-dropdown {
+  position: relative;
+}
+
 .split {
   display: grid;
   grid-template-columns: 1.15fr 1fr;
@@ -107,7 +111,18 @@
   }
 
   .nav {
+    width: 100%;
     justify-content: flex-start;
+    align-items: stretch;
+  }
+
+  .nav > a,
+  .nav-dropdown {
+    width: 100%;
+  }
+
+  .nav-dropdown {
+    position: static;
   }
 }
 
