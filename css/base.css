@@ -9,11 +9,15 @@
   --border: #d8e2ec;
   --card: #f8fbfe;
   --shadow: 0 16px 40px rgba(10, 34, 51, 0.12);
+  --shadow-soft: 0 8px 24px rgba(10, 34, 51, 0.08);
   --radius: 18px;
+  --radius-sm: 12px;
   --max: 1180px;
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -37,6 +41,21 @@ img {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+summary {
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
 }
 
 h1,
