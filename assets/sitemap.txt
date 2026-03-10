@@ -1,0 +1,47 @@
+/
+index.html
+
+/components/
+  header.html
+  footer.html
+
+/css/
+  base.css
+  components.css
+  layout.css
+
+/assets/
+  sitemap.txt
+  images/
+
+/why-it-matters/
+  index.html
+
+/policy/
+  policy-statement.html
+  additional-policies.html
+  policy-explanation.html
+
+/learning/
+  know-your-rights.html
+  speech-in-schools.html
+  links.html
+
+/news/
+  success-stories.html
+  policy-changes.html
+  school-incidents.html
+  protests.html
+
+/faq/
+  index.html
+
+/campaigns/
+  index.html
+
+Footer
+
+  about-us.html
+  contact.html
+  volunteer.html
+  sources.html

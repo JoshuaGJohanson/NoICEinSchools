@@ -301,3 +301,18 @@
     font-size: 1rem;
   }
 }
+
+.footer-branding {
+  max-width: 32rem;
+}
+
+.footer-links-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-links-secondary a {
+  opacity: 0.92;
+  font-size: 0.95rem;
+}
