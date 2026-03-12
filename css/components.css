@@ -101,23 +101,27 @@
 
 .nav-home,
 .footer-home-button {
-  background: var(--navy);
-  color: var(--white);
-  border: 1px solid var(--navy);
+  background: var(--white);
+  color: var(--navy);
+  border: 2px solid var(--white);
   white-space: nowrap;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
 }
 
 .nav-home:hover,
 .nav-home:focus,
 .footer-home-button:hover,
 .footer-home-button:focus {
-  background: var(--navy-dark);
-  color: var(--white);
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--navy);
+  border-color: rgba(255, 255, 255, 0.9);
 }
 
 .nav a,
 .nav summary {
-  color: var(--navy);
+  color: var(--blue-light);
   font-weight: 600;
   font-size: 0.95rem;
 }
@@ -133,23 +137,34 @@
   position: relative;
 }
 
-.nav-dropdown summary {
+.dropdown-toggle {
+  background: none;
+  border: none;
+  padding: 0.55rem 0.1rem;
+  cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  cursor: pointer;
-  padding: 0.55rem 0.1rem;
   user-select: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--blue-light);
+  transition: color 0.2s ease;
 }
 
-.nav-dropdown summary::after {
+.dropdown-toggle:hover,
+.dropdown-toggle:focus {
+  color: var(--blue-dark);
+}
+
+.dropdown-toggle::after {
   content: "▾";
   font-size: 0.75rem;
   line-height: 1;
   transition: transform 0.2s ease;
 }
 
-.nav-dropdown[open] summary::after {
+.nav-dropdown.open .dropdown-toggle::after {
   transform: rotate(180deg);
 }
 
@@ -163,9 +178,14 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-soft);
-  display: grid;
+  display: none;
+  grid-template-columns: 1fr;
   gap: 0.2rem;
   z-index: 1200;
+}
+
+.nav-dropdown.open .dropdown-menu {
+  display: grid;
 }
 
 .dropdown-menu a {
