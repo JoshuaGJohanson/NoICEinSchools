@@ -1,0 +1,7 @@
+---
+---
+
+:root {
+  --hero-image-path: {{ '/assets/images/hero-classroom.jpg' | relative_url }};
+  --cta-image-path: {{ '/assets/images/public-school-exterior.jpg' | relative_url }};
+}
