@@ -101,22 +101,38 @@
 
 .nav-home,
 .footer-home-button {
-  background: var(--white);
-  color: var(--navy);
-  border: 2px solid var(--white);
+  background: var(--blue);
+  color: var(--white);
+  border: 2px solid var(--blue);
   white-space: nowrap;
   font-size: 1rem;
   font-weight: 800;
   letter-spacing: 0.02em;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+  transition: all 0.3s ease;
+}
+
+.nav-home {
+  min-width: 160px;
+  color: var(--white) !important;
 }
 
 .nav-home:hover,
-.nav-home:focus,
+.nav-home:focus {
+  background: var(--blue-dark);
+  color: var(--white) !important;
+  border-color: var(--blue-dark);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.4);
+  transform: translateY(-2px);
+}
+
 .footer-home-button:hover,
 .footer-home-button:focus {
-  background: rgba(255, 255, 255, 0.9);
-  color: var(--navy);
-  border-color: rgba(255, 255, 255, 0.9);
+  background: var(--blue-dark);
+  color: var(--white) !important;
+  border-color: var(--blue-dark);
 }
 
 .nav a,
@@ -149,12 +165,31 @@
   font-weight: 600;
   font-size: 0.95rem;
   color: var(--blue-light);
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
+  position: relative;
 }
 
 .dropdown-toggle:hover,
 .dropdown-toggle:focus {
   color: var(--blue-dark);
+}
+
+.dropdown-toggle::before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--blue-dark);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-toggle:hover::before,
+.nav-dropdown.open .dropdown-toggle::before {
+  transform: scaleX(1);
 }
 
 .dropdown-toggle::after {
@@ -182,10 +217,17 @@
   grid-template-columns: 1fr;
   gap: 0.2rem;
   z-index: 1200;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: all 0.2s ease;
+  pointer-events: none;
 }
 
 .nav-dropdown.open .dropdown-menu {
   display: grid;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 .dropdown-menu a {
@@ -194,12 +236,33 @@
   border-radius: 10px;
   font-weight: 600;
   color: var(--navy);
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.dropdown-menu a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--blue);
+  transform: translateX(-3px);
+  transition: transform 0.2s ease;
 }
 
 .dropdown-menu a:hover,
 .dropdown-menu a:focus {
   background: var(--card);
   color: var(--blue-dark);
+  padding-left: 1.15rem;
+}
+
+.dropdown-menu a:hover::before,
+.dropdown-menu a:focus::before {
+  transform: translateX(0);
 }
 
 .image-card {
