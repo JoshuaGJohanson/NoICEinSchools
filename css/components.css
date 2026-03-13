@@ -398,6 +398,71 @@
   font-size: 0.95rem;
 }
 
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  color: var(--navy);
+  font-size: 0.95rem;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.75rem 0.95rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background: var(--white);
+  color: var(--navy);
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  background: rgba(37, 99, 235, 0.02);
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+form button {
+  margin-top: 0.5rem;
+}
+
+.form-section {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.form-section h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  color: var(--navy);
+}
+
+.form-section p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
 @media (max-width: 980px) {
   .hero {
     min-height: 72vh;
