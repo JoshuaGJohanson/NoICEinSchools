@@ -14,8 +14,8 @@ index.html
   sitemap.txt
   images/
 
-/why-it-matters/
-  index.html
+/pages/
+  why-it-matters.html
 
 /policy/
   policy-statement.html

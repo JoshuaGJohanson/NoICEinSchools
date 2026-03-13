@@ -1,58 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Why It Matters | No ICE in Schools</title>
-  <meta
-    name="description"
-    content="Why schools should remain safe places for learning, how immigration enforcement harms attendance and academic outcomes, and how clear school policies can reduce those harms."
-  />
-  <link rel="stylesheet" href="css/base.css" />
-  <link rel="stylesheet" href="css/layout.css" />
-  <link rel="stylesheet" href="css/components.css" />
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">No ICE in Schools</a>
-        <nav class="nav" aria-label="Primary navigation">
-        <a href="index.html">Home</a>
-        <a href="why-it-matters.html">Why It Matters</a>
-        <a href="policy.html">Policy</a>
+---
+layout: default
+title: Why It Matters
+description: Why schools should remain safe places for learning, how immigration enforcement harms attendance and academic outcomes, and how clear school policies can reduce those harms.
+permalink: /pages/why-it-matters.html
+---
 
-        <details class="nav-dropdown">
-            <summary>Take Action</summary>
-            <div class="dropdown-menu">
-            <a href="take-action.html">Take Action Overview</a>
-            <a href="know-your-rights.html">Know Your Rights</a>
-            <a href="parents.html">For Parents</a>
-            <a href="students.html">For Students</a>
-            <a href="educators.html">For Educators</a>
-            <a href="start-a-campaign.html">Start a Campaign</a>
-            <a href="protest-organizing.html">Protest Organizing</a>
-            </div>
-        </details>
-
-        <a href="campaigns.html">Campaigns</a>
-
-        <details class="nav-dropdown">
-            <summary>News</summary>
-            <div class="dropdown-menu">
-            <a href="news.html">News Overview</a>
-            <a href="policy-changes.html">Policy Changes</a>
-            <a href="school-incidents.html">Schools Targeted by ICE</a>
-            <a href="protests.html">Protests</a>
-            </div>
-        </details>
-
-        <a href="contact.html">Contact</a>
-        </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero" aria-label="Why it matters hero">
+<section class="hero" aria-label="Why it matters hero">
       <div class="container">
         <div class="hero-content">
           <div class="eyebrow">Safe schools support learning</div>
@@ -64,8 +17,8 @@
             academic outcomes, and the trust schools depend on.
           </p>
           <div class="button-row">
-            <a class="button button-primary" href="policy-solutions.html">See Policy Solutions</a>
-            <a class="button button-secondary" href="take-action.html">Take Action</a>
+            <a class="button button-primary" href="{{ '/policy-solutions.html' | relative_url }}">See Policy Solutions</a>
+            <a class="button button-secondary" href="{{ '/take-action.html' | relative_url }}">Take Action</a>
           </div>
         </div>
       </div>
@@ -83,15 +36,13 @@
         </div>
 
         <div class="split">
-          <div class="image-card">
-            <img
-              src="assets/images/hallway-lockers.jpg"
-              alt="Students walking through a middle or high school hallway with lockers"
-              loading="lazy"
-            />
-          </div>
-
-          <div class="panel">
+      <div class="image-card">
+        <img
+          src="{{ '/assets/images/hallway-lockers.jpg' | relative_url }}"
+          alt="Students walking through a middle or high school hallway with lockers"
+          loading="lazy"
+        />
+      </div>          <div class="panel">
             <h3>Fear changes how students experience school.</h3>
             <p>
               Learning depends on stability. Students do better when they feel safe enough to show
@@ -171,7 +122,7 @@
 
           <div class="image-card">
             <img
-              src="assets/images/student-portrait.jpg"
+              src="{{ '/assets/images/student-portrait.jpg' | relative_url }}"
               alt="Portrait of a teenage student in a school setting"
               loading="lazy"
             />
@@ -192,15 +143,13 @@
         </div>
 
         <div class="split">
-          <div class="image-card">
-            <img
-              src="assets/images/teacher-helping-student.jpg"
-              alt="Teacher helping a student in a classroom"
-              loading="lazy"
-            />
-          </div>
-
-          <div class="panel">
+        <div class="image-card">
+          <img
+            src="{{ '/assets/images/teacher-helping-student.jpg' | relative_url }}"
+            alt="Teacher helping a student in a classroom"
+            loading="lazy"
+          />
+        </div>          <div class="panel">
             <h3>Clear ICE-response policies help schools stay focused on learning.</h3>
             <p>
               Research suggests that when districts adopt protective school policies, students from
@@ -271,15 +220,15 @@
               environment.
             </p>
             <div class="button-row">
-              <a class="button button-primary" href="why-schools-should-be-safe.html">Why Schools Should Be Safe</a>
-              <a class="button button-light" href="threats-to-school-safety.html">Threats to School Safety</a>
-              <a class="button button-light" href="policy-solutions.html">Policy Solutions</a>
+              <a class="button button-primary" href="{{ '/pages/why-schools-should-be-safe.html' | relative_url }}">Why Schools Should Be Safe</a>
+              <a class="button button-light" href="{{ '/pages/threats-to-school-safety.html' | relative_url }}">Threats to School Safety</a>
+              <a class="button button-light" href="{{ '/policy-solutions.html' | relative_url }}">Policy Solutions</a>
             </div>
           </div>
 
           <div class="image-card">
             <img
-              src="assets/images/students-studying-group.jpg"
+              src="{{ '/assets/images/students-studying-group.jpg' | relative_url }}"
               alt="Teen students studying together at a table in school"
               loading="lazy"
             />
@@ -296,8 +245,8 @@
           focused on what schools are for: showing up, learning, and building a future.
         </p>
         <div class="button-row">
-          <a class="button button-primary" href="policy-solutions.html">Review Policy Solutions</a>
-          <a class="button button-light" href="take-action.html">Take Action</a>
+          <a class="button button-primary" href="{{ '/policy-solutions.html' | relative_url }}">Review Policy Solutions</a>
+          <a class="button button-light" href="{{ '/take-action.html' | relative_url }}">Take Action</a>
         </div>
       </div>
     </section>
