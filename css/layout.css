@@ -12,6 +12,10 @@
   margin-bottom: 2rem;
 }
 
+.section-header h2 {
+  white-space: nowrap;
+}
+
 .section-header p {
   margin: 0;
   font-size: 1.05rem;

@@ -4,3 +4,9 @@ baseurl: ""
 url: ""
 markdown: kramdown
 permalink: pretty
+
+# GitHub Pages settings
+theme: jekyll-theme-primer
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
