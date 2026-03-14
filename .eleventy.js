@@ -25,7 +25,9 @@ module.exports = function(eleventyConfig) {
       layouts: "_layouts",
       output: "_site"
     },
-    pathPrefix: "/NoICEinSchools/",
+    // Remove pathPrefix for Cloudflare Pages - it serves from root
+    // If serving on GitHub Pages with /NoICEinSchools/ baseurl, add it back
+    pathPrefix: process.env.ENVIRONMENT === 'cloudflare' ? "" : "/NoICEinSchools/",
     templateFormats: ["html", "md", "njk"],
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk"

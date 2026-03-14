@@ -1,11 +1,12 @@
 {
   "build": {
-    "command": "npm run build",
+    "command": "ENVIRONMENT=cloudflare npm run build",
     "cwd": "/",
     "destination_dir": "_site",
     "root_dir": "/"
   },
   "env": {
-    "NODE_VERSION": "18"
+    "NODE_VERSION": "18",
+    "ENVIRONMENT": "cloudflare"
   }
 }
