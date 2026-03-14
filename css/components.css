@@ -5,6 +5,50 @@
   white-space: nowrap;
 }
 
+/* Link Styles */
+a {
+  color: var(--blue);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+a:hover,
+a:focus {
+  color: var(--blue-dark);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
+}
+
+a[target="_blank"]::after {
+  content: "";
+}
+
+/* External link styling for emphasis */
+.section a,
+.card a,
+.panel a {
+  font-weight: 600;
+}
+
+/* Remove link styling from navigation */
+.nav a,
+.nav-dropdown button,
+.dropdown-menu a {
+  text-decoration: none;
+}
+
+.dropdown-menu a[target="_blank"]::after {
+  content: "";
+}
+
+/* Remove link styling from footer */
+.site-footer a {
+  text-decoration: none;
+}
+
 .hero {
   position: relative;
   min-height: 82vh;

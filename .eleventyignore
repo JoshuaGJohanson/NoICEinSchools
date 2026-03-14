@@ -1,0 +1,8 @@
+README.md
+.git
+node_modules
+*.gemfile
+Gemfile
+Gemfile.lock
+_config.yml
+.github

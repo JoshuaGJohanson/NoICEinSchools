@@ -4,26 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>
-    {% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}
+    {% if title %}{{ title }} | {% endif %}No ICE in Schools
   </title>
-  {% if page.description %}
-  <meta name="description" content="{{ page.description }}" />
-  {% elsif site.description %}
-  <meta name="description" content="{{ site.description }}" />
+  {% if description %}
+  <meta name="description" content="{{ description }}" />
+  {% else %}
+  <meta name="description" content="Advocacy resources for keeping schools safe from ICE" />
   {% endif %}
 
-  <link rel="stylesheet" href="{{ '/css/base.css' | relative_url }}" />
-  <link rel="stylesheet" href="{{ '/css/components.css' | relative_url }}" />
-  <link rel="stylesheet" href="{{ '/css/layout.css' | relative_url }}" />
+  <link rel="stylesheet" href="{{ '/css/base.css' | url }}" />
+  <link rel="stylesheet" href="{{ '/css/components.css' | url }}" />
+  <link rel="stylesheet" href="{{ '/css/layout.css' | url }}" />
 </head>
 <body>
-  {% include header.html %}
+  {% include "header.html" %}
 
   <main>
-    {{ content }}
+    {{ content | safe }}
   </main>
 
-  {% include footer.html %}
-  <script src="{{ '/assets/js/navigation.js' | relative_url }}"></script>
+  {% include "footer.html" %}
+  <script src="{{ '/assets/js/navigation.js' | url }}"></script>
 </body>
 </html>
