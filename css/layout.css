@@ -39,6 +39,24 @@
   padding: 0.9rem 0;
 }
 
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.hamburger-menu span {
+  width: 24px;
+  height: 2px;
+  background: var(--navy);
+  transition: all 0.3s ease;
+  border-radius: 1px;
+}
+
 .nav {
   display: flex;
   flex-wrap: wrap;
@@ -124,9 +142,65 @@
     font-size: 1rem;
   }
 
+  .hamburger-menu {
+    display: flex;
+  }
+
   .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
     flex-direction: column;
     align-items: stretch;
     gap: 0.5rem;
+    padding: 1rem;
+    z-index: 999;
+  }
+
+  .nav.mobile-open {
+    display: flex;
+  }
+
+  .nav a,
+  .nav button {
+    padding: 0.8rem 1rem;
+    text-align: left;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+  }
+
+  .nav a:hover,
+  .nav button:hover {
+    background: var(--card);
+  }
+
+  .dropdown-menu {
+    position: static !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    padding: 0 !important;
+    background: var(--card) !important;
+    border: none !important;
+    box-shadow: none !important;
+    margin-top: 0.5rem !important;
+  }
+
+  .nav-dropdown.open .dropdown-menu {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .dropdown-menu a {
+    padding: 0.7rem 1rem !important;
+    margin: 0 !important;
+    border-radius: 6px !important;
+  }
+
+  .dropdown-menu a::before {
+    display: none;
   }
 }

@@ -1,6 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const nav = document.querySelector(".nav");
   const dropdowns = document.querySelectorAll(".nav-dropdown");
   let hoverTimeout;
+
+  // Create hamburger menu button
+  const hamburger = document.createElement("button");
+  hamburger.className = "hamburger-menu";
+  hamburger.setAttribute("aria-label", "Toggle navigation menu");
+  hamburger.setAttribute("aria-expanded", "false");
+  hamburger.innerHTML = `
+    <span></span>
+    <span></span>
+    <span></span>
+  `;
+
+  const header = document.querySelector(".header-inner");
+  if (header) {
+    header.insertBefore(hamburger, nav);
+  }
 
   function closeAllDropdowns() {
     dropdowns.forEach((drop) => {
@@ -12,6 +29,26 @@ document.addEventListener("DOMContentLoaded", () => {
     closeAllDropdowns();
     drop.classList.add("open");
   }
+
+  function toggleNav() {
+    nav.classList.toggle("mobile-open");
+    hamburger.setAttribute("aria-expanded", nav.classList.contains("mobile-open"));
+  }
+
+  // Hamburger menu click handler
+  hamburger.addEventListener("click", (e) => {
+    e.stopPropagation();
+    toggleNav();
+  });
+
+  // Close nav when clicking on a link
+  nav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("mobile-open");
+      hamburger.setAttribute("aria-expanded", "false");
+      closeAllDropdowns();
+    });
+  });
 
   dropdowns.forEach((drop) => {
     const button = drop.querySelector(".dropdown-toggle");
@@ -25,23 +62,29 @@ document.addEventListener("DOMContentLoaded", () => {
       e.stopPropagation();
 
       const isOpen = drop.classList.contains("open");
-      closeAllDropdowns();
 
       if (!isOpen) {
+        closeAllDropdowns();
+        openDropdown(drop);
+      } else {
+        closeAllDropdowns();
+      }
+    });
+
+    // Hover to open on desktop (only if not mobile)
+    drop.addEventListener("mouseenter", () => {
+      if (window.innerWidth > 640) {
+        clearTimeout(hoverTimeout);
         openDropdown(drop);
       }
     });
 
-    // Hover to open on desktop
-    drop.addEventListener("mouseenter", () => {
-      clearTimeout(hoverTimeout);
-      openDropdown(drop);
-    });
-
     drop.addEventListener("mouseleave", () => {
-      hoverTimeout = setTimeout(() => {
-        closeAllDropdowns();
-      }, 150);
+      if (window.innerWidth > 640) {
+        hoverTimeout = setTimeout(() => {
+          closeAllDropdowns();
+        }, 150);
+      }
     });
 
     // Close when menu item is clicked
@@ -64,10 +107,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // Close mobile nav when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+      nav.classList.remove("mobile-open");
+      hamburger.setAttribute("aria-expanded", "false");
+    }
+  });
+
   // Close dropdowns with Escape key
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       closeAllDropdowns();
+      nav.classList.remove("mobile-open");
+      hamburger.setAttribute("aria-expanded", "false");
     }
   });
 });
