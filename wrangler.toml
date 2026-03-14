@@ -1,0 +1,4 @@
+# Cloudflare Pages configuration for Eleventy build
+
+[env.production]
+vars = { ELEVENTY_ENV = "production" }

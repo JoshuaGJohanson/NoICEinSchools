@@ -1,0 +1,11 @@
+{
+  "build": {
+    "command": "npm run build",
+    "cwd": "/",
+    "destination_dir": "_site",
+    "root_dir": "/"
+  },
+  "env": {
+    "NODE_VERSION": "18"
+  }
+}
