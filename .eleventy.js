@@ -14,7 +14,7 @@ module.exports = function(eleventyConfig) {
     if (!url) {
       return "";
     }
-    // Return the URL as-is - let pathPrefix handle the base
+    // Return the URL as-is
     return url;
   });
 
@@ -25,9 +25,7 @@ module.exports = function(eleventyConfig) {
       layouts: "_layouts",
       output: "_site"
     },
-    // Remove pathPrefix for Cloudflare Pages - it serves from root
-    // If serving on GitHub Pages with /NoICEinSchools/ baseurl, add it back
-    pathPrefix: process.env.ENVIRONMENT === 'cloudflare' ? "" : "/NoICEinSchools/",
+    // No pathPrefix - let Cloudflare serve from root
     templateFormats: ["html", "md", "njk"],
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk"
