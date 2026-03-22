@@ -1,0 +1,746 @@
+---
+layout: default
+title: Utah — State Information
+description: School immigration enforcement policies, ICE activity, and district-by-district scorecard for Utah families and educators.
+permalink: /learning/states/utah.html
+---
+
+<style>
+  /* ── Tables ── */
+  .scorecard-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.93rem;
+  }
+  .scorecard-table th {
+    text-align: left;
+    padding: 0.6rem 0.85rem;
+    background: var(--surface);
+    border-bottom: 2px solid var(--border);
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .scorecard-table td {
+    padding: 0.55rem 0.85rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+  }
+  .scorecard-table tbody tr:nth-child(even) td {
+    background: var(--surface);
+  }
+  .scorecard-table tbody tr:hover td {
+    background: color-mix(in srgb, var(--accent) 5%, transparent);
+  }
+  .scorecard-table tr:last-child td { border-bottom: none; }
+
+  /* ── Status icons ── */
+  .status-ok   { color: #2e7d32; font-size: 1.15rem; line-height: 1; }
+  .status-warn { color: #b45309; font-size: 1.15rem; line-height: 1; }
+  .status-bad  { color: #b91c1c; font-size: 1.15rem; line-height: 1; }
+
+  /* ── Tier banners ── */
+  .tier-banner {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    border-radius: var(--radius);
+    margin-bottom: var(--space-6);
+  }
+  .tier-banner-1 { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .tier-banner-2 { background: #fff8e1; border-left: 5px solid #b45309; }
+  .tier-banner-3 { background: #fef2f2; border-left: 5px solid #b91c1c; }
+  .tier-banner-icon { font-size: 1.75rem; line-height: 1; }
+  .tier-banner-text { flex: 1; }
+  .tier-banner-text strong { display: block; font-size: 1.1rem; margin-bottom: 0.15rem; }
+  .tier-banner-text span { font-size: 0.9rem; color: var(--muted); }
+
+  /* ── District cards ── */
+  .district-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-bottom: var(--space-8);
+  }
+  .district-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+  }
+  .district-card-header-t1 { background: #e8f5e9; border-bottom: 2px solid #2e7d32; }
+  .district-card-header-t2 { background: #fff8e1; border-bottom: 2px solid #b45309; }
+  .district-card-header-t3 { background: #fef2f2; border-bottom: 2px solid #b91c1c; }
+  .district-card-header h3 { margin: 0; font-size: 1.1rem; }
+  .score-pills { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+  .score-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .pill-ok   { background: #dcfce7; color: #166534; }
+  .pill-warn { background: #fef9c3; color: #854d0e; }
+  .pill-bad  { background: #fee2e2; color: #991b1b; }
+
+  /* ── Advocacy note ── */
+  .advocacy-note {
+    padding: 0.85rem 1.25rem;
+    background: color-mix(in srgb, var(--accent) 8%, var(--surface));
+    border-top: 1px solid var(--border);
+    font-size: 0.93rem;
+    display: flex;
+    gap: 0.6rem;
+  }
+  .advocacy-note-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.1rem; }
+
+  /* ── Jump nav ── */
+  .jump-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    padding: 1rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: var(--space-6);
+  }
+  .jump-nav a {
+    padding: 0.25rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    border: 1px solid var(--border);
+    text-decoration: none;
+    color: var(--text);
+    white-space: nowrap;
+  }
+  .jump-nav a:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .jump-nav-label { font-size: 0.8rem; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.05em; color: var(--muted); align-self: center; margin-right: 0.25rem; }
+
+  /* ── Legend ── */
+  .legend-row {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    padding: 0.85rem 1.1rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: var(--space-6);
+    font-size: 0.9rem;
+  }
+  .legend-item { display: flex; align-items: center; gap: 0.4rem; }
+
+  /* ── Image break ── */
+  .tier-image-break {
+    margin: var(--space-10) 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-6);
+    align-items: center;
+  }
+  .tier-image-break img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: var(--radius);
+  }
+  .tier-image-break .break-text { padding: var(--space-2); }
+  .tier-image-break .break-text h3 { margin-bottom: var(--space-3); }
+  @media (max-width: 700px) {
+    .tier-image-break { grid-template-columns: 1fr; }
+    .district-card-header { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+
+<section class="hero" aria-label="Utah state information hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="eyebrow">State information</div>
+      <h1>Utah</h1>
+      <p>
+        Utah leaves school immigration enforcement policy almost entirely to individual
+        districts. There is no state law requiring protection. Use this scorecard to find
+        your district and see exactly what needs to happen next.
+      </p>
+      <div class="button-row">
+        <a class="button button-primary" href="#scorecard">View District Scorecard</a>
+        <a class="button button-secondary" href="{{ '/learning/state-information.html' | url }}">All States</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="split">
+      <div class="panel">
+        <h3>State context</h3>
+        <p>
+          Utah took a nationally notable step with the Utah Compact (2010) — a statement of
+          principles signed by law enforcement, business, faith, and civic leaders — calling
+          for a humane and measured approach to immigration enforcement. The LDS Church's
+          moderating influence and a history of bipartisan civic engagement have made Utah
+          somewhat more open to advocacy than other conservative states.
+        </p>
+        <p>
+          However, the state legislature has <strong>not enacted any law</strong> requiring school
+          districts to adopt protective policies. Every district makes its own choices. Most
+          have not made any formal choice at all.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3>ICE activity in Utah</h3>
+        <p>
+          ICE is active across the Salt Lake Valley and in communities tied to construction,
+          services, and food processing. Local law enforcement has generally maintained a
+          cooperative posture with federal enforcement, facilitating operations across the
+          Wasatch Front.
+        </p>
+        <h3 style="margin-top: var(--space-4);">What this means for families</h3>
+        <p>
+          Because Utah places no requirements on districts, a family's protection depends
+          entirely on which district their child attends. <strong>No Utah district currently
+          meets all criteria for a complete protective policy.</strong> Even the strongest
+          districts have significant gaps.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════ SCORECARD ════════════════════════════════════════ -->
+
+<section id="scorecard" class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2>District Scorecard</h2>
+      <p>
+        Each district is assessed against nine criteria for a complete protective policy.
+        Find your district, identify the gaps, and use the advocacy focus to know what to
+        ask for at your next school board meeting.
+      </p>
+    </div>
+
+    <div class="legend-row">
+      <div class="legend-item"><span class="status-ok">✅</span> Clearly in place</div>
+      <div class="legend-item"><span class="status-warn">⚠️</span> Partial or not publicly documented</div>
+      <div class="legend-item"><span class="status-bad">❌</span> Not found — direct advocacy opportunity</div>
+    </div>
+
+    <div class="jump-nav" aria-label="Jump to district">
+      <span class="jump-nav-label">Jump to:</span>
+      <a href="#slc">Salt Lake City</a>
+      <a href="#granite">Granite</a>
+      <a href="#provo">Provo City</a>
+      <a href="#canyons">Canyons</a>
+      <a href="#jordan">Jordan</a>
+      <a href="#davis">Davis</a>
+      <a href="#cache">Cache</a>
+      <a href="#weber">Weber</a>
+      <a href="#tooele">Tooele</a>
+      <a href="#washington">Washington County</a>
+      <a href="#tier3">All Others</a>
+    </div>
+
+    <!-- ─── TIER 1 ─── -->
+    <div class="tier-banner tier-banner-1">
+      <div class="tier-banner-icon">🛡</div>
+      <div class="tier-banner-text">
+        <strong>Tier 1 — Strongest Existing Models</strong>
+        <span>These districts have made the most progress. None are complete. The most common gaps are training, emergency protocols, and formal board adoption.</span>
+      </div>
+    </div>
+
+    <div id="slc" class="district-card">
+      <div class="district-card-header district-card-header-t1">
+        <h3>Salt Lake City School District</h3>
+        <div class="score-pills">
+          <span class="score-pill pill-ok">✅ 2 in place</span>
+          <span class="score-pill pill-warn">⚠️ 4 partial</span>
+          <span class="score-pill pill-bad">❌ 3 missing</span>
+        </div>
+      </div>
+      <table class="scorecard-table">
+        <thead>
+          <tr><th>Category</th><th style="width:4rem;">Status</th><th>What to push for</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Written ICE policy</td><td class="status-warn">⚠️</td><td>Formal board-adopted policy, not just a FAQ or guidance document</td></tr>
+          <tr><td>Judicial warrant requirement</td><td class="status-warn">⚠️</td><td>Explicit "judicial warrant only" language in policy</td></tr>
+          <tr><td>Staff protocols</td><td class="status-bad">❌</td><td>Public step-by-step front office procedures</td></tr>
+          <tr><td>Student privacy (FERPA+)</td><td class="status-ok">✅</td><td>Strong — maintain and expand</td></tr>
+          <tr><td>Family communication</td><td class="status-ok">✅</td><td>Expand multilingual outreach</td></tr>
+          <tr><td>Staff training</td><td class="status-bad">❌</td><td>Publish required annual training requirements</td></tr>
+          <tr><td>Emergency response plan</td><td class="status-bad">❌</td><td>Public protocol for what happens when ICE arrives</td></tr>
+          <tr><td>Community partnerships</td><td class="status-warn">⚠️</td><td>Formalize and publish partnerships with legal organizations</td></tr>
+          <tr><td>Student support services</td><td class="status-warn">⚠️</td><td>More explicit trauma-informed supports for affected students</td></tr>
+        </tbody>
+      </table>
+      <div class="advocacy-note">
+        <span class="advocacy-note-icon">→</span>
+        <span><strong>Advocacy focus:</strong> Move from informal guidance to a formal, board-adopted enforceable policy. The pieces are mostly in place — they need to be codified.</span>
+      </div>
+    </div>
+
+    <div id="granite" class="district-card">
+      <div class="district-card-header district-card-header-t1">
+        <h3>Granite School District</h3>
+        <div class="score-pills">
+          <span class="score-pill pill-ok">✅ 2 in place</span>
+          <span class="score-pill pill-warn">⚠️ 4 partial</span>
+          <span class="score-pill pill-bad">❌ 3 missing</span>
+        </div>
+      </div>
+      <table class="scorecard-table">
+        <thead>
+          <tr><th>Category</th><th style="width:4rem;">Status</th><th>What to push for</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Written ICE policy</td><td class="status-warn">⚠️</td><td>Convert FAQ-style language into a binding board policy</td></tr>
+          <tr><td>Judicial warrant requirement</td><td class="status-warn">⚠️</td><td>Clarify the difference between judicial and administrative warrants</td></tr>
+          <tr><td>Staff protocols</td><td class="status-bad">❌</td><td>Publish front office scripts and escalation steps</td></tr>
+          <tr><td>Student privacy (FERPA+)</td><td class="status-ok">✅</td><td>Strong FERPA language — maintain</td></tr>
+          <tr><td>Family communication</td><td class="status-ok">✅</td><td>Good — continue and expand</td></tr>
+          <tr><td>Staff training</td><td class="status-bad">❌</td><td>Add required annual training</td></tr>
+          <tr><td>Emergency response plan</td><td class="status-bad">❌</td><td>Define what happens when enforcement arrives on campus</td></tr>
+          <tr><td>Community partnerships</td><td class="status-warn">⚠️</td><td>Make existing partnerships visible and formal</td></tr>
+          <tr><td>Student support services</td><td class="status-warn">⚠️</td><td>Expand counseling resources for affected students</td></tr>
+        </tbody>
+      </table>
+      <div class="advocacy-note">
+        <span class="advocacy-note-icon">→</span>
+        <span><strong>Advocacy focus:</strong> Operational protocols and training. The district has the right instincts — it needs procedures that staff can actually follow in the moment.</span>
+      </div>
+    </div>
+
+    <div id="provo" class="district-card">
+      <div class="district-card-header district-card-header-t1">
+        <h3>Provo City School District</h3>
+        <div class="score-pills">
+          <span class="score-pill pill-ok">✅ 2 in place</span>
+          <span class="score-pill pill-warn">⚠️ 5 partial</span>
+          <span class="score-pill pill-bad">❌ 2 missing</span>
+        </div>
+      </div>
+      <table class="scorecard-table">
+        <thead>
+          <tr><th>Category</th><th style="width:4rem;">Status</th><th>What to push for</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Written ICE policy</td><td class="status-warn">⚠️</td><td>Formal board-adopted policy</td></tr>
+          <tr><td>Judicial warrant requirement</td><td class="status-ok">✅</td><td>Strong — one of the better examples in the state</td></tr>
+          <tr><td>Staff protocols</td><td class="status-warn">⚠️</td><td>Add detail and publish publicly</td></tr>
+          <tr><td>Student privacy (FERPA+)</td><td class="status-ok">✅</td><td>Strong</td></tr>
+          <tr><td>Family communication</td><td class="status-warn">⚠️</td><td>Expand visibility and multilingual access</td></tr>
+          <tr><td>Staff training</td><td class="status-bad">❌</td><td>Add and publish required training</td></tr>
+          <tr><td>Emergency response plan</td><td class="status-bad">❌</td><td>Formalize a response protocol</td></tr>
+          <tr><td>Community partnerships</td><td class="status-warn">⚠️</td><td>Expand and formalize</td></tr>
+          <tr><td>Student support services</td><td class="status-warn">⚠️</td><td>Expand trauma-informed supports</td></tr>
+        </tbody>
+      </table>
+      <div class="advocacy-note">
+        <span class="advocacy-note-icon">→</span>
+        <span><strong>Advocacy focus:</strong> Training and emergency procedures. The warrant language is already there — now it needs to be backed by operational readiness.</span>
+      </div>
+    </div>
+
+    <div id="canyons" class="district-card">
+      <div class="district-card-header district-card-header-t1">
+        <h3>Canyons School District</h3>
+        <div class="score-pills">
+          <span class="score-pill pill-ok">✅ 1 in place</span>
+          <span class="score-pill pill-warn">⚠️ 7 partial</span>
+          <span class="score-pill pill-bad">❌ 1 missing</span>
+        </div>
+      </div>
+      <table class="scorecard-table">
+        <thead>
+          <tr><th>Category</th><th style="width:4rem;">Status</th><th>What to push for</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Written ICE policy</td><td class="status-warn">⚠️</td><td>Formalize into a board-adopted policy</td></tr>
+          <tr><td>Judicial warrant requirement</td><td class="status-warn">⚠️</td><td>Clarify standard explicitly</td></tr>
+          <tr><td>Staff protocols</td><td class="status-ok">✅</td><td>Stronger than most Utah districts — maintain and publish</td></tr>
+          <tr><td>Student privacy (FERPA+)</td><td class="status-warn">⚠️</td><td>Expand public visibility of protections</td></tr>
+          <tr><td>Family communication</td><td class="status-warn">⚠️</td><td>Improve clarity and multilingual access</td></tr>
+          <tr><td>Staff training</td><td class="status-warn">⚠️</td><td>Formalize training requirements</td></tr>
+          <tr><td>Emergency response plan</td><td class="status-warn">⚠️</td><td>Expand and publish response protocol</td></tr>
+          <tr><td>Community partnerships</td><td class="status-bad">❌</td><td>Build formal partnerships with legal organizations</td></tr>
+          <tr><td>Student support services</td><td class="status-warn">⚠️</td><td>Expand counseling and support resources</td></tr>
+        </tbody>
+      </table>
+      <div class="advocacy-note">
+        <span class="advocacy-note-icon">→</span>
+        <span><strong>Advocacy focus:</strong> Community partnerships and transparency. The operational pieces are the strongest in the state — the gap is community connection and formal documentation.</span>
+      </div>
+    </div>
+
+    <!-- ─── IMAGE BREAK: TIER 1 → TIER 2 ─── -->
+    <div class="tier-image-break">
+      <img
+        src="{{ '/assets/images/parents-meeting-with-admin.jpg' | url }}"
+        alt="Parents meeting with school administrators"
+        loading="lazy"
+      />
+      <div class="break-text">
+        <h3>Even in the best Utah districts, gaps remain.</h3>
+        <p>
+          Tier 1 districts have made meaningful progress, but no Utah district has a complete
+          protective policy. Every one of them can still be pushed further — and Tier 2 and
+          Tier 3 districts are largely starting from scratch.
+        </p>
+        <p style="color: var(--muted); font-size: 0.95rem;">
+          In Utah, every protection that exists is the result of local organizing. The school
+          board in your district can act right now.
+        </p>
+      </div>
+    </div>
+
+    <!-- ─── TIER 2 ─── -->
+    <div class="tier-banner tier-banner-2">
+      <div class="tier-banner-icon">⚠️</div>
+      <div class="tier-banner-text">
+        <strong>Tier 2 — Partial Protections</strong>
+        <span>These districts typically have student privacy protections in place but lack formal policies, written protocols, or staff training. They are reachable targets for structured advocacy.</span>
+      </div>
+    </div>
+
+    <div id="jordan" class="district-card">
+      <div class="district-card-header district-card-header-t2">
+        <h3>Jordan School District</h3>
+        <div class="score-pills">
+          <span class="score-pill pill-ok">✅ 1 in place</span>
+          <span class="score-pill pill-warn">⚠️ 1 partial</span>
+          <span class="score-pill pill-bad">❌ 7 missing</span>
+        </div>
+      </div>
+      <table class="scorecard-table">
+        <thead>
+          <tr><th>Category</th><th style="width:4rem;">Status</th><th>What to push for</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Written ICE policy</td><td class="status-bad">❌</td><td>Create a formal board-adopted policy</td></tr>
+          <tr><td>Judicial warrant requirement</td><td class="status-bad">❌</td><td>Add explicit warrant requirement</td></tr>
+          <tr><td>Staff protocols</td><td class="status-bad">❌</td><td>Publish front office procedures</td></tr>
+          <tr><td>Student privacy (FERPA+)</td><td class="status-ok">✅</td><td>Strong — use as the foundation to build from</td></tr>
+          <tr><td>Family communication</td><td class="status-bad">❌</td><td>Notify families of their rights and district procedures</td></tr>
+          <tr><td>Staff training</td><td class="status-bad">❌</td><td>Add required training</td></tr>
+          <tr><td>Emergency response plan</td><td class="status-bad">❌</td><td>Create a written response protocol</td></tr>
+          <tr><td>Community partnerships</td><td class="status-bad">❌</td><td>Build partnerships with legal aid organizations</td></tr>
+          <tr><td>Student support services</td><td class="status-warn">⚠️</td><td>Expand counseling resources</td></tr>
+        </tbody>
+      </table>
+      <div class="advocacy-note">
+        <span class="advocacy-note-icon">→</span>
+        <span><strong>High-impact target.</strong> The district already has strong privacy protections — the ask is to build on that foundation with a formal policy and procedures.</span>
+      </div>
+    </div>
+
+    <div id="davis" class="district-card">
+      <div class="district-card-header district-card-header-t2">
+        <h3>Davis School District</h3>
+        <div class="score-pills">
+          <span class="score-pill pill-ok">✅ 0 in place</span>
+          <span class="score-pill pill-warn">⚠️ 4 partial</span>
+          <span class="score-pill pill-bad">❌ 5 missing</span>
+        </div>
+      </div>
+      <table class="scorecard-table">
+        <thead>
+          <tr><th>Category</th><th style="width:4rem;">Status</th><th>What to push for</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Written ICE policy</td><td class="status-bad">❌</td><td>Create a formal policy</td></tr>
+          <tr><td>Judicial warrant requirement</td><td class="status-bad">❌</td><td>Add explicit warrant language</td></tr>
+          <tr><td>Staff protocols</td><td class="status-bad">❌</td><td>Train and equip front office staff</td></tr>
+          <tr><td>Student privacy (FERPA+)</td><td class="status-warn">⚠️</td><td>Strengthen and clarify FERPA protections</td></tr>
+          <tr><td>Family communication</td><td class="status-warn">⚠️</td><td>Expand outreach and multilingual materials</td></tr>
+          <tr><td>Staff training</td><td class="status-bad">❌</td><td>Implement annual required training</td></tr>
+          <tr><td>Emergency response plan</td><td class="status-bad">❌</td><td>Write a formal response protocol</td></tr>
+          <tr><td>Community partnerships</td><td class="status-warn">⚠️</td><td>Expand and formalize</td></tr>
+          <tr><td>Student support services</td><td class="status-warn">⚠️</td><td>Expand support services</td></tr>
+        </tbody>
+      </table>
+      <div class="advocacy-note">
+        <span class="advocacy-note-icon">→</span>
+        <span><strong>Advocacy focus:</strong> Politically influential district. A policy adoption here would signal to neighboring districts that change is achievable.</span>
+      </div>
+    </div>
+
+    <div id="cache" class="district-card">
+      <div class="district-card-header district-card-header-t2">
+        <h3>Cache School District</h3>
+        <div class="score-pills">
+          <span class="score-pill pill-ok">✅ 0 in place</span>
+          <span class="score-pill pill-warn">⚠️ 4 partial</span>
+          <span class="score-pill pill-bad">❌ 5 missing</span>
+        </div>
+      </div>
+      <table class="scorecard-table">
+        <thead>
+          <tr><th>Category</th><th style="width:4rem;">Status</th><th>What to push for</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Written ICE policy</td><td class="status-bad">❌</td><td>Create a policy from scratch</td></tr>
+          <tr><td>Judicial warrant requirement</td><td class="status-bad">❌</td><td>Add warrant requirement</td></tr>
+          <tr><td>Staff protocols</td><td class="status-bad">❌</td><td>Create front office procedures</td></tr>
+          <tr><td>Student privacy (FERPA+)</td><td class="status-warn">⚠️</td><td>Strengthen FERPA language</td></tr>
+          <tr><td>Family communication</td><td class="status-warn">⚠️</td><td>Add outreach in Spanish and other languages</td></tr>
+          <tr><td>Staff training</td><td class="status-bad">❌</td><td>Add required training</td></tr>
+          <tr><td>Emergency response plan</td><td class="status-bad">❌</td><td>Create a response protocol</td></tr>
+          <tr><td>Community partnerships</td><td class="status-warn">⚠️</td><td>Build partnerships with legal organizations</td></tr>
+          <tr><td>Student support services</td><td class="status-warn">⚠️</td><td>Expand counseling resources</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="weber" class="district-card">
+      <div class="district-card-header district-card-header-t2">
+        <h3>Weber School District</h3>
+        <div class="score-pills">
+          <span class="score-pill pill-ok">✅ 0 in place</span>
+          <span class="score-pill pill-warn">⚠️ 2 partial</span>
+          <span class="score-pill pill-bad">❌ 7 missing</span>
+        </div>
+      </div>
+      <table class="scorecard-table">
+        <thead>
+          <tr><th>Category</th><th style="width:4rem;">Status</th><th>What to push for</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Written ICE policy</td><td class="status-bad">❌</td><td>Create a formal policy</td></tr>
+          <tr><td>Judicial warrant requirement</td><td class="status-bad">❌</td><td>Add warrant requirement</td></tr>
+          <tr><td>Staff protocols</td><td class="status-bad">❌</td><td>Create front office procedures</td></tr>
+          <tr><td>Student privacy (FERPA+)</td><td class="status-warn">⚠️</td><td>Strengthen privacy language</td></tr>
+          <tr><td>Family communication</td><td class="status-bad">❌</td><td>Add family notification and outreach</td></tr>
+          <tr><td>Staff training</td><td class="status-bad">❌</td><td>Add required training</td></tr>
+          <tr><td>Emergency response plan</td><td class="status-bad">❌</td><td>Create a response protocol</td></tr>
+          <tr><td>Community partnerships</td><td class="status-bad">❌</td><td>Build partnerships</td></tr>
+          <tr><td>Student support services</td><td class="status-warn">⚠️</td><td>Expand support services</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="tooele" class="district-card">
+      <div class="district-card-header district-card-header-t2">
+        <h3>Tooele School District</h3>
+        <div class="score-pills">
+          <span class="score-pill pill-ok">✅ 0 in place</span>
+          <span class="score-pill pill-warn">⚠️ 2 partial</span>
+          <span class="score-pill pill-bad">❌ 7 missing</span>
+        </div>
+      </div>
+      <table class="scorecard-table">
+        <thead>
+          <tr><th>Category</th><th style="width:4rem;">Status</th><th>What to push for</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Written ICE policy</td><td class="status-bad">❌</td><td>Create a formal policy</td></tr>
+          <tr><td>Judicial warrant requirement</td><td class="status-bad">❌</td><td>Add warrant requirement</td></tr>
+          <tr><td>Staff protocols</td><td class="status-bad">❌</td><td>Create front office procedures</td></tr>
+          <tr><td>Student privacy (FERPA+)</td><td class="status-warn">⚠️</td><td>Strengthen and clarify</td></tr>
+          <tr><td>Family communication</td><td class="status-bad">❌</td><td>Add family outreach</td></tr>
+          <tr><td>Staff training</td><td class="status-bad">❌</td><td>Add required training</td></tr>
+          <tr><td>Emergency response plan</td><td class="status-bad">❌</td><td>Create a response protocol</td></tr>
+          <tr><td>Community partnerships</td><td class="status-bad">❌</td><td>Build partnerships with legal organizations</td></tr>
+          <tr><td>Student support services</td><td class="status-warn">⚠️</td><td>Expand support services</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="washington" class="district-card">
+      <div class="district-card-header district-card-header-t2">
+        <h3>Washington County School District</h3>
+        <div class="score-pills">
+          <span class="score-pill pill-ok">✅ 0 in place</span>
+          <span class="score-pill pill-warn">⚠️ 3 partial</span>
+          <span class="score-pill pill-bad">❌ 6 missing</span>
+        </div>
+      </div>
+      <table class="scorecard-table">
+        <thead>
+          <tr><th>Category</th><th style="width:4rem;">Status</th><th>What to push for</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Written ICE policy</td><td class="status-bad">❌</td><td>Create a formal policy</td></tr>
+          <tr><td>Judicial warrant requirement</td><td class="status-bad">❌</td><td>Add warrant requirement</td></tr>
+          <tr><td>Staff protocols</td><td class="status-bad">❌</td><td>Create front office procedures</td></tr>
+          <tr><td>Student privacy (FERPA+)</td><td class="status-warn">⚠️</td><td>Strengthen and clarify</td></tr>
+          <tr><td>Family communication</td><td class="status-warn">⚠️</td><td>Expand outreach and multilingual materials</td></tr>
+          <tr><td>Staff training</td><td class="status-bad">❌</td><td>Add required annual training</td></tr>
+          <tr><td>Emergency response plan</td><td class="status-bad">❌</td><td>Create a response protocol</td></tr>
+          <tr><td>Community partnerships</td><td class="status-bad">❌</td><td>Build partnerships</td></tr>
+          <tr><td>Student support services</td><td class="status-warn">⚠️</td><td>Expand support services</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ─── IMAGE BREAK: TIER 2 → TIER 3 ─── -->
+    <div class="tier-image-break">
+      <div class="break-text">
+        <h3>Most Utah districts are starting from zero.</h3>
+        <p>
+          That is not a reason for despair — it is an opportunity. A school board that has
+          never considered a warrant policy hasn't rejected it. The ask is to create something
+          new, not to reverse an existing position.
+        </p>
+        <p style="color: var(--muted); font-size: 0.95rem;">
+          The largest district in Utah — Alpine — has no public protective policy. It serves
+          over 90,000 students. That is the single highest-impact organizing target in the state.
+        </p>
+      </div>
+      <img
+        src="{{ '/assets/images/school-admin-safety-plans.jpg' | url }}"
+        alt="School administrators reviewing safety plans"
+        loading="lazy"
+      />
+    </div>
+
+    <!-- ─── TIER 3 ─── -->
+    <div id="tier3" class="tier-banner tier-banner-3">
+      <div class="tier-banner-icon">❌</div>
+      <div class="tier-banner-text">
+        <strong>Tier 3 — Minimal or No Public Protections</strong>
+        <span>Most Utah districts fall here, including Alpine — the largest district in the state. All share essentially the same baseline: nothing formally in place.</span>
+      </div>
+    </div>
+
+    <div class="district-card">
+      <div class="district-card-header district-card-header-t3">
+        <h3>All Remaining Districts</h3>
+        <div style="font-size: 0.85rem; color: var(--muted);">Alpine · Nebo · Ogden City · Murray · Box Elder · Iron · Wasatch · Park City · and others</div>
+      </div>
+      <table class="scorecard-table">
+        <thead>
+          <tr><th>Category</th><th style="width:4rem;">Status</th><th>What to push for</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Written ICE policy</td><td class="status-bad">❌</td><td>Create a district-wide board-adopted policy</td></tr>
+          <tr><td>Judicial warrant requirement</td><td class="status-bad">❌</td><td>Require judicial warrants before any school access</td></tr>
+          <tr><td>Staff protocols</td><td class="status-bad">❌</td><td>Train and equip front office staff with a clear script</td></tr>
+          <tr><td>Student privacy (FERPA+)</td><td class="status-warn">⚠️</td><td>Clarify that FERPA protections extend to enforcement requests</td></tr>
+          <tr><td>Family communication</td><td class="status-bad">❌</td><td>Notify families of protections in their language</td></tr>
+          <tr><td>Staff training</td><td class="status-bad">❌</td><td>Implement required annual training</td></tr>
+          <tr><td>Emergency response plan</td><td class="status-bad">❌</td><td>Create a written protocol for when ICE arrives on campus</td></tr>
+          <tr><td>Community partnerships</td><td class="status-bad">❌</td><td>Partner with local legal aid organizations</td></tr>
+          <tr><td>Student support services</td><td class="status-warn">⚠️</td><td>Expand counseling resources for students from affected families</td></tr>
+        </tbody>
+      </table>
+      <div class="advocacy-note">
+        <span class="advocacy-note-icon">★</span>
+        <span><strong>Alpine School District priority:</strong> Alpine is the largest school district in Utah and among the 50 largest in the country, serving over 90,000 students. A policy adoption here would be transformative. It is the single highest-impact organizing target in the state.</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════ TAKEAWAYS ════════════════════════════════════════ -->
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Key takeaways for Utah advocates</h2>
+    </div>
+
+    <div class="cards-grid">
+      <article class="card">
+        <h3>Even the best districts are incomplete</h3>
+        <p>
+          No Utah district fully meets all nine criteria. The most common gaps statewide are
+          training, emergency protocols, and formal board adoption. There is room to push in
+          every district.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Most districts are starting from zero</h3>
+        <p>
+          This is powerful for advocacy. The ask is not to overhaul a hostile system — it is
+          to create basic protections where none exist. You are not asking them to change
+          direction. You are asking them to start.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Utah leaves it to districts</h3>
+        <p>
+          Every protection in Utah is the result of local organizing. Every unprotected
+          district is a direct advocacy opportunity with a reachable decision-maker: your
+          local school board.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>The Utah Compact is an asset</h3>
+        <p>
+          Utah's history of bipartisan civic engagement — the Compact, LDS Church positions,
+          business community support — makes cross-party advocacy more viable here than in
+          most conservative states.
+        </p>
+      </article>
+    </div>
+
+    <div class="split" style="margin-top: var(--space-8);">
+      <div class="panel">
+        <h3>The five highest-impact asks for any Utah district</h3>
+        <ul class="styled-list">
+          <li><strong>Require a judicial warrant</strong> before any immigration enforcement officer enters non-public school areas</li>
+          <li><strong>Train front office staff</strong> with a clear, written script for what to do and who to call</li>
+          <li><strong>Adopt a formal board policy</strong> — not a FAQ, not informal guidance, but a policy the board has voted on</li>
+          <li><strong>Protect student records</strong> — make explicit that FERPA applies to immigration enforcement requests</li>
+          <li><strong>Create a public emergency response plan</strong> for when enforcement officers arrive on campus</li>
+        </ul>
+      </div>
+
+      <div class="image-card">
+        <img
+          src="{{ '/assets/images/holding-fight-today-for-a-better-tomorrow-sign.jpg' | url }}"
+          alt="Person holding a sign about fighting for a better tomorrow"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="panel">
+      <h3>General resources</h3>
+      <ul class="styled-list">
+        <li><a href="{{ '/policy-solutions.html' | url }}">Policy solutions schools can adopt</a></li>
+        <li><a href="{{ '/policy/policy-statement.html' | url }}">Model policy language for districts</a></li>
+        <li><a href="{{ '/learning/know-your-rights.html' | url }}">Know your rights</a></li>
+        <li><a href="{{ '/campaigns/organize-a-campaign.html' | url }}">How to organize a campaign in your district</a></li>
+        <li><a href="{{ '/take-action.html' | url }}">Take action</a></li>
+        <li><a href="{{ '/campaigns/stay-informed.html' | url }}">Sign up to stay informed</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="cta" aria-label="Closing call to action">
+  <div class="container cta-inner">
+    <h2>Your school board makes the call.</h2>
+    <p>
+      In Utah, there is no state law to wait for. The decision is made at the district level —
+      which means your school board can act right now if advocates show up and make the ask.
+    </p>
+    <div class="button-row">
+      <a class="button button-primary" href="{{ '/campaigns/organize-a-campaign.html' | url }}">Organize a Campaign</a>
+      <a class="button button-light" href="{{ '/learning/state-information.html' | url }}">All States</a>
+    </div>
+  </div>
+</section>
