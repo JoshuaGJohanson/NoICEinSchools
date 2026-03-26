@@ -305,6 +305,7 @@ permalink: /stay-informed/email-updates.html
   </div>
 </section>
 
+<script src="{{ '/assets/js/districts-by-state.js' | url }}"></script>
 <script>
 (function () {
   const form        = document.getElementById('signup-form');
@@ -318,123 +319,6 @@ permalink: /stay-informed/email-updates.html
   const activityNote = document.getElementById('activity-note');
   const datalist     = document.getElementById('district-suggestions');
   const districtInput = document.getElementById('district');
-
-  const districtsByState = {
-    'California': [
-      'Los Angeles Unified School District',
-      'San Diego Unified School District',
-      'San Francisco Unified School District',
-      'Fresno Unified School District',
-      'Long Beach Unified School District',
-      'Sacramento City Unified School District',
-      'San Jose Unified School District',
-      'Oakland Unified School District',
-      'Santa Ana Unified School District',
-      'Riverside Unified School District',
-    ],
-    'Utah': [
-      'Alpine School District',
-      'Jordan School District',
-      'Salt Lake City School District',
-      'Davis School District',
-      'Granite School District',
-      'Canyons School District',
-      'Weber School District',
-      'Washington County School District',
-      'Nebo School District',
-      'Cache County School District',
-    ],
-    'Colorado': [
-      'Denver Public Schools',
-      'Jefferson County Public Schools',
-      'Cherry Creek School District',
-      'Douglas County School District',
-      'Colorado Springs School District 11',
-      'Aurora Public Schools',
-      'Poudre School District',
-      'St. Vrain Valley School District',
-      'Boulder Valley School District',
-      'Adams 12 Five Star Schools',
-    ],
-    'Nevada': [
-      'Clark County School District',
-      'Washoe County School District',
-      'Carson City School District',
-      'Elko County School District',
-      'Lyon County School District',
-      'Douglas County School District',
-      'Nye County School District',
-      'Humboldt County School District',
-      'Churchill County School District',
-      'White Pine County School District',
-    ],
-    'Idaho': [
-      'Boise School District',
-      'West Ada School District',
-      'Idaho Falls School District',
-      'Pocatello/Chubbuck School District',
-      'Twin Falls School District',
-      "Coeur d'Alene School District",
-      'Nampa School District',
-      'Vallivue School District',
-      'Madison School District',
-      'Bonneville Joint School District',
-    ],
-    'Texas': [
-      'Houston Independent School District',
-      'Dallas Independent School District',
-      'Austin Independent School District',
-      'San Antonio Independent School District',
-      'Fort Worth Independent School District',
-    ],
-    'Florida': [
-      'Miami-Dade County Public Schools',
-      'Broward County Public Schools',
-      'Orange County Public Schools',
-      'Hillsborough County Public Schools',
-      'Palm Beach County School District',
-    ],
-    'New York': [
-      'New York City Department of Education',
-      'Buffalo City School District',
-      'Rochester City School District',
-    ],
-    'Illinois': [
-      'Chicago Public Schools',
-      'Naperville Community Unit School District 203',
-    ],
-    'Arizona': [
-      'Mesa Public Schools',
-      'Chandler Unified School District',
-    ],
-    'Washington': [
-      'Seattle Public Schools',
-    ],
-    'Oregon': [
-      'Portland Public Schools',
-    ],
-    'Georgia': [
-      'Gwinnett County Public Schools',
-    ],
-    'North Carolina': [
-      'Wake County Public School System',
-    ],
-    'Virginia': [
-      'Fairfax County Public Schools',
-    ],
-    'Pennsylvania': [
-      'Philadelphia School District',
-    ],
-    'Ohio': [
-      'Columbus City Schools',
-    ],
-    'Michigan': [
-      'Detroit Public Schools Community District',
-    ],
-    'Massachusetts': [
-      'Boston Public Schools',
-    ],
-  };
 
   const highActivity = [
     'Arizona','California','Colorado','Florida','Georgia','Illinois','Maryland',
