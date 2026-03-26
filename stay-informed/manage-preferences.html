@@ -297,7 +297,8 @@ permalink: /stay-informed/manage-preferences.html
 
           <div class="field">
             <label for="district">School district <span style="font-weight:400; color:var(--muted);">(optional)</span></label>
-            <input type="text" id="district" name="district" placeholder="e.g. Jordan School District" autocomplete="off" />
+            <input type="text" id="district" name="district" placeholder="e.g. Jordan School District" autocomplete="off" list="district-suggestions" />
+            <datalist id="district-suggestions"></datalist>
           </div>
 
           <div class="field">
@@ -355,6 +356,8 @@ permalink: /stay-informed/manage-preferences.html
   </div>
 </section>
 
+<script src="{{ '/assets/js/districts-by-state.js' | url }}"></script>
+<script src="{{ '/assets/js/subscription-form.js' | url }}"></script>
 <script>
 (function () {
   const formWrap      = document.getElementById('form-wrap');
@@ -367,34 +370,12 @@ permalink: /stay-informed/manage-preferences.html
   const cbError       = document.getElementById('checkboxes-error');
   const stateSelect   = document.getElementById('state');
   const activityNote  = document.getElementById('activity-note');
+  const datalist      = document.getElementById('district-suggestions');
+  const districtInput = document.getElementById('district');
   const unsubBtn      = document.getElementById('unsub-btn');
   const unsubError    = document.getElementById('unsub-error');
 
-  const highActivity = [
-    'Arizona','California','Colorado','Florida','Georgia','Illinois','Maryland',
-    'Massachusetts','Mississippi','Nevada','New Jersey','New York','North Carolina',
-    'Oregon','Pennsylvania','Texas','Virginia','Washington'
-  ];
-
-  const lowActivity = [
-    'Alaska','Hawaii','Maine','Montana','North Dakota','South Dakota',
-    'Vermont','West Virginia','Wyoming'
-  ];
-
-  stateSelect.addEventListener('change', function () {
-    const s = this.value;
-    if (!s) { activityNote.textContent = ''; activityNote.classList.remove('visible'); return; }
-    let msg = '';
-    if (highActivity.includes(s)) {
-      msg = '⚡ ' + s + ' has high ICE enforcement activity and active campaigns. Local and state updates are especially valuable here.';
-    } else if (lowActivity.includes(s)) {
-      msg = s + ' has relatively limited ICE enforcement activity. National updates will keep you informed of broader trends.';
-    } else {
-      msg = 'Campaign activity in ' + s + ' varies by district. State and local updates will help you track what is happening near you.';
-    }
-    activityNote.textContent = msg;
-    activityNote.classList.add('visible');
-  });
+  initSubscriptionForm({ stateSelect, districtInput, datalist, activityNote });
 
   function validateEmail(val) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val.trim());
