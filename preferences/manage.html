@@ -1,0 +1,531 @@
+---
+layout: default
+title: Manage Your Preferences
+description: Update your subscription preferences or unsubscribe from all updates.
+permalink: /preferences/manage.html
+---
+
+<style>
+  .signup-wrap {
+    max-width: 520px;
+    margin: 0 auto;
+    padding: var(--space-10) var(--space-4);
+  }
+
+  .signup-wrap h1 {
+    font-size: 1.75rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .signup-wrap .sub {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: var(--space-6);
+  }
+
+  .field {
+    margin-bottom: var(--space-5);
+  }
+
+  .field label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .field .hint {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-bottom: 0.35rem;
+    display: block;
+  }
+
+  .field input[type="email"],
+  .field input[type="text"],
+  .field select {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    font-size: 0.95rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--text);
+    box-sizing: border-box;
+    transition: border-color 0.15s;
+  }
+
+  .field input:focus,
+  .field select:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 15%, transparent);
+  }
+
+  .field input.invalid,
+  .field select.invalid {
+    border-color: #b91c1c;
+  }
+
+  .checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-top: 0.25rem;
+  }
+
+  .checkbox-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    cursor: pointer;
+  }
+
+  .checkbox-row input[type="checkbox"] {
+    width: 1.1rem;
+    height: 1.1rem;
+    margin-top: 0.15rem;
+    flex-shrink: 0;
+    accent-color: var(--accent);
+    cursor: pointer;
+  }
+
+  .checkbox-row .cb-label {
+    font-size: 0.93rem;
+  }
+
+  .checkbox-row .cb-label strong {
+    display: block;
+    line-height: 1.3;
+  }
+
+  .checkbox-row .cb-label span {
+    color: var(--muted);
+    font-size: 0.82rem;
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: var(--space-6) 0;
+  }
+
+  .unsubscribe-section {
+    padding: var(--space-4) var(--space-4);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+  }
+
+  .unsubscribe-section h2 {
+    font-size: 1rem;
+    margin-bottom: 0.35rem;
+    color: var(--text);
+  }
+
+  .unsubscribe-section p {
+    font-size: 0.875rem;
+    color: var(--muted);
+    margin-bottom: var(--space-4);
+  }
+
+  .activity-note {
+    margin-top: var(--space-4);
+    padding: 0.75rem 1rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: var(--radius);
+    font-size: 0.85rem;
+    color: var(--muted);
+    display: none;
+  }
+
+  .activity-note.visible { display: block; }
+
+  .privacy-note {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-bottom: var(--space-5);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .field-error {
+    font-size: 0.82rem;
+    color: #b91c1c;
+    margin-top: 0.3rem;
+    display: none;
+  }
+
+  .field-error.visible { display: block; }
+
+  .form-error {
+    padding: 0.75rem 1rem;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: var(--radius);
+    color: #991b1b;
+    font-size: 0.9rem;
+    margin-bottom: var(--space-4);
+    display: none;
+  }
+
+  .form-error.visible { display: block; }
+
+  .success-state {
+    text-align: center;
+    padding: var(--space-8) 0;
+    display: none;
+  }
+
+  .success-state.visible { display: block; }
+
+  .success-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-3);
+  }
+
+  .success-state h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .success-state p {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: var(--space-5);
+  }
+
+  #manage-form button[type="submit"] {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  #manage-form button[type="submit"]:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  .button-unsubscribe {
+    width: 100%;
+    padding: 0.65rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    background: transparent;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+    border-radius: var(--radius);
+    transition: background 0.15s, border-color 0.15s;
+  }
+
+  .button-unsubscribe:hover {
+    background: #fef2f2;
+    border-color: #fca5a5;
+  }
+
+  .button-unsubscribe:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  @media (max-width: 480px) {
+    .signup-wrap { padding: var(--space-6) var(--space-3); }
+    .signup-wrap h1 { font-size: 1.5rem; }
+  }
+</style>
+
+<section class="section">
+  <div class="container">
+    <div class="signup-wrap">
+
+      <div id="success-state" class="success-state" aria-live="polite">
+        <div class="success-icon">✅</div>
+        <h2>Preferences saved.</h2>
+        <p>Your subscription preferences have been updated.</p>
+        <a class="button button-light" href="{{ '/' | url }}">Back to Home</a>
+      </div>
+
+      <div id="unsub-success-state" class="success-state" aria-live="polite">
+        <div class="success-icon">👋</div>
+        <h2>You've been unsubscribed.</h2>
+        <p>You will no longer receive any emails from us. If you change your mind, you can sign up again anytime.</p>
+        <a class="button button-light" href="{{ '/' | url }}">Back to Home</a>
+      </div>
+
+      <div id="form-wrap">
+        <h1>Manage your preferences.</h1>
+        <p class="sub">Update what you hear from us, or unsubscribe from everything.</p>
+
+        <div id="form-error" class="form-error" role="alert"></div>
+
+        <form id="manage-form" novalidate>
+
+          <div class="field">
+            <label for="email">Email address <span style="color:#b91c1c;">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com" />
+            <div id="email-error" class="field-error">Please enter a valid email address.</div>
+          </div>
+
+          <div class="field">
+            <label for="state">State <span style="font-weight:400; color:var(--muted);">(optional)</span></label>
+            <select id="state" name="state">
+              <option value="">— Select your state —</option>
+              <option>Alabama</option><option>Alaska</option><option>Arizona</option>
+              <option>Arkansas</option><option>California</option><option>Colorado</option>
+              <option>Connecticut</option><option>Delaware</option><option>Florida</option>
+              <option>Georgia</option><option>Hawaii</option><option>Idaho</option>
+              <option>Illinois</option><option>Indiana</option><option>Iowa</option>
+              <option>Kansas</option><option>Kentucky</option><option>Louisiana</option>
+              <option>Maine</option><option>Maryland</option><option>Massachusetts</option>
+              <option>Michigan</option><option>Minnesota</option><option>Mississippi</option>
+              <option>Missouri</option><option>Montana</option><option>Nebraska</option>
+              <option>Nevada</option><option>New Hampshire</option><option>New Jersey</option>
+              <option>New Mexico</option><option>New York</option><option>North Carolina</option>
+              <option>North Dakota</option><option>Ohio</option><option>Oklahoma</option>
+              <option>Oregon</option><option>Pennsylvania</option><option>Rhode Island</option>
+              <option>South Carolina</option><option>South Dakota</option><option>Tennessee</option>
+              <option>Texas</option><option>Utah</option><option>Vermont</option>
+              <option>Virginia</option><option>Washington</option><option>West Virginia</option>
+              <option>Wisconsin</option><option>Wyoming</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="district">School district <span style="font-weight:400; color:var(--muted);">(optional)</span></label>
+            <input type="text" id="district" name="district" placeholder="e.g. Jordan School District" autocomplete="off" />
+          </div>
+
+          <div class="field">
+            <label>What do you want updates about? <span style="color:#b91c1c;">*</span></label>
+            <div id="checkboxes-error" class="field-error"></div>
+            <div class="checkboxes" role="group">
+              <label class="checkbox-row">
+                <input type="checkbox" id="sub_national" name="sub_national" />
+                <div class="cb-label">
+                  <strong>Newsletter</strong>
+                  <span>Campaign milestones, new resources, and major developments across the country</span>
+                </div>
+              </label>
+              <label class="checkbox-row">
+                <input type="checkbox" id="sub_state" name="sub_state" />
+                <div class="cb-label">
+                  <strong>State updates</strong>
+                  <span>Legislation, enforcement trends, and campaign news in your state — requires a state selection above</span>
+                </div>
+              </label>
+              <label class="checkbox-row">
+                <input type="checkbox" id="sub_local" name="sub_local" />
+                <div class="cb-label">
+                  <strong>Local updates</strong>
+                  <span>School board meetings, petitions, and actions in your district — requires a school district above</span>
+                </div>
+              </label>
+            </div>
+            <div id="activity-note" class="activity-note" aria-live="polite"></div>
+          </div>
+
+          <div class="privacy-note">
+            <span>🔒</span>
+            <span>We only collect what we need. You can unsubscribe anytime.</span>
+          </div>
+
+          <div class="field">
+            <button type="submit" class="button button-primary">Save preferences</button>
+          </div>
+
+        </form>
+
+        <hr class="divider" />
+
+        <div class="unsubscribe-section">
+          <h2>Unsubscribe from everything</h2>
+          <p>Enter your email address above and click below to stop all emails from us.</p>
+          <div id="unsub-error" class="form-error" role="alert"></div>
+          <button id="unsub-btn" class="button-unsubscribe" type="button">Unsubscribe from all</button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  const formWrap      = document.getElementById('form-wrap');
+  const successEl     = document.getElementById('success-state');
+  const unsubSuccess  = document.getElementById('unsub-success-state');
+  const form          = document.getElementById('manage-form');
+  const formError     = document.getElementById('form-error');
+  const emailInput    = document.getElementById('email');
+  const emailError    = document.getElementById('email-error');
+  const cbError       = document.getElementById('checkboxes-error');
+  const stateSelect   = document.getElementById('state');
+  const activityNote  = document.getElementById('activity-note');
+  const unsubBtn      = document.getElementById('unsub-btn');
+  const unsubError    = document.getElementById('unsub-error');
+
+  const highActivity = [
+    'Arizona','California','Colorado','Florida','Georgia','Illinois','Maryland',
+    'Massachusetts','Mississippi','Nevada','New Jersey','New York','North Carolina',
+    'Oregon','Pennsylvania','Texas','Virginia','Washington'
+  ];
+
+  const lowActivity = [
+    'Alaska','Hawaii','Maine','Montana','North Dakota','South Dakota',
+    'Vermont','West Virginia','Wyoming'
+  ];
+
+  stateSelect.addEventListener('change', function () {
+    const s = this.value;
+    if (!s) { activityNote.textContent = ''; activityNote.classList.remove('visible'); return; }
+    let msg = '';
+    if (highActivity.includes(s)) {
+      msg = '⚡ ' + s + ' has high ICE enforcement activity and active campaigns. Local and state updates are especially valuable here.';
+    } else if (lowActivity.includes(s)) {
+      msg = s + ' has relatively limited ICE enforcement activity. National updates will keep you informed of broader trends.';
+    } else {
+      msg = 'Campaign activity in ' + s + ' varies by district. State and local updates will help you track what is happening near you.';
+    }
+    activityNote.textContent = msg;
+    activityNote.classList.add('visible');
+  });
+
+  function validateEmail(val) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val.trim());
+  }
+
+  function getEmail() {
+    return emailInput.value.trim();
+  }
+
+  function clearEmailError() {
+    emailError.classList.remove('visible');
+    emailInput.classList.remove('invalid');
+  }
+
+  function showEmailError() {
+    emailError.classList.add('visible');
+    emailInput.classList.add('invalid');
+    emailInput.focus();
+  }
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    let valid = true;
+
+    if (!validateEmail(getEmail())) {
+      showEmailError();
+      valid = false;
+    } else {
+      clearEmailError();
+    }
+
+    const national = document.getElementById('sub_national').checked;
+    const state    = document.getElementById('sub_state').checked;
+    const local    = document.getElementById('sub_local').checked;
+
+    let cbMsg = '';
+    if (!national && !state && !local) {
+      cbMsg = 'Please select at least one option.';
+    } else if (state && !stateSelect.value) {
+      cbMsg = 'Please select your state to receive state updates.';
+    } else if (local && !document.getElementById('district').value.trim()) {
+      cbMsg = 'Please enter your school district to receive local updates.';
+    }
+
+    if (cbMsg) {
+      cbError.textContent = cbMsg;
+      cbError.classList.add('visible');
+      valid = false;
+    } else {
+      cbError.textContent = '';
+      cbError.classList.remove('visible');
+    }
+
+    if (!valid) return;
+
+    const btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'Saving…';
+    formError.classList.remove('visible');
+
+    const payload = {
+      email:        getEmail(),
+      state:        stateSelect.value || null,
+      district:     document.getElementById('district').value.trim() || null,
+      sub_national: national,
+      sub_state:    state,
+      sub_local:    local,
+    };
+
+    try {
+      const res = await fetch('/api/subscribe', {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body:    JSON.stringify(payload),
+      });
+
+      if (res.ok) {
+        formWrap.style.display = 'none';
+        successEl.classList.add('visible');
+        successEl.focus();
+      } else {
+        const data = await res.json().catch(() => ({}));
+        formError.textContent = data.message || 'Something went wrong. Please try again.';
+        formError.classList.add('visible');
+        btn.disabled = false;
+        btn.textContent = 'Save preferences';
+      }
+    } catch (err) {
+      formError.textContent = 'Unable to reach the server. Please check your connection and try again.';
+      formError.classList.add('visible');
+      btn.disabled = false;
+      btn.textContent = 'Save preferences';
+    }
+  });
+
+  unsubBtn.addEventListener('click', async function () {
+    if (!validateEmail(getEmail())) {
+      showEmailError();
+      return;
+    }
+    clearEmailError();
+    unsubError.classList.remove('visible');
+
+    unsubBtn.disabled = true;
+    unsubBtn.textContent = 'Unsubscribing…';
+
+    try {
+      const res = await fetch('/api/unsubscribe', {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body:    JSON.stringify({ email: getEmail() }),
+      });
+
+      if (res.ok) {
+        formWrap.style.display = 'none';
+        unsubSuccess.classList.add('visible');
+        unsubSuccess.focus();
+      } else {
+        const data = await res.json().catch(() => ({}));
+        unsubError.textContent = data.message || 'Something went wrong. Please try again.';
+        unsubError.classList.add('visible');
+        unsubBtn.disabled = false;
+        unsubBtn.textContent = 'Unsubscribe from all';
+      }
+    } catch (err) {
+      unsubError.textContent = 'Unable to reach the server. Please check your connection and try again.';
+      unsubError.classList.add('visible');
+      unsubBtn.disabled = false;
+      unsubBtn.textContent = 'Unsubscribe from all';
+    }
+  });
+})();
+</script>
