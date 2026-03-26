@@ -1,9 +1,23 @@
 ---
 layout: default
-title: Manage Your Preferences
-description: Update your subscription preferences or unsubscribe from all updates.
-permalink: /preferences/manage.html
+title: Sign Up for Updates
+description: Sign up to receive updates about school immigration enforcement policies and campaigns in your area.
+permalink: /stay-informed/email-updates.html
 ---
+
+<section class="hero" style="background: linear-gradient(rgba(7,25,38,0.6),rgba(7,25,38,0.6)), url({{ '/assets/images/smiling-teenager-on-cell-phone.jpg' | url }}) center/cover no-repeat;" aria-label="Stay informed hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="eyebrow">Stay connected</div>
+      <h1>Get updates about campaigns and actions in your area.</h1>
+      <p>
+        Sign up to hear about school board meetings, petitions, protests, and campaign
+        developments near you. We will only contact you about things that are relevant
+        to your district and community.
+      </p>
+    </div>
+  </div>
+</section>
 
 <style>
   .signup-wrap {
@@ -104,31 +118,6 @@ permalink: /preferences/manage.html
     font-size: 0.82rem;
   }
 
-  .divider {
-    border: none;
-    border-top: 1px solid var(--border);
-    margin: var(--space-6) 0;
-  }
-
-  .unsubscribe-section {
-    padding: var(--space-4) var(--space-4);
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-  }
-
-  .unsubscribe-section h2 {
-    font-size: 1rem;
-    margin-bottom: 0.35rem;
-    color: var(--text);
-  }
-
-  .unsubscribe-section p {
-    font-size: 0.875rem;
-    color: var(--muted);
-    margin-bottom: var(--space-4);
-  }
-
   .activity-note {
     margin-top: var(--space-4);
     padding: 0.75rem 1rem;
@@ -197,7 +186,7 @@ permalink: /preferences/manage.html
     margin-bottom: var(--space-5);
   }
 
-  #manage-form button[type="submit"] {
+  #signup-form button[type="submit"] {
     width: 100%;
     padding: 0.75rem;
     font-size: 1rem;
@@ -205,30 +194,7 @@ permalink: /preferences/manage.html
     cursor: pointer;
   }
 
-  #manage-form button[type="submit"]:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-  }
-
-  .button-unsubscribe {
-    width: 100%;
-    padding: 0.65rem;
-    font-size: 0.95rem;
-    font-weight: 600;
-    cursor: pointer;
-    background: transparent;
-    color: #b91c1c;
-    border: 1px solid #fecaca;
-    border-radius: var(--radius);
-    transition: background 0.15s, border-color 0.15s;
-  }
-
-  .button-unsubscribe:hover {
-    background: #fef2f2;
-    border-color: #fca5a5;
-  }
-
-  .button-unsubscribe:disabled {
+  #signup-form button[type="submit"]:disabled {
     opacity: 0.6;
     cursor: not-allowed;
   }
@@ -244,26 +210,19 @@ permalink: /preferences/manage.html
     <div class="signup-wrap">
 
       <div id="success-state" class="success-state" aria-live="polite">
-        <div class="success-icon">✅</div>
-        <h2>Preferences saved.</h2>
-        <p>Your subscription preferences have been updated.</p>
-        <a class="button button-light" href="{{ '/' | url }}">Back to Home</a>
-      </div>
-
-      <div id="unsub-success-state" class="success-state" aria-live="polite">
-        <div class="success-icon">👋</div>
-        <h2>You've been unsubscribed.</h2>
-        <p>You will no longer receive any emails from us. If you change your mind, you can sign up again anytime.</p>
+        <div class="success-icon">📬</div>
+        <h2>Check your email.</h2>
+        <p>We sent a confirmation link to the address you provided. Click it to activate your subscription.</p>
         <a class="button button-light" href="{{ '/' | url }}">Back to Home</a>
       </div>
 
       <div id="form-wrap">
-        <h1>Manage your preferences.</h1>
-        <p class="sub">Update what you hear from us, or unsubscribe from everything.</p>
+        <h1>Stay informed.</h1>
+        <p class="sub">Get updates about campaigns, school board meetings, petitions, and protests relevant to your area.</p>
 
         <div id="form-error" class="form-error" role="alert"></div>
 
-        <form id="manage-form" novalidate>
+        <form id="signup-form" novalidate>
 
           <div class="field">
             <label for="email">Email address <span style="color:#b91c1c;">*</span></label>
@@ -297,13 +256,14 @@ permalink: /preferences/manage.html
 
           <div class="field">
             <label for="district">School district <span style="font-weight:400; color:var(--muted);">(optional)</span></label>
-            <input type="text" id="district" name="district" placeholder="e.g. Jordan School District" autocomplete="off" />
+            <input type="text" id="district" name="district" placeholder="e.g. Los Angeles Unified School District" list="district-suggestions" />
+            <datalist id="district-suggestions"></datalist>
           </div>
 
           <div class="field">
             <label>What do you want updates about? <span style="color:#b91c1c;">*</span></label>
             <div id="checkboxes-error" class="field-error"></div>
-            <div class="checkboxes" role="group">
+            <div class="checkboxes" role="group" aria-labelledby="pref-label">
               <label class="checkbox-row">
                 <input type="checkbox" id="sub_national" name="sub_national" />
                 <div class="cb-label">
@@ -335,20 +295,10 @@ permalink: /preferences/manage.html
           </div>
 
           <div class="field">
-            <button type="submit" class="button button-primary">Save preferences</button>
+            <button type="submit" class="button button-primary">Sign Up</button>
           </div>
 
         </form>
-
-        <hr class="divider" />
-
-        <div class="unsubscribe-section">
-          <h2>Unsubscribe from everything</h2>
-          <p>Enter your email address above and click below to stop all emails from us.</p>
-          <div id="unsub-error" class="form-error" role="alert"></div>
-          <button id="unsub-btn" class="button-unsubscribe" type="button">Unsubscribe from all</button>
-        </div>
-
       </div>
 
     </div>
@@ -357,18 +307,134 @@ permalink: /preferences/manage.html
 
 <script>
 (function () {
-  const formWrap      = document.getElementById('form-wrap');
-  const successEl     = document.getElementById('success-state');
-  const unsubSuccess  = document.getElementById('unsub-success-state');
-  const form          = document.getElementById('manage-form');
-  const formError     = document.getElementById('form-error');
-  const emailInput    = document.getElementById('email');
-  const emailError    = document.getElementById('email-error');
-  const cbError       = document.getElementById('checkboxes-error');
-  const stateSelect   = document.getElementById('state');
-  const activityNote  = document.getElementById('activity-note');
-  const unsubBtn      = document.getElementById('unsub-btn');
-  const unsubError    = document.getElementById('unsub-error');
+  const form        = document.getElementById('signup-form');
+  const formWrap    = document.getElementById('form-wrap');
+  const successEl   = document.getElementById('success-state');
+  const formError   = document.getElementById('form-error');
+  const emailInput  = document.getElementById('email');
+  const emailError  = document.getElementById('email-error');
+  const cbError     = document.getElementById('checkboxes-error');
+  const stateSelect = document.getElementById('state');
+  const activityNote = document.getElementById('activity-note');
+  const datalist     = document.getElementById('district-suggestions');
+  const districtInput = document.getElementById('district');
+
+  const districtsByState = {
+    'California': [
+      'Los Angeles Unified School District',
+      'San Diego Unified School District',
+      'San Francisco Unified School District',
+      'Fresno Unified School District',
+      'Long Beach Unified School District',
+      'Sacramento City Unified School District',
+      'San Jose Unified School District',
+      'Oakland Unified School District',
+      'Santa Ana Unified School District',
+      'Riverside Unified School District',
+    ],
+    'Utah': [
+      'Alpine School District',
+      'Jordan School District',
+      'Salt Lake City School District',
+      'Davis School District',
+      'Granite School District',
+      'Canyons School District',
+      'Weber School District',
+      'Washington County School District',
+      'Nebo School District',
+      'Cache County School District',
+    ],
+    'Colorado': [
+      'Denver Public Schools',
+      'Jefferson County Public Schools',
+      'Cherry Creek School District',
+      'Douglas County School District',
+      'Colorado Springs School District 11',
+      'Aurora Public Schools',
+      'Poudre School District',
+      'St. Vrain Valley School District',
+      'Boulder Valley School District',
+      'Adams 12 Five Star Schools',
+    ],
+    'Nevada': [
+      'Clark County School District',
+      'Washoe County School District',
+      'Carson City School District',
+      'Elko County School District',
+      'Lyon County School District',
+      'Douglas County School District',
+      'Nye County School District',
+      'Humboldt County School District',
+      'Churchill County School District',
+      'White Pine County School District',
+    ],
+    'Idaho': [
+      'Boise School District',
+      'West Ada School District',
+      'Idaho Falls School District',
+      'Pocatello/Chubbuck School District',
+      'Twin Falls School District',
+      "Coeur d'Alene School District",
+      'Nampa School District',
+      'Vallivue School District',
+      'Madison School District',
+      'Bonneville Joint School District',
+    ],
+    'Texas': [
+      'Houston Independent School District',
+      'Dallas Independent School District',
+      'Austin Independent School District',
+      'San Antonio Independent School District',
+      'Fort Worth Independent School District',
+    ],
+    'Florida': [
+      'Miami-Dade County Public Schools',
+      'Broward County Public Schools',
+      'Orange County Public Schools',
+      'Hillsborough County Public Schools',
+      'Palm Beach County School District',
+    ],
+    'New York': [
+      'New York City Department of Education',
+      'Buffalo City School District',
+      'Rochester City School District',
+    ],
+    'Illinois': [
+      'Chicago Public Schools',
+      'Naperville Community Unit School District 203',
+    ],
+    'Arizona': [
+      'Mesa Public Schools',
+      'Chandler Unified School District',
+    ],
+    'Washington': [
+      'Seattle Public Schools',
+    ],
+    'Oregon': [
+      'Portland Public Schools',
+    ],
+    'Georgia': [
+      'Gwinnett County Public Schools',
+    ],
+    'North Carolina': [
+      'Wake County Public School System',
+    ],
+    'Virginia': [
+      'Fairfax County Public Schools',
+    ],
+    'Pennsylvania': [
+      'Philadelphia School District',
+    ],
+    'Ohio': [
+      'Columbus City Schools',
+    ],
+    'Michigan': [
+      'Detroit Public Schools Community District',
+    ],
+    'Massachusetts': [
+      'Boston Public Schools',
+    ],
+  };
 
   const highActivity = [
     'Arizona','California','Colorado','Florida','Georgia','Illinois','Maryland',
@@ -383,7 +449,13 @@ permalink: /preferences/manage.html
 
   stateSelect.addEventListener('change', function () {
     const s = this.value;
-    if (!s) { activityNote.textContent = ''; activityNote.classList.remove('visible'); return; }
+    if (!s) {
+      activityNote.textContent = '';
+      activityNote.classList.remove('visible');
+      datalist.innerHTML = '';
+      districtInput.placeholder = 'e.g. Jordan School District';
+      return;
+    }
     let msg = '';
     if (highActivity.includes(s)) {
       msg = '⚡ ' + s + ' has high ICE enforcement activity and active campaigns. Local and state updates are especially valuable here.';
@@ -394,25 +466,31 @@ permalink: /preferences/manage.html
     }
     activityNote.textContent = msg;
     activityNote.classList.add('visible');
+
+    datalist.innerHTML = '';
+    const hasDistricts = (districtsByState[s] || []).length > 0;
+    districtInput.placeholder = hasDistricts
+      ? 'Start typing your district\u2026'
+      : 'e.g. Los Angeles Unified School District';
+  });
+
+  districtInput.addEventListener('input', function () {
+    const q = this.value.trim().toLowerCase();
+    datalist.innerHTML = '';
+    if (!q) return;
+    const all = districtsByState[stateSelect.value] || [];
+    all
+      .filter(function(d) { return d.toLowerCase().includes(q); })
+      .slice(0, 4)
+      .forEach(function(d) {
+        const opt = document.createElement('option');
+        opt.value = d;
+        datalist.appendChild(opt);
+      });
   });
 
   function validateEmail(val) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val.trim());
-  }
-
-  function getEmail() {
-    return emailInput.value.trim();
-  }
-
-  function clearEmailError() {
-    emailError.classList.remove('visible');
-    emailInput.classList.remove('invalid');
-  }
-
-  function showEmailError() {
-    emailError.classList.add('visible');
-    emailInput.classList.add('invalid');
-    emailInput.focus();
   }
 
   form.addEventListener('submit', async function (e) {
@@ -420,13 +498,18 @@ permalink: /preferences/manage.html
 
     let valid = true;
 
-    if (!validateEmail(getEmail())) {
-      showEmailError();
+    // Email
+    if (!validateEmail(emailInput.value)) {
+      emailError.classList.add('visible');
+      emailInput.classList.add('invalid');
+      emailInput.focus();
       valid = false;
     } else {
-      clearEmailError();
+      emailError.classList.remove('visible');
+      emailInput.classList.remove('invalid');
     }
 
+    // Checkboxes
     const national = document.getElementById('sub_national').checked;
     const state    = document.getElementById('sub_state').checked;
     const local    = document.getElementById('sub_local').checked;
@@ -453,13 +536,13 @@ permalink: /preferences/manage.html
 
     const btn = form.querySelector('button[type="submit"]');
     btn.disabled = true;
-    btn.textContent = 'Saving…';
+    btn.textContent = 'Signing up…';
     formError.classList.remove('visible');
 
     const payload = {
-      email:        getEmail(),
-      state:        stateSelect.value || null,
-      district:     document.getElementById('district').value.trim() || null,
+      email:       emailInput.value.trim(),
+      state:       stateSelect.value || null,
+      district:    document.getElementById('district').value.trim() || null,
       sub_national: national,
       sub_state:    state,
       sub_local:    local,
@@ -481,50 +564,13 @@ permalink: /preferences/manage.html
         formError.textContent = data.message || 'Something went wrong. Please try again.';
         formError.classList.add('visible');
         btn.disabled = false;
-        btn.textContent = 'Save preferences';
+        btn.textContent = 'Sign Up';
       }
     } catch (err) {
       formError.textContent = 'Unable to reach the server. Please check your connection and try again.';
       formError.classList.add('visible');
       btn.disabled = false;
-      btn.textContent = 'Save preferences';
-    }
-  });
-
-  unsubBtn.addEventListener('click', async function () {
-    if (!validateEmail(getEmail())) {
-      showEmailError();
-      return;
-    }
-    clearEmailError();
-    unsubError.classList.remove('visible');
-
-    unsubBtn.disabled = true;
-    unsubBtn.textContent = 'Unsubscribing…';
-
-    try {
-      const res = await fetch('/api/unsubscribe', {
-        method:  'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body:    JSON.stringify({ email: getEmail() }),
-      });
-
-      if (res.ok) {
-        formWrap.style.display = 'none';
-        unsubSuccess.classList.add('visible');
-        unsubSuccess.focus();
-      } else {
-        const data = await res.json().catch(() => ({}));
-        unsubError.textContent = data.message || 'Something went wrong. Please try again.';
-        unsubError.classList.add('visible');
-        unsubBtn.disabled = false;
-        unsubBtn.textContent = 'Unsubscribe from all';
-      }
-    } catch (err) {
-      unsubError.textContent = 'Unable to reach the server. Please check your connection and try again.';
-      unsubError.classList.add('visible');
-      unsubBtn.disabled = false;
-      unsubBtn.textContent = 'Unsubscribe from all';
+      btn.textContent = 'Sign Up';
     }
   });
 })();

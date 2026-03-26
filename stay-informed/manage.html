@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Sign Up for Updates
-description: Sign up to receive updates about school immigration enforcement policies and campaigns in your area.
-permalink: /preferences/signup.html
+title: Manage Your Preferences
+description: Update your subscription preferences or unsubscribe from all updates.
+permalink: /stay-informed/manage.html
 ---
 
 <style>
@@ -104,6 +104,31 @@ permalink: /preferences/signup.html
     font-size: 0.82rem;
   }
 
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: var(--space-6) 0;
+  }
+
+  .unsubscribe-section {
+    padding: var(--space-4) var(--space-4);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+  }
+
+  .unsubscribe-section h2 {
+    font-size: 1rem;
+    margin-bottom: 0.35rem;
+    color: var(--text);
+  }
+
+  .unsubscribe-section p {
+    font-size: 0.875rem;
+    color: var(--muted);
+    margin-bottom: var(--space-4);
+  }
+
   .activity-note {
     margin-top: var(--space-4);
     padding: 0.75rem 1rem;
@@ -172,7 +197,7 @@ permalink: /preferences/signup.html
     margin-bottom: var(--space-5);
   }
 
-  #signup-form button[type="submit"] {
+  #manage-form button[type="submit"] {
     width: 100%;
     padding: 0.75rem;
     font-size: 1rem;
@@ -180,7 +205,30 @@ permalink: /preferences/signup.html
     cursor: pointer;
   }
 
-  #signup-form button[type="submit"]:disabled {
+  #manage-form button[type="submit"]:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  .button-unsubscribe {
+    width: 100%;
+    padding: 0.65rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    background: transparent;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+    border-radius: var(--radius);
+    transition: background 0.15s, border-color 0.15s;
+  }
+
+  .button-unsubscribe:hover {
+    background: #fef2f2;
+    border-color: #fca5a5;
+  }
+
+  .button-unsubscribe:disabled {
     opacity: 0.6;
     cursor: not-allowed;
   }
@@ -196,19 +244,26 @@ permalink: /preferences/signup.html
     <div class="signup-wrap">
 
       <div id="success-state" class="success-state" aria-live="polite">
-        <div class="success-icon">📬</div>
-        <h2>Check your email.</h2>
-        <p>We sent a confirmation link to the address you provided. Click it to activate your subscription.</p>
+        <div class="success-icon">✅</div>
+        <h2>Preferences saved.</h2>
+        <p>Your subscription preferences have been updated.</p>
+        <a class="button button-light" href="{{ '/' | url }}">Back to Home</a>
+      </div>
+
+      <div id="unsub-success-state" class="success-state" aria-live="polite">
+        <div class="success-icon">👋</div>
+        <h2>You've been unsubscribed.</h2>
+        <p>You will no longer receive any emails from us. If you change your mind, you can sign up again anytime.</p>
         <a class="button button-light" href="{{ '/' | url }}">Back to Home</a>
       </div>
 
       <div id="form-wrap">
-        <h1>Stay informed.</h1>
-        <p class="sub">Get updates about campaigns, school board meetings, petitions, and protests relevant to your area.</p>
+        <h1>Manage your preferences.</h1>
+        <p class="sub">Update what you hear from us, or unsubscribe from everything.</p>
 
         <div id="form-error" class="form-error" role="alert"></div>
 
-        <form id="signup-form" novalidate>
+        <form id="manage-form" novalidate>
 
           <div class="field">
             <label for="email">Email address <span style="color:#b91c1c;">*</span></label>
@@ -248,7 +303,7 @@ permalink: /preferences/signup.html
           <div class="field">
             <label>What do you want updates about? <span style="color:#b91c1c;">*</span></label>
             <div id="checkboxes-error" class="field-error"></div>
-            <div class="checkboxes" role="group" aria-labelledby="pref-label">
+            <div class="checkboxes" role="group">
               <label class="checkbox-row">
                 <input type="checkbox" id="sub_national" name="sub_national" />
                 <div class="cb-label">
@@ -280,10 +335,20 @@ permalink: /preferences/signup.html
           </div>
 
           <div class="field">
-            <button type="submit" class="button button-primary">Sign Up</button>
+            <button type="submit" class="button button-primary">Save preferences</button>
           </div>
 
         </form>
+
+        <hr class="divider" />
+
+        <div class="unsubscribe-section">
+          <h2>Unsubscribe from everything</h2>
+          <p>Enter your email address above and click below to stop all emails from us.</p>
+          <div id="unsub-error" class="form-error" role="alert"></div>
+          <button id="unsub-btn" class="button-unsubscribe" type="button">Unsubscribe from all</button>
+        </div>
+
       </div>
 
     </div>
@@ -292,15 +357,18 @@ permalink: /preferences/signup.html
 
 <script>
 (function () {
-  const form        = document.getElementById('signup-form');
-  const formWrap    = document.getElementById('form-wrap');
-  const successEl   = document.getElementById('success-state');
-  const formError   = document.getElementById('form-error');
-  const emailInput  = document.getElementById('email');
-  const emailError  = document.getElementById('email-error');
-  const cbError     = document.getElementById('checkboxes-error');
-  const stateSelect = document.getElementById('state');
-  const activityNote = document.getElementById('activity-note');
+  const formWrap      = document.getElementById('form-wrap');
+  const successEl     = document.getElementById('success-state');
+  const unsubSuccess  = document.getElementById('unsub-success-state');
+  const form          = document.getElementById('manage-form');
+  const formError     = document.getElementById('form-error');
+  const emailInput    = document.getElementById('email');
+  const emailError    = document.getElementById('email-error');
+  const cbError       = document.getElementById('checkboxes-error');
+  const stateSelect   = document.getElementById('state');
+  const activityNote  = document.getElementById('activity-note');
+  const unsubBtn      = document.getElementById('unsub-btn');
+  const unsubError    = document.getElementById('unsub-error');
 
   const highActivity = [
     'Arizona','California','Colorado','Florida','Georgia','Illinois','Maryland',
@@ -332,23 +400,33 @@ permalink: /preferences/signup.html
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val.trim());
   }
 
+  function getEmail() {
+    return emailInput.value.trim();
+  }
+
+  function clearEmailError() {
+    emailError.classList.remove('visible');
+    emailInput.classList.remove('invalid');
+  }
+
+  function showEmailError() {
+    emailError.classList.add('visible');
+    emailInput.classList.add('invalid');
+    emailInput.focus();
+  }
+
   form.addEventListener('submit', async function (e) {
     e.preventDefault();
 
     let valid = true;
 
-    // Email
-    if (!validateEmail(emailInput.value)) {
-      emailError.classList.add('visible');
-      emailInput.classList.add('invalid');
-      emailInput.focus();
+    if (!validateEmail(getEmail())) {
+      showEmailError();
       valid = false;
     } else {
-      emailError.classList.remove('visible');
-      emailInput.classList.remove('invalid');
+      clearEmailError();
     }
 
-    // Checkboxes
     const national = document.getElementById('sub_national').checked;
     const state    = document.getElementById('sub_state').checked;
     const local    = document.getElementById('sub_local').checked;
@@ -375,13 +453,13 @@ permalink: /preferences/signup.html
 
     const btn = form.querySelector('button[type="submit"]');
     btn.disabled = true;
-    btn.textContent = 'Signing up…';
+    btn.textContent = 'Saving…';
     formError.classList.remove('visible');
 
     const payload = {
-      email:       emailInput.value.trim(),
-      state:       stateSelect.value || null,
-      district:    document.getElementById('district').value.trim() || null,
+      email:        getEmail(),
+      state:        stateSelect.value || null,
+      district:     document.getElementById('district').value.trim() || null,
       sub_national: national,
       sub_state:    state,
       sub_local:    local,
@@ -403,13 +481,50 @@ permalink: /preferences/signup.html
         formError.textContent = data.message || 'Something went wrong. Please try again.';
         formError.classList.add('visible');
         btn.disabled = false;
-        btn.textContent = 'Sign Up';
+        btn.textContent = 'Save preferences';
       }
     } catch (err) {
       formError.textContent = 'Unable to reach the server. Please check your connection and try again.';
       formError.classList.add('visible');
       btn.disabled = false;
-      btn.textContent = 'Sign Up';
+      btn.textContent = 'Save preferences';
+    }
+  });
+
+  unsubBtn.addEventListener('click', async function () {
+    if (!validateEmail(getEmail())) {
+      showEmailError();
+      return;
+    }
+    clearEmailError();
+    unsubError.classList.remove('visible');
+
+    unsubBtn.disabled = true;
+    unsubBtn.textContent = 'Unsubscribing…';
+
+    try {
+      const res = await fetch('/api/unsubscribe', {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body:    JSON.stringify({ email: getEmail() }),
+      });
+
+      if (res.ok) {
+        formWrap.style.display = 'none';
+        unsubSuccess.classList.add('visible');
+        unsubSuccess.focus();
+      } else {
+        const data = await res.json().catch(() => ({}));
+        unsubError.textContent = data.message || 'Something went wrong. Please try again.';
+        unsubError.classList.add('visible');
+        unsubBtn.disabled = false;
+        unsubBtn.textContent = 'Unsubscribe from all';
+      }
+    } catch (err) {
+      unsubError.textContent = 'Unable to reach the server. Please check your connection and try again.';
+      unsubError.classList.add('visible');
+      unsubBtn.disabled = false;
+      unsubBtn.textContent = 'Unsubscribe from all';
     }
   });
 })();
