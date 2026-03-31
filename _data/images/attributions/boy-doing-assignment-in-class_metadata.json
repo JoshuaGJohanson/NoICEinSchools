@@ -1,0 +1,43 @@
+{
+  "id": "GDokEYnOfnE",
+  "title": "Captured in a metropolitan Atlanta, Georgia primary school, seated amongst his classmates, this photograph depicts a young African-American schoolboy who was in the process of drawing with a pencil on a piece of white paper. Note that the student was focused on a drawing book that referenced fantasy flying planes, while intent on creating his artwork, seemingly oblivious to all the classroom goings-on that surrounded him. It is important to know that objects, including pencils, crayons, paper, etc., are known as fomites, and can act as transmitters of illnesses.",
+  "width": 4256,
+  "height": 2832,
+  "color": "#d9d9d9",
+  "created_at": "2020-04-28T11:15:48Z",
+  "updated_at": "2026-03-16T20:09:59Z",
+  "likes": 1010,
+  "downloads": 335269,
+  "views": 39080744,
+  "attribution": {
+    "photographer": {
+      "name": "CDC",
+      "username": "cdc",
+      "portfolio_url": "https://phil.cdc.gov/",
+      "bio": "The Public Health Image Library from the Centers for Disease Control and Prevention (CDC) offers an organized, universal electronic gateway to useful and important public health imagery.",
+      "location": "USA",
+      "profile_image_url": "https://images.unsplash.com/profile-1574341635267-a67096a2de26image?ixlib=rb-4.1.0&crop=faces&fit=crop&w=64&h=64"
+    }
+  },
+  "urls": {
+    "raw": "https://images.unsplash.com/photo-1588072432836-e10032774350?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk3MTU3fA&ixlib=rb-4.1.0",
+    "full": "https://images.unsplash.com/photo-1588072432836-e10032774350?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk3MTU3fA&ixlib=rb-4.1.0&q=85",
+    "regular": "https://images.unsplash.com/photo-1588072432836-e10032774350?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk3MTU3fA&ixlib=rb-4.1.0&q=80&w=1080",
+    "small": "https://images.unsplash.com/photo-1588072432836-e10032774350?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk3MTU3fA&ixlib=rb-4.1.0&q=80&w=400",
+    "thumb": "https://images.unsplash.com/photo-1588072432836-e10032774350?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk3MTU3fA&ixlib=rb-4.1.0&q=80&w=200",
+    "small_s3": "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1588072432836-e10032774350"
+  },
+  "links": {
+    "photographer_profile": "https://unsplash.com/@cdc",
+    "download_unsplash": "https://unsplash.com/photos/boy-in-green-sweater-writing-on-white-paper-GDokEYnOfnE",
+    "download_raw": null,
+    "self": "https://api.unsplash.com/photos/boy-in-green-sweater-writing-on-white-paper-GDokEYnOfnE"
+  },
+  "usage_guidelines": {
+    "free_to_use": "Yes, under the Unsplash License",
+    "commercial_use": "Allowed",
+    "requires_permission": "No",
+    "requires_attribution": "Not required but appreciated",
+    "unsplash_license_url": "https://unsplash.com/license"
+  }
+}

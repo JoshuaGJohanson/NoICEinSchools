@@ -1,0 +1,43 @@
+{
+  "id": "PwGtjsGkIwc",
+  "title": "Playing with colours!",
+  "width": 6048,
+  "height": 4024,
+  "color": "#a6c0d9",
+  "created_at": "2022-05-31T06:39:13Z",
+  "updated_at": "2026-03-16T18:18:22Z",
+  "likes": 5,
+  "downloads": 1145,
+  "views": 182893,
+  "attribution": {
+    "photographer": {
+      "name": "Avin CP",
+      "username": "avincp",
+      "portfolio_url": "http://www.avincp.com/",
+      "bio": null,
+      "location": "Kochi",
+      "profile_image_url": "https://images.unsplash.com/profile-fb-1543298247-07f232ed1c02.jpg?ixlib=rb-4.1.0&crop=faces&fit=crop&w=64&h=64"
+    }
+  },
+  "urls": {
+    "raw": "https://images.unsplash.com/photo-1653979025259-780e85b572eb?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk2NDIyfA&ixlib=rb-4.1.0",
+    "full": "https://images.unsplash.com/photo-1653979025259-780e85b572eb?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk2NDIyfA&ixlib=rb-4.1.0&q=85",
+    "regular": "https://images.unsplash.com/photo-1653979025259-780e85b572eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk2NDIyfA&ixlib=rb-4.1.0&q=80&w=1080",
+    "small": "https://images.unsplash.com/photo-1653979025259-780e85b572eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk2NDIyfA&ixlib=rb-4.1.0&q=80&w=400",
+    "thumb": "https://images.unsplash.com/photo-1653979025259-780e85b572eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk2NDIyfA&ixlib=rb-4.1.0&q=80&w=200",
+    "small_s3": "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1653979025259-780e85b572eb"
+  },
+  "links": {
+    "photographer_profile": "https://unsplash.com/@avincp",
+    "download_unsplash": "https://unsplash.com/photos/a-little-girl-with-her-hands-painted-blue-PwGtjsGkIwc",
+    "download_raw": null,
+    "self": "https://api.unsplash.com/photos/a-little-girl-with-her-hands-painted-blue-PwGtjsGkIwc"
+  },
+  "usage_guidelines": {
+    "free_to_use": "Yes, under the Unsplash License",
+    "commercial_use": "Allowed",
+    "requires_permission": "No",
+    "requires_attribution": "Not required but appreciated",
+    "unsplash_license_url": "https://unsplash.com/license"
+  }
+}

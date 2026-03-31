@@ -1,0 +1,43 @@
+{
+  "id": "lGGuf8LSxa4",
+  "title": "Cheerful people old man and small boy studying at home writing doing school homework sitting at desk together. Family, lifestyle and education concept.",
+  "width": 3840,
+  "height": 2160,
+  "color": "#d9d9d9",
+  "created_at": "2025-09-23T07:39:04Z",
+  "updated_at": "2026-03-16T16:11:16Z",
+  "likes": 1,
+  "downloads": 632,
+  "views": 77415,
+  "attribution": {
+    "photographer": {
+      "name": "Vitaly Gariev",
+      "username": "silverkblack",
+      "portfolio_url": null,
+      "bio": "If you use my photos don't hesitate to follow my Instagram))",
+      "location": "Worldwide",
+      "profile_image_url": "https://images.unsplash.com/profile-1713942088787-b6a718031fe7image?ixlib=rb-4.1.0&crop=faces&fit=crop&w=64&h=64"
+    }
+  },
+  "urls": {
+    "raw": "https://images.unsplash.com/photo-1758612898373-1032cb4d15cf?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk2NDA4fA&ixlib=rb-4.1.0",
+    "full": "https://images.unsplash.com/photo-1758612898373-1032cb4d15cf?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk2NDA4fA&ixlib=rb-4.1.0&q=85",
+    "regular": "https://images.unsplash.com/photo-1758612898373-1032cb4d15cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk2NDA4fA&ixlib=rb-4.1.0&q=80&w=1080",
+    "small": "https://images.unsplash.com/photo-1758612898373-1032cb4d15cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk2NDA4fA&ixlib=rb-4.1.0&q=80&w=400",
+    "thumb": "https://images.unsplash.com/photo-1758612898373-1032cb4d15cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk2NDA4fA&ixlib=rb-4.1.0&q=80&w=200",
+    "small_s3": "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1758612898373-1032cb4d15cf"
+  },
+  "links": {
+    "photographer_profile": "https://unsplash.com/@silverkblack",
+    "download_unsplash": "https://unsplash.com/photos/grandfather-helps-grandson-with-homework-at-table-lGGuf8LSxa4",
+    "download_raw": null,
+    "self": "https://api.unsplash.com/photos/grandfather-helps-grandson-with-homework-at-table-lGGuf8LSxa4"
+  },
+  "usage_guidelines": {
+    "free_to_use": "Yes, under the Unsplash License",
+    "commercial_use": "Allowed",
+    "requires_permission": "No",
+    "requires_attribution": "Not required but appreciated",
+    "unsplash_license_url": "https://unsplash.com/license"
+  }
+}

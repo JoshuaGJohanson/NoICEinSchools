@@ -1,0 +1,43 @@
+{
+  "id": "4kjq2dqGT14",
+  "title": "Two young people with headphones outdoors",
+  "width": 6000,
+  "height": 4000,
+  "color": "#738c8c",
+  "created_at": "2025-09-17T17:38:10Z",
+  "updated_at": "2026-03-16T16:20:34Z",
+  "likes": 0,
+  "downloads": 21,
+  "views": 3157,
+  "attribution": {
+    "photographer": {
+      "name": "Faustina Okeke",
+      "username": "thefourthwxll",
+      "portfolio_url": null,
+      "bio": null,
+      "location": "cyprus",
+      "profile_image_url": "https://images.unsplash.com/profile-1761500593988-c83d469035e8image?ixlib=rb-4.1.0&crop=faces&fit=crop&w=64&h=64"
+    }
+  },
+  "urls": {
+    "raw": "https://images.unsplash.com/photo-1758130652165-8995c3d968cd?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk2Mzc0fA&ixlib=rb-4.1.0",
+    "full": "https://images.unsplash.com/photo-1758130652165-8995c3d968cd?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk2Mzc0fA&ixlib=rb-4.1.0&q=85",
+    "regular": "https://images.unsplash.com/photo-1758130652165-8995c3d968cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk2Mzc0fA&ixlib=rb-4.1.0&q=80&w=1080",
+    "small": "https://images.unsplash.com/photo-1758130652165-8995c3d968cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk2Mzc0fA&ixlib=rb-4.1.0&q=80&w=400",
+    "thumb": "https://images.unsplash.com/photo-1758130652165-8995c3d968cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk2Mzc0fA&ixlib=rb-4.1.0&q=80&w=200",
+    "small_s3": "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1758130652165-8995c3d968cd"
+  },
+  "links": {
+    "photographer_profile": "https://unsplash.com/@thefourthwxll",
+    "download_unsplash": "https://unsplash.com/photos/two-young-people-with-headphones-outdoors-4kjq2dqGT14",
+    "download_raw": null,
+    "self": "https://api.unsplash.com/photos/two-young-people-with-headphones-outdoors-4kjq2dqGT14"
+  },
+  "usage_guidelines": {
+    "free_to_use": "Yes, under the Unsplash License",
+    "commercial_use": "Allowed",
+    "requires_permission": "No",
+    "requires_attribution": "Not required but appreciated",
+    "unsplash_license_url": "https://unsplash.com/license"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "id": "Xy-F5GptgR8",
+  "title": "American football stadium with people",
+  "width": 4032,
+  "height": 3024,
+  "color": "#a6c0d9",
+  "created_at": "2016-06-03T19:49:32Z",
+  "updated_at": "2026-03-16T21:22:15Z",
+  "likes": 367,
+  "downloads": 41603,
+  "views": 10287624,
+  "attribution": {
+    "photographer": {
+      "name": "Aaron Burden",
+      "username": "aaronburden",
+      "portfolio_url": "http://aaronburden.com",
+      "bio": "I’m a nature photographer who finds joy in capturing the beauty of creation. Follow my everyday photography on IG and Threads (@aaronburden).",
+      "location": "Baltimore, MD",
+      "profile_image_url": "https://images.unsplash.com/profile-1578021854441-1f6abbca2a1dimage?ixlib=rb-4.1.0&crop=faces&fit=crop&w=64&h=64"
+    }
+  },
+  "urls": {
+    "raw": "https://images.unsplash.com/photo-1464983308776-3c7215084895?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk2OTg2fA&ixlib=rb-4.1.0",
+    "full": "https://images.unsplash.com/photo-1464983308776-3c7215084895?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk2OTg2fA&ixlib=rb-4.1.0&q=85",
+    "regular": "https://images.unsplash.com/photo-1464983308776-3c7215084895?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk2OTg2fA&ixlib=rb-4.1.0&q=80&w=1080",
+    "small": "https://images.unsplash.com/photo-1464983308776-3c7215084895?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk2OTg2fA&ixlib=rb-4.1.0&q=80&w=400",
+    "thumb": "https://images.unsplash.com/photo-1464983308776-3c7215084895?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk2OTg2fA&ixlib=rb-4.1.0&q=80&w=200",
+    "small_s3": "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1464983308776-3c7215084895"
+  },
+  "links": {
+    "photographer_profile": "https://unsplash.com/@aaronburden",
+    "download_unsplash": "https://unsplash.com/photos/american-football-stadium-with-people-Xy-F5GptgR8",
+    "download_raw": null,
+    "self": "https://api.unsplash.com/photos/american-football-stadium-with-people-Xy-F5GptgR8"
+  },
+  "usage_guidelines": {
+    "free_to_use": "Yes, under the Unsplash License",
+    "commercial_use": "Allowed",
+    "requires_permission": "No",
+    "requires_attribution": "Not required but appreciated",
+    "unsplash_license_url": "https://unsplash.com/license"
+  }
+}

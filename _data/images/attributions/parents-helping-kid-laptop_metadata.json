@@ -1,0 +1,43 @@
+{
+  "id": "zgq9OXecyqI",
+  "title": "Parents learning teaching their child during homeschooling.",
+  "width": 6720,
+  "height": 4480,
+  "color": "#d9c0c0",
+  "created_at": "2021-08-19T08:06:22Z",
+  "updated_at": "2026-03-16T20:04:10Z",
+  "likes": 86,
+  "downloads": 27183,
+  "views": 1893584,
+  "attribution": {
+    "photographer": {
+      "name": "sofatutor",
+      "username": "sofatutor",
+      "portfolio_url": "https://www.sofatutor.com/",
+      "bio": null,
+      "location": "Berlin",
+      "profile_image_url": "https://images.unsplash.com/profile-1629362540515-0073b47c9555image?ixlib=rb-4.1.0&crop=faces&fit=crop&w=64&h=64"
+    }
+  },
+  "urls": {
+    "raw": "https://images.unsplash.com/photo-1629360021730-3d258452c425?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk3MTkyfA&ixlib=rb-4.1.0",
+    "full": "https://images.unsplash.com/photo-1629360021730-3d258452c425?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk3MTkyfA&ixlib=rb-4.1.0&q=85",
+    "regular": "https://images.unsplash.com/photo-1629360021730-3d258452c425?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk3MTkyfA&ixlib=rb-4.1.0&q=80&w=1080",
+    "small": "https://images.unsplash.com/photo-1629360021730-3d258452c425?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk3MTkyfA&ixlib=rb-4.1.0&q=80&w=400",
+    "thumb": "https://images.unsplash.com/photo-1629360021730-3d258452c425?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk3MTkyfA&ixlib=rb-4.1.0&q=80&w=200",
+    "small_s3": "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1629360021730-3d258452c425"
+  },
+  "links": {
+    "photographer_profile": "https://unsplash.com/@sofatutor",
+    "download_unsplash": "https://unsplash.com/photos/woman-in-gray-long-sleeve-shirt-sitting-beside-boy-in-blue-sweater-zgq9OXecyqI",
+    "download_raw": null,
+    "self": "https://api.unsplash.com/photos/woman-in-gray-long-sleeve-shirt-sitting-beside-boy-in-blue-sweater-zgq9OXecyqI"
+  },
+  "usage_guidelines": {
+    "free_to_use": "Yes, under the Unsplash License",
+    "commercial_use": "Allowed",
+    "requires_permission": "No",
+    "requires_attribution": "Not required but appreciated",
+    "unsplash_license_url": "https://unsplash.com/license"
+  }
+}

@@ -1,0 +1,162 @@
+======================================================================
+IMAGE USAGE REPORT
+======================================================================
+
+PAGES AND THEIR IMAGES
+----------------------------------------------------------------------
+
+about-us.html
+  notepads-with-ideas.jpg
+  people-meeting-classroom.jpg
+  school-exterior.jpg
+
+contact.html
+  (no images)
+
+faq.html
+  (no images)
+
+index.html
+  closeup-of-student-writing.jpg
+  high-school-study-group.jpg
+  hispanic-student-focused-on-learning.jpg
+  holding-sign-about-children-needing-voice.jpg
+  in-red-uniform-walks-towards-yellow-bus.jpg
+  parent-teacher-conference.jpg
+  school-hallway.jpg
+  students-going-to-high-school.jpg
+  teacher-student-serious-meeting.jpg
+
+policy-solutions.html
+  child-protests-for-her-school.jpg
+  high-school-study-group.jpg
+  indian-faculty-meeting.jpg
+  innocent-hispanic-kid.jpg
+  parent-teacher-conference.jpg
+  school-admin-safety-plans.jpg
+  school-building-exterior.jpg
+  school-hallway.jpg
+  stop-sign-attached-to-the-side-of-a-school-bus.jpg
+  students-going-to-high-school.jpg
+  teacher-helping-kid-read.jpg
+  two-people-making-plans.jpg
+
+sources.html
+  (no images)
+
+take-action.html
+  boy-holding-sign-our-future-matter.jpg
+  child-protests-for-her-school.jpg
+  parents-discuss-concerns-teacher.jpg
+  parents-meeting-with-admin.jpg
+  people-shaking-hands.jpg
+  school-library.jpg
+  two-people-making-plans.jpg
+
+threats-to-school-safety.html
+  aerial-view-of-school.jpg
+  caution-sign-by-empty-classroom.jpg
+  high-school-study-group.jpg
+  in-red-uniform-walks-towards-yellow-bus.jpg
+  innocent-hispanic-kid.jpg
+  kids-going-to-elementary-school.jpg
+  parent-teacher-conference.jpg
+  school-admin-safety-plans.jpg
+  school-building-exterior.jpg
+  students-not-being-welcoming.jpg
+  teacher-helping-kid-read.jpg
+
+volunteer-signup.html
+  (no images)
+
+volunteer.html
+  notepads-with-ideas.jpg
+  of-children-pulling-brown-rope.jpg
+  parents-in-classroom.jpg
+  people-meeting-classroom.jpg
+  students-in-circle-with-hands-in-center-coolaboration.jpg
+  two-people-making-plans.jpg
+  writing-on-printer-paper-near-girl.jpg
+  young-people-with-headphones-outdoors.jpg
+
+why-it-matters.html
+  high-school-study-group.jpg
+  innocent-hispanic-kid.jpg
+  school-hallway.jpg
+  teacher-helping-kid-read.jpg
+  teacher-helping-student-in-classroom.jpg
+
+why-schools-should-be-safe.html
+  black-kid-being-comforted.jpg
+  safe-in-scrabble-letters.jpg
+  smiling-students-taking-a-selfie-in-a-classroom.jpg
+  students-in-circle-with-hands-in-center-coolaboration.jpg
+  teacher-reading-kids.jpg
+
+
+UNUSED IMAGES  (in assets/images but not referenced by any page)
+----------------------------------------------------------------------
+  aerial-view-kids-doing-homework-table.jpg
+  and-child-drawing-together-at-a-table-r.jpg
+  and-children-sitting-in-a-classroom-setting.jpg
+  apple-fruit-on-four-pyle-books.jpg
+  bike-rack-outside-of-school.jpg
+  black-kid-looking-serious.jpg
+  boy-doing-assignment-in-class.jpg
+  boy-holding-a-stuffed-animal-in-black-and-white-YFh_.jpg
+  boys-looking-at-the-camera.jpg
+  discuss-concerns-principal.jpg
+  elementary-kid-doing-math.jpg
+  elementary-school-group-project.jpg
+  empty-elementary-school-classroom.jpg
+  empty-school-desks.jpg
+  empty-school-hallway-grayscale.jpg
+  girl-going-to-school.jpg
+  group-of-young-people-sitting-next-to-each-other.jpg
+  helps-grandson-with-homework-at-table.jpg
+  hero-classroom.jpg
+  high-school-basketball.jpg
+  high-school-cafeteria.jpg
+  high-school-football-field.jpg
+  high-school-raising-hand.jpg
+  hispanic-kid-crying.jpg
+  hispanic-kid-raising-hand-in-class.jpg
+  hispanic-kid-sitting-alone.jpg
+  holding-fight-today-for-a-better-tomorrow-sign.jpg
+  in-white-tank-top-beside-girl-in-yellow-dress.jpg
+  kid-alone-on-bench.jpg
+  kids-taking-test.jpg
+  kids-waiting-to-play-basketball.jpg
+  kids-working-on-art-project.jpg
+  law-enforcement-entering-a-home.jpg
+  little-girl-holding-a-sign-that-says-peace-fET-sQI.jpg
+  little-girl-with-her-hands-painted-blue.jpg
+  man-arrested-by-ice.jpg
+  man-being-arrested.jpg
+  man-with-sign-protesting-ice-is-not-a-crime.jpg
+  parent-resolve-issue-principal.jpg
+  parents-and-admin-serious-discussion.jpg
+  parents-helping-kid-laptop.jpg
+  protest-with-a-sign-that-reads-hands-off-our-children.jpg
+  protester-sign-save-the-children.jpg
+  school-bus-with-use-your-voice-spray-painted.jpg
+  silhouette-of-child-reading.jpg
+  sitting-on-swing-chair.jpg
+  smiling-teenager-on-cell-phone.jpg
+  students-gathered-around-teacher-looking-at-book.jpg
+  students-listening-to-teacher.jpg
+  teacher-by-whiteboard.jpg
+  teacher-lecture.jpg
+  teacher-parents-classroom.jpg
+  teacher-posing-by-empty-classroom.jpg
+  worried-hispanic-kid-with-head-in-hands.jpg
+  worried-white-kid.jpg
+  young-girls-making-funny-faces.jpg
+  young-kids-reading-a-book.jpg
+
+
+MISSING IMAGES  (referenced by pages but not found in assets/images)
+----------------------------------------------------------------------
+  (none)
+
+======================================================================

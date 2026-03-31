@@ -11,14 +11,14 @@ export async function onRequestPost(context) {
     return json({ message: "Invalid request body." }, 400);
   }
 
-  const { email, state, district, sub_national, sub_state, sub_local } = body;
+  const { email, state, district, city, sub_national, sub_local, sub_urgent } = body;
 
   // Validate
   if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) {
     return json({ message: "A valid email address is required." }, 400);
   }
 
-  if (!sub_national && !sub_state && !sub_local) {
+  if (!sub_national && !sub_local && !sub_urgent) {
     return json({ message: "At least one subscription preference must be selected." }, 400);
   }
 
@@ -28,9 +28,10 @@ export async function onRequestPost(context) {
     attributes: {
       STATE:        state    || null,
       DISTRICT:     district || null,
+      CITY:         city     || null,
       SUB_NATIONAL: !!sub_national,
-      SUB_STATE:    !!sub_state,
       SUB_LOCAL:    !!sub_local,
+      SUB_URGENT:   !!sub_urgent,
     },
     listIds: [PENDING_LIST_ID],
     updateEnabled: true,

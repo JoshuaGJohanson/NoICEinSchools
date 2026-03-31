@@ -1,0 +1,43 @@
+{
+  "id": "YBMt6ETGTWA",
+  "title": "a group of people sitting around a white table",
+  "width": 10368,
+  "height": 6912,
+  "color": "#d9d9d9",
+  "created_at": "2022-05-27T16:41:58Z",
+  "updated_at": "2026-03-16T20:06:02Z",
+  "likes": 37,
+  "downloads": 3975,
+  "views": 949465,
+  "attribution": {
+    "photographer": {
+      "name": "The Jopwell Collection",
+      "username": "jopwell",
+      "portfolio_url": null,
+      "bio": "We represent and advance careers for Black, Latinx and Native American students and professionals.",
+      "location": null,
+      "profile_image_url": "https://images.unsplash.com/profile-1653669180679-7f6868afeba9image?ixlib=rb-4.1.0&crop=faces&fit=crop&w=64&h=64"
+    }
+  },
+  "urls": {
+    "raw": "https://images.unsplash.com/photo-1653669487221-252f32c53f2c?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk3MjAzfA&ixlib=rb-4.1.0",
+    "full": "https://images.unsplash.com/photo-1653669487221-252f32c53f2c?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk3MjAzfA&ixlib=rb-4.1.0&q=85",
+    "regular": "https://images.unsplash.com/photo-1653669487221-252f32c53f2c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk3MjAzfA&ixlib=rb-4.1.0&q=80&w=1080",
+    "small": "https://images.unsplash.com/photo-1653669487221-252f32c53f2c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk3MjAzfA&ixlib=rb-4.1.0&q=80&w=400",
+    "thumb": "https://images.unsplash.com/photo-1653669487221-252f32c53f2c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk3MjAzfA&ixlib=rb-4.1.0&q=80&w=200",
+    "small_s3": "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1653669487221-252f32c53f2c"
+  },
+  "links": {
+    "photographer_profile": "https://unsplash.com/@jopwell",
+    "download_unsplash": "https://unsplash.com/photos/a-group-of-people-sitting-around-a-white-table-YBMt6ETGTWA",
+    "download_raw": null,
+    "self": "https://api.unsplash.com/photos/a-group-of-people-sitting-around-a-white-table-YBMt6ETGTWA"
+  },
+  "usage_guidelines": {
+    "free_to_use": "Yes, under the Unsplash License",
+    "commercial_use": "Allowed",
+    "requires_permission": "No",
+    "requires_attribution": "Not required but appreciated",
+    "unsplash_license_url": "https://unsplash.com/license"
+  }
+}

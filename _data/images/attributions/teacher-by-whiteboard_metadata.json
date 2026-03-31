@@ -1,0 +1,43 @@
+{
+  "id": "c-mgSuxqpzA",
+  "title": "woman taking selfie",
+  "width": 6016,
+  "height": 4016,
+  "color": "#f3f3f3",
+  "created_at": "2019-11-11T18:29:19Z",
+  "updated_at": "2026-03-16T18:48:39Z",
+  "likes": 448,
+  "downloads": 73613,
+  "views": 11627123,
+  "attribution": {
+    "photographer": {
+      "name": "Christina @ wocintechchat.com M",
+      "username": "wocintechchat",
+      "portfolio_url": "https://www.wocintechchat.com",
+      "bio": "Creators of the #WOCinTech stock OSS Creative Commons photo collection. Learn about how and why this collection came about at www.wocintechchat.com",
+      "location": "New York, NY",
+      "profile_image_url": "https://images.unsplash.com/profile-1462130890488-77bd27f193d8?ixlib=rb-4.1.0&crop=faces&fit=crop&w=64&h=64"
+    }
+  },
+  "urls": {
+    "raw": "https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk2OTg3fA&ixlib=rb-4.1.0",
+    "full": "https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk2OTg3fA&ixlib=rb-4.1.0&q=85",
+    "regular": "https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk2OTg3fA&ixlib=rb-4.1.0&q=80&w=1080",
+    "small": "https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk2OTg3fA&ixlib=rb-4.1.0&q=80&w=400",
+    "thumb": "https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk2OTg3fA&ixlib=rb-4.1.0&q=80&w=200",
+    "small_s3": "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1573496799652-408c2ac9fe98"
+  },
+  "links": {
+    "photographer_profile": "https://unsplash.com/@wocintechchat",
+    "download_unsplash": "https://unsplash.com/photos/woman-taking-selfie-c-mgSuxqpzA",
+    "download_raw": null,
+    "self": "https://api.unsplash.com/photos/woman-taking-selfie-c-mgSuxqpzA"
+  },
+  "usage_guidelines": {
+    "free_to_use": "Yes, under the Unsplash License",
+    "commercial_use": "Allowed",
+    "requires_permission": "No",
+    "requires_attribution": "Not required but appreciated",
+    "unsplash_license_url": "https://unsplash.com/license"
+  }
+}

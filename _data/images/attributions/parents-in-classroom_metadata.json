@@ -1,0 +1,43 @@
+{
+  "id": "b4A6Ug_s7Xo",
+  "title": "People attending a class with a projector screen.",
+  "width": 6000,
+  "height": 4000,
+  "color": "#404040",
+  "created_at": "2025-08-18T20:16:39Z",
+  "updated_at": "2026-03-16T16:19:30Z",
+  "likes": 0,
+  "downloads": 230,
+  "views": 3742,
+  "attribution": {
+    "photographer": {
+      "name": "Frederick Shaw",
+      "username": "dropfastcollective",
+      "portfolio_url": "http://Dropfastcollective.org",
+      "bio": "Im Just a broken guy trying to fix my damn self by helping other people.",
+      "location": "Nepal",
+      "profile_image_url": "https://images.unsplash.com/profile-1769871352325-728a1d299f9bimage?ixlib=rb-4.1.0&crop=faces&fit=crop&w=64&h=64"
+    }
+  },
+  "urls": {
+    "raw": "https://images.unsplash.com/photo-1755548180517-668190569cbf?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk3MjIxfA&ixlib=rb-4.1.0",
+    "full": "https://images.unsplash.com/photo-1755548180517-668190569cbf?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk3MjIxfA&ixlib=rb-4.1.0&q=85",
+    "regular": "https://images.unsplash.com/photo-1755548180517-668190569cbf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk3MjIxfA&ixlib=rb-4.1.0&q=80&w=1080",
+    "small": "https://images.unsplash.com/photo-1755548180517-668190569cbf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk3MjIxfA&ixlib=rb-4.1.0&q=80&w=400",
+    "thumb": "https://images.unsplash.com/photo-1755548180517-668190569cbf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk3MjIxfA&ixlib=rb-4.1.0&q=80&w=200",
+    "small_s3": "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1755548180517-668190569cbf"
+  },
+  "links": {
+    "photographer_profile": "https://unsplash.com/@dropfastcollective",
+    "download_unsplash": "https://unsplash.com/photos/people-attending-a-class-with-a-projector-screen-b4A6Ug_s7Xo",
+    "download_raw": null,
+    "self": "https://api.unsplash.com/photos/people-attending-a-class-with-a-projector-screen-b4A6Ug_s7Xo"
+  },
+  "usage_guidelines": {
+    "free_to_use": "Yes, under the Unsplash License",
+    "commercial_use": "Allowed",
+    "requires_permission": "No",
+    "requires_attribution": "Not required but appreciated",
+    "unsplash_license_url": "https://unsplash.com/license"
+  }
+}

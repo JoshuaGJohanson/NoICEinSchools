@@ -1,0 +1,43 @@
+{
+  "id": "Qw6wa96IvvQ",
+  "title": "Classroom in an elementary school in Germany",
+  "width": 4032,
+  "height": 3024,
+  "color": "#8c7359",
+  "created_at": "2025-02-27T05:53:29Z",
+  "updated_at": "2026-03-16T20:25:04Z",
+  "likes": 28,
+  "downloads": 18373,
+  "views": 1134378,
+  "attribution": {
+    "photographer": {
+      "name": "Nathan Cima",
+      "username": "nathan_cima",
+      "portfolio_url": null,
+      "bio": "French 🇫🇷 - Erasmus Student Network (ESN) volunteer 🤝🏼 - Studied in Montpellier (FRA) & Leuven (BEL) 👨🏼‍🎓 - Travelled in +25 countries ✈ - Live in Montpellier (FRA) 🏡 - Lived in Belgium 🇧🇪, Germany 🇩🇪 and Thailand 🇹🇭 - Drone owner 🚁",
+      "location": "Montpellier, France",
+      "profile_image_url": "https://images.unsplash.com/profile-1721184415875-f04ca5c0a4d3image?ixlib=rb-4.1.0&crop=faces&fit=crop&w=64&h=64"
+    }
+  },
+  "urls": {
+    "raw": "https://images.unsplash.com/photo-1740635341299-3b8e3490f546?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk3MTY1fA&ixlib=rb-4.1.0",
+    "full": "https://images.unsplash.com/photo-1740635341299-3b8e3490f546?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk3MTY1fA&ixlib=rb-4.1.0&q=85",
+    "regular": "https://images.unsplash.com/photo-1740635341299-3b8e3490f546?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk3MTY1fA&ixlib=rb-4.1.0&q=80&w=1080",
+    "small": "https://images.unsplash.com/photo-1740635341299-3b8e3490f546?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk3MTY1fA&ixlib=rb-4.1.0&q=80&w=400",
+    "thumb": "https://images.unsplash.com/photo-1740635341299-3b8e3490f546?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk3MTY1fA&ixlib=rb-4.1.0&q=80&w=200",
+    "small_s3": "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1740635341299-3b8e3490f546"
+  },
+  "links": {
+    "photographer_profile": "https://unsplash.com/@nathan_cima",
+    "download_unsplash": "https://unsplash.com/photos/a-classroom-filled-with-lots-of-desks-and-chairs-Qw6wa96IvvQ",
+    "download_raw": null,
+    "self": "https://api.unsplash.com/photos/a-classroom-filled-with-lots-of-desks-and-chairs-Qw6wa96IvvQ"
+  },
+  "usage_guidelines": {
+    "free_to_use": "Yes, under the Unsplash License",
+    "commercial_use": "Allowed",
+    "requires_permission": "No",
+    "requires_attribution": "Not required but appreciated",
+    "unsplash_license_url": "https://unsplash.com/license"
+  }
+}

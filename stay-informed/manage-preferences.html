@@ -107,25 +107,26 @@ permalink: /stay-informed/manage-preferences.html
   .divider {
     border: none;
     border-top: 1px solid var(--border);
-    margin: var(--space-6) 0;
+    margin: var(--space-10) 0;
   }
 
   .unsubscribe-section {
-    padding: var(--space-4) var(--space-4);
-    background: var(--surface);
-    border: 1px solid var(--border);
+    padding: var(--space-5) var(--space-5);
+    background: #fef2f2;
+    border: 1px solid #fecaca;
     border-radius: var(--radius);
   }
 
   .unsubscribe-section h2 {
     font-size: 1rem;
     margin-bottom: 0.35rem;
-    color: var(--text);
+    color: #991b1b;
   }
 
   .unsubscribe-section p {
     font-size: 0.875rem;
-    color: var(--muted);
+    color: #b91c1c;
+    opacity: 0.8;
     margin-bottom: var(--space-4);
   }
 
@@ -216,16 +217,17 @@ permalink: /stay-informed/manage-preferences.html
     font-size: 0.95rem;
     font-weight: 600;
     cursor: pointer;
-    background: transparent;
+    background: white;
     color: #b91c1c;
-    border: 1px solid #fecaca;
+    border: 1.5px solid #f87171;
     border-radius: var(--radius);
-    transition: background 0.15s, border-color 0.15s;
+    transition: background 0.15s, border-color 0.15s, color 0.15s;
   }
 
   .button-unsubscribe:hover {
-    background: #fef2f2;
-    border-color: #fca5a5;
+    background: #b91c1c;
+    border-color: #b91c1c;
+    color: white;
   }
 
   .button-unsubscribe:disabled {
@@ -245,8 +247,8 @@ permalink: /stay-informed/manage-preferences.html
 
       <div id="success-state" class="success-state" aria-live="polite">
         <div class="success-icon">✅</div>
-        <h2>Preferences saved.</h2>
-        <p>Your subscription preferences have been updated.</p>
+        <h2 id="success-heading">Your preferences have been updated.</h2>
+        <p id="success-body">Changes take effect immediately.</p>
         <a class="button button-light" href="{{ '/' | url }}">Back to Home</a>
       </div>
 
@@ -297,8 +299,13 @@ permalink: /stay-informed/manage-preferences.html
 
           <div class="field">
             <label for="district">School district <span style="font-weight:400; color:var(--muted);">(optional)</span></label>
-            <input type="text" id="district" name="district" placeholder="e.g. Jordan School District" autocomplete="off" list="district-suggestions" />
+            <input type="text" id="district" name="district" placeholder="e.g. Los Angeles Unified School District" autocomplete="off" list="district-suggestions" value="Los Angeles Unified School District" />
             <datalist id="district-suggestions"></datalist>
+          </div>
+
+          <div class="field">
+            <label for="city">City <span style="font-weight:400; color:var(--muted);">(optional — if school district is unknown)</span></label>
+            <input type="text" id="city" name="city" placeholder="e.g. Los Angeles" autocomplete="address-level2" />
           </div>
 
           <div class="field">
@@ -309,21 +316,21 @@ permalink: /stay-informed/manage-preferences.html
                 <input type="checkbox" id="sub_national" name="sub_national" />
                 <div class="cb-label">
                   <strong>Newsletter</strong>
-                  <span>Campaign milestones, new resources, and major developments across the country</span>
-                </div>
-              </label>
-              <label class="checkbox-row">
-                <input type="checkbox" id="sub_state" name="sub_state" />
-                <div class="cb-label">
-                  <strong>State updates</strong>
-                  <span>Legislation, enforcement trends, and campaign news in your state — requires a state selection above</span>
+                  <span>Campaign milestones, new resources, and major developments</span>
                 </div>
               </label>
               <label class="checkbox-row">
                 <input type="checkbox" id="sub_local" name="sub_local" />
                 <div class="cb-label">
                   <strong>Local updates</strong>
-                  <span>School board meetings, petitions, and actions in your district — requires a school district above</span>
+                  <span>School board meetings, petitions, and actions in your area — requires a school district or city above</span>
+                </div>
+              </label>
+              <label class="checkbox-row">
+                <input type="checkbox" id="sub_urgent" name="sub_urgent" />
+                <div class="cb-label">
+                  <strong>Urgent action alerts</strong>
+                  <span>Time-sensitive items like petition deadlines and upcoming school board meetings — requires a school district or city above</span>
                 </div>
               </label>
             </div>
@@ -339,11 +346,13 @@ permalink: /stay-informed/manage-preferences.html
             <button type="submit" class="button button-primary">Save preferences</button>
           </div>
 
+          <p style="font-size: 0.8rem; color: var(--muted); margin-top: 0.75rem; text-align: center;">
+            <a href="{{ '/privacy/' | url }}">View our Privacy Policy</a>
+          </p>
+
         </form>
 
-        <hr class="divider" />
-
-        <div class="unsubscribe-section">
+        <div class="unsubscribe-section" style="margin-top: 3rem;">
           <h2>Unsubscribe from everything</h2>
           <p>Enter your email address above and click below to stop all emails from us.</p>
           <div id="unsub-error" class="form-error" role="alert"></div>
@@ -409,16 +418,14 @@ permalink: /stay-informed/manage-preferences.html
     }
 
     const national = document.getElementById('sub_national').checked;
-    const state    = document.getElementById('sub_state').checked;
     const local    = document.getElementById('sub_local').checked;
+    const urgent   = document.getElementById('sub_urgent').checked;
 
     let cbMsg = '';
-    if (!national && !state && !local) {
+    if (!national && !local && !urgent) {
       cbMsg = 'Please select at least one option.';
-    } else if (state && !stateSelect.value) {
-      cbMsg = 'Please select your state to receive state updates.';
-    } else if (local && !document.getElementById('district').value.trim()) {
-      cbMsg = 'Please enter your school district to receive local updates.';
+    } else if ((local || urgent) && !document.getElementById('district').value.trim() && !document.getElementById('city').value.trim()) {
+      cbMsg = 'Please enter your school district or city to receive local and urgent updates.';
     }
 
     if (cbMsg) {
@@ -441,19 +448,25 @@ permalink: /stay-informed/manage-preferences.html
       email:        getEmail(),
       state:        stateSelect.value || null,
       district:     document.getElementById('district').value.trim() || null,
+      city:         document.getElementById('city').value.trim() || null,
       sub_national: national,
-      sub_state:    state,
       sub_local:    local,
+      sub_urgent:   urgent,
     };
 
     try {
-      const res = await fetch('/api/subscribe', {
+      const res = await fetch('/api/update-preferences', {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
         body:    JSON.stringify(payload),
       });
 
       if (res.ok) {
+        const data = await res.json().catch(() => ({}));
+        if (data.new_signup) {
+          document.getElementById('success-heading').textContent = 'Check your email.';
+          document.getElementById('success-body').textContent = 'We sent a confirmation link to activate your subscription.';
+        }
         formWrap.style.display = 'none';
         successEl.classList.add('visible');
         successEl.focus();

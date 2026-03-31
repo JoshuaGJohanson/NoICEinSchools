@@ -1,0 +1,52 @@
+---
+layout: default
+title: Image Attributions
+description: Attribution for photographs used on No ICE in Schools, sourced from Unsplash.
+permalink: /image-attributions.html
+---
+
+<section class="section">
+  <div class="container">
+    <div style="max-width: 680px; margin: 0 auto; padding: 3rem 1rem;">
+
+      <h1>Image Attributions</h1>
+      <p style="color: var(--muted); margin-bottom: 2.5rem;">
+        Photographs on this site are sourced from
+        <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a>
+        and used under the
+        <a href="https://unsplash.com/license" target="_blank" rel="noopener">Unsplash License</a>.
+        Attribution is not required under the license but we include it to credit the photographers.
+      </p>
+
+      <table style="width: 100%; border-collapse: collapse; font-size: 0.92rem;">
+        <thead>
+          <tr style="border-bottom: 2px solid var(--border); text-align: left;">
+            <th style="padding: 0.5rem 0.75rem 0.5rem 0;">Photographer</th>
+            <th style="padding: 0.5rem 0.75rem;">Photo</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in attributions %}
+          <tr style="border-bottom: 1px solid var(--border);">
+            <td style="padding: 0.6rem 0.75rem 0.6rem 0; vertical-align: top; white-space: nowrap;">
+              {% if item.profile_url %}
+                <a href="{{ item.profile_url }}" target="_blank" rel="noopener">{{ item.photographer }}</a>
+              {% else %}
+                {{ item.photographer }}
+              {% endif %}
+            </td>
+            <td style="padding: 0.6rem 0.75rem; vertical-align: top; color: var(--muted);">
+              {% if item.photo_url %}
+                <a href="{{ item.photo_url }}" target="_blank" rel="noopener">{{ item.title }}</a>
+              {% else %}
+                {{ item.title }}
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</section>

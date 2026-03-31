@@ -1,0 +1,43 @@
+{
+  "id": "PkAiydV3VuY",
+  "title": "Cheerful girls students are taking selfie with smartphone sitting at tables at college, young women are posing making hand gestures and hugging. Friends and technology concept.",
+  "width": 3800,
+  "height": 2138,
+  "color": "#594040",
+  "created_at": "2025-09-19T08:54:46Z",
+  "updated_at": "2026-03-16T21:21:33Z",
+  "likes": 2,
+  "downloads": 249,
+  "views": 29798,
+  "attribution": {
+    "photographer": {
+      "name": "Vitaly Gariev",
+      "username": "silverkblack",
+      "portfolio_url": null,
+      "bio": "If you use my photos don't hesitate to follow my Instagram))",
+      "location": "Worldwide",
+      "profile_image_url": "https://images.unsplash.com/profile-1713942088787-b6a718031fe7image?ixlib=rb-4.1.0&crop=faces&fit=crop&w=64&h=64"
+    }
+  },
+  "urls": {
+    "raw": "https://images.unsplash.com/photo-1758270704625-cf6f1898853d?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk2NDQ4fA&ixlib=rb-4.1.0",
+    "full": "https://images.unsplash.com/photo-1758270704625-cf6f1898853d?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk2NDQ4fA&ixlib=rb-4.1.0&q=85",
+    "regular": "https://images.unsplash.com/photo-1758270704625-cf6f1898853d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk2NDQ4fA&ixlib=rb-4.1.0&q=80&w=1080",
+    "small": "https://images.unsplash.com/photo-1758270704625-cf6f1898853d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk2NDQ4fA&ixlib=rb-4.1.0&q=80&w=400",
+    "thumb": "https://images.unsplash.com/photo-1758270704625-cf6f1898853d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk2NDQ4fA&ixlib=rb-4.1.0&q=80&w=200",
+    "small_s3": "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1758270704625-cf6f1898853d"
+  },
+  "links": {
+    "photographer_profile": "https://unsplash.com/@silverkblack",
+    "download_unsplash": "https://unsplash.com/photos/two-smiling-students-taking-a-selfie-in-a-classroom-PkAiydV3VuY",
+    "download_raw": null,
+    "self": "https://api.unsplash.com/photos/two-smiling-students-taking-a-selfie-in-a-classroom-PkAiydV3VuY"
+  },
+  "usage_guidelines": {
+    "free_to_use": "Yes, under the Unsplash License",
+    "commercial_use": "Allowed",
+    "requires_permission": "No",
+    "requires_attribution": "Not required but appreciated",
+    "unsplash_license_url": "https://unsplash.com/license"
+  }
+}

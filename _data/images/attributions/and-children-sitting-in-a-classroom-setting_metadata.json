@@ -1,0 +1,43 @@
+{
+  "id": "DhmWgCMYRSw",
+  "title": "Adults and children sitting in a classroom setting.",
+  "width": 7622,
+  "height": 5084,
+  "color": "#d9d9d9",
+  "created_at": "2026-03-02T02:40:55Z",
+  "updated_at": "2026-03-16T19:01:00Z",
+  "likes": 0,
+  "downloads": 377,
+  "views": 12612,
+  "attribution": {
+    "photographer": {
+      "name": "AMONWAT DUMKRUT",
+      "username": "amonwatdumkrut",
+      "portfolio_url": "https://www.youtube.com/c/JESUSINSIDE",
+      "bio": "Hello everyone!\r\n I'm JOSEPH. I serve God in the Worship Team, Arts Team, and Media Team at Nexus Christian Church Thonburi in Bangkok, Thailand.  I love photography because every picture tells a story. I hope my photos bring you joy and inspiration.",
+      "location": "Bangkok, Thailand",
+      "profile_image_url": "https://images.unsplash.com/profile-1662089231032-e80f5346db02image?ixlib=rb-4.1.0&crop=faces&fit=crop&w=64&h=64"
+    }
+  },
+  "urls": {
+    "raw": "https://images.unsplash.com/photo-1772419186959-fdb8cc37e149?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk2NDA5fA&ixlib=rb-4.1.0",
+    "full": "https://images.unsplash.com/photo-1772419186959-fdb8cc37e149?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk2NDA5fA&ixlib=rb-4.1.0&q=85",
+    "regular": "https://images.unsplash.com/photo-1772419186959-fdb8cc37e149?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk2NDA5fA&ixlib=rb-4.1.0&q=80&w=1080",
+    "small": "https://images.unsplash.com/photo-1772419186959-fdb8cc37e149?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk2NDA5fA&ixlib=rb-4.1.0&q=80&w=400",
+    "thumb": "https://images.unsplash.com/photo-1772419186959-fdb8cc37e149?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk2NDA5fA&ixlib=rb-4.1.0&q=80&w=200",
+    "small_s3": "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1772419186959-fdb8cc37e149"
+  },
+  "links": {
+    "photographer_profile": "https://unsplash.com/@amonwatdumkrut",
+    "download_unsplash": "https://unsplash.com/photos/adults-and-children-sitting-in-a-classroom-setting-DhmWgCMYRSw",
+    "download_raw": null,
+    "self": "https://api.unsplash.com/photos/adults-and-children-sitting-in-a-classroom-setting-DhmWgCMYRSw"
+  },
+  "usage_guidelines": {
+    "free_to_use": "Yes, under the Unsplash License",
+    "commercial_use": "Allowed",
+    "requires_permission": "No",
+    "requires_attribution": "Not required but appreciated",
+    "unsplash_license_url": "https://unsplash.com/license"
+  }
+}

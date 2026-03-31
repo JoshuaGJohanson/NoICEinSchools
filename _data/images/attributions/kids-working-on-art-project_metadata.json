@@ -1,0 +1,43 @@
+{
+  "id": "EpMIv296POE",
+  "title": "Captured in a metropolitan Atlanta, Georgia primary school, seated amongst his classmates, this photograph depicts a young Asian-American school boy, who was in the process of creating a drawing, and was choosing from a box of crayons, the colors he’d use in order to bring his ideas to life. It is important to know that these objects are known as fomites, and can act as transmitters of illnesses.",
+  "width": 4256,
+  "height": 2832,
+  "color": "#735940",
+  "created_at": "2020-04-28T11:15:48Z",
+  "updated_at": "2026-03-16T19:43:10Z",
+  "likes": 194,
+  "downloads": 21869,
+  "views": 3572264,
+  "attribution": {
+    "photographer": {
+      "name": "CDC",
+      "username": "cdc",
+      "portfolio_url": "https://phil.cdc.gov/",
+      "bio": "The Public Health Image Library from the Centers for Disease Control and Prevention (CDC) offers an organized, universal electronic gateway to useful and important public health imagery.",
+      "location": "USA",
+      "profile_image_url": "https://images.unsplash.com/profile-1574341635267-a67096a2de26image?ixlib=rb-4.1.0&crop=faces&fit=crop&w=64&h=64"
+    }
+  },
+  "urls": {
+    "raw": "https://images.unsplash.com/photo-1588072432733-2b6a4873b187?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk3MTcxfA&ixlib=rb-4.1.0",
+    "full": "https://images.unsplash.com/photo-1588072432733-2b6a4873b187?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk3MTcxfA&ixlib=rb-4.1.0&q=85",
+    "regular": "https://images.unsplash.com/photo-1588072432733-2b6a4873b187?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk3MTcxfA&ixlib=rb-4.1.0&q=80&w=1080",
+    "small": "https://images.unsplash.com/photo-1588072432733-2b6a4873b187?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk3MTcxfA&ixlib=rb-4.1.0&q=80&w=400",
+    "thumb": "https://images.unsplash.com/photo-1588072432733-2b6a4873b187?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk3MTcxfA&ixlib=rb-4.1.0&q=80&w=200",
+    "small_s3": "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1588072432733-2b6a4873b187"
+  },
+  "links": {
+    "photographer_profile": "https://unsplash.com/@cdc",
+    "download_unsplash": "https://unsplash.com/photos/2-boys-and-girl-sitting-on-chair-EpMIv296POE",
+    "download_raw": null,
+    "self": "https://api.unsplash.com/photos/2-boys-and-girl-sitting-on-chair-EpMIv296POE"
+  },
+  "usage_guidelines": {
+    "free_to_use": "Yes, under the Unsplash License",
+    "commercial_use": "Allowed",
+    "requires_permission": "No",
+    "requires_attribution": "Not required but appreciated",
+    "unsplash_license_url": "https://unsplash.com/license"
+  }
+}

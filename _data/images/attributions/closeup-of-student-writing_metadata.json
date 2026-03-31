@@ -1,0 +1,43 @@
+{
+  "id": "s9CC2SKySJM",
+  "title": "Designer sketching Wireframes",
+  "width": 5184,
+  "height": 3456,
+  "color": "#f3f3f3",
+  "created_at": "2015-06-11T13:58:58Z",
+  "updated_at": "2026-03-16T20:36:13Z",
+  "likes": 11960,
+  "downloads": 3187455,
+  "views": 401671314,
+  "attribution": {
+    "photographer": {
+      "name": "Unseen Studio",
+      "username": "uns__nstudio",
+      "portfolio_url": "http://www.unseen.co",
+      "bio": null,
+      "location": "Bristol",
+      "profile_image_url": "https://images.unsplash.com/profile-1675243514637-6295a77d9611image?ixlib=rb-4.1.0&crop=faces&fit=crop&w=64&h=64"
+    }
+  },
+  "urls": {
+    "raw": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk3MTY3fA&ixlib=rb-4.1.0",
+    "full": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk3MTY3fA&ixlib=rb-4.1.0&q=85",
+    "regular": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk3MTY3fA&ixlib=rb-4.1.0&q=80&w=1080",
+    "small": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk3MTY3fA&ixlib=rb-4.1.0&q=80&w=400",
+    "thumb": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzczNjk3MTY3fA&ixlib=rb-4.1.0&q=80&w=200",
+    "small_s3": "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1434030216411-0b793f4b4173"
+  },
+  "links": {
+    "photographer_profile": "https://unsplash.com/@uns__nstudio",
+    "download_unsplash": "https://unsplash.com/photos/person-writing-on-brown-wooden-table-near-white-ceramic-mug-s9CC2SKySJM",
+    "download_raw": null,
+    "self": "https://api.unsplash.com/photos/person-writing-on-brown-wooden-table-near-white-ceramic-mug-s9CC2SKySJM"
+  },
+  "usage_guidelines": {
+    "free_to_use": "Yes, under the Unsplash License",
+    "commercial_use": "Allowed",
+    "requires_permission": "No",
+    "requires_attribution": "Not required but appreciated",
+    "unsplash_license_url": "https://unsplash.com/license"
+  }
+}
