@@ -51,6 +51,41 @@ permalink: /volunteer-signup.html
         </div>
 
         <div class="form-group">
+          <label for="state">State <span style="font-weight:400; color:var(--muted);">(optional)</span></label>
+          <select id="state" name="state">
+            <option value="">— Select your state —</option>
+            <option>Alabama</option><option>Alaska</option><option>Arizona</option>
+            <option>Arkansas</option><option>California</option><option>Colorado</option>
+            <option>Connecticut</option><option>Delaware</option><option>Florida</option>
+            <option>Georgia</option><option>Hawaii</option><option>Idaho</option>
+            <option>Illinois</option><option>Indiana</option><option>Iowa</option>
+            <option>Kansas</option><option>Kentucky</option><option>Louisiana</option>
+            <option>Maine</option><option>Maryland</option><option>Massachusetts</option>
+            <option>Michigan</option><option>Minnesota</option><option>Mississippi</option>
+            <option>Missouri</option><option>Montana</option><option>Nebraska</option>
+            <option>Nevada</option><option>New Hampshire</option><option>New Jersey</option>
+            <option>New Mexico</option><option>New York</option><option>North Carolina</option>
+            <option>North Dakota</option><option>Ohio</option><option>Oklahoma</option>
+            <option>Oregon</option><option>Pennsylvania</option><option>Rhode Island</option>
+            <option>South Carolina</option><option>South Dakota</option><option>Tennessee</option>
+            <option>Texas</option><option>Utah</option><option>Vermont</option>
+            <option>Virginia</option><option>Washington</option><option>West Virginia</option>
+            <option>Wisconsin</option><option>Wyoming</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="district">School district <span style="font-weight:400; color:var(--muted);">(optional)</span></label>
+          <input type="text" id="district" name="district" placeholder="e.g. Los Angeles Unified School District" autocomplete="off" list="district-suggestions" />
+          <datalist id="district-suggestions"></datalist>
+        </div>
+
+        <div class="form-group">
+          <label for="city">City <span style="font-weight:400; color:var(--muted);">(optional — if school district is unknown)</span></label>
+          <input type="text" id="city" name="city" placeholder="e.g. Los Angeles" autocomplete="address-level2" />
+        </div>
+
+        <div class="form-group">
           <label for="message">Anything else you'd like us to know?</label>
           <textarea
             id="message"
@@ -71,3 +106,16 @@ permalink: /volunteer-signup.html
     </div>
   </div>
 </section>
+
+<script src="{{ '/assets/js/districts-by-state.js' | url }}"></script>
+<script src="{{ '/assets/js/subscription-form.js' | url }}"></script>
+<script>
+(function () {
+  initSubscriptionForm({
+    stateSelect:   document.getElementById('state'),
+    districtInput: document.getElementById('district'),
+    datalist:      document.getElementById('district-suggestions'),
+    activityNote:  { textContent: '', classList: { add: function(){}, remove: function(){} } },
+  });
+})();
+</script>
