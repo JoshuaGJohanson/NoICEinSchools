@@ -1,0 +1,85 @@
+/* ─────────────────────────────────────────────
+   Utah section sub-navigation bar
+   Appears on all 8 Utah pages, below site header.
+   Loaded by the "utah" layout.
+───────────────────────────────────────────── */
+
+.utah-nav {
+  background: var(--navy);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+}
+
+.utah-nav-inner {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  width: min(100% - 2rem, var(--max));
+  margin: 0 auto;
+}
+
+.utah-nav-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.utah-nav-inner a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.83rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.72);
+  text-decoration: none;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+  border-bottom: 3px solid transparent;
+  transition: color 0.18s, border-color 0.18s;
+  margin-bottom: -2px;
+}
+
+.utah-nav-inner a:hover {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.utah-nav-inner a.utah-nav-active {
+  color: var(--white);
+  border-bottom-color: #38bdf8;
+}
+
+.utah-nav-divider {
+  width: 1px;
+  height: 1.1rem;
+  background: rgba(255, 255, 255, 0.18);
+  flex-shrink: 0;
+  margin: 0 0.35rem;
+  align-self: center;
+}
+
+.utah-nav-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: rgba(255, 255, 255, 0.38);
+  padding: 0 0.5rem 0 0;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .utah-nav-inner a {
+    padding: 0.55rem 0.7rem;
+    font-size: 0.8rem;
+  }
+
+  .utah-nav-label {
+    display: none;
+  }
+
+  .utah-nav-divider {
+    margin: 0 0.2rem;
+  }
+}

@@ -1,0 +1,506 @@
+---
+layout: utah
+title: Utah — State Information
+description: School immigration enforcement policies, ICE activity, and district-by-district scorecard for Utah families and educators.
+permalink: /states/ut/
+---
+
+<style>
+  /* ── Tables ── */
+  .scorecard-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.93rem;
+  }
+  .scorecard-table th {
+    text-align: left;
+    padding: 0.6rem 0.85rem;
+    background: var(--surface);
+    border-bottom: 2px solid var(--border);
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .scorecard-table td {
+    padding: 0.55rem 0.85rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+  }
+  .scorecard-table tbody tr:nth-child(even) td {
+    background: var(--surface);
+  }
+  .scorecard-table tbody tr:hover td {
+    background: color-mix(in srgb, var(--accent) 5%, transparent);
+  }
+  .scorecard-table tr:last-child td { border-bottom: none; }
+
+  /* ── Status icons ── */
+  .status-ok   { color: #2e7d32; font-size: 1.15rem; line-height: 1; }
+  .status-warn { color: #b45309; font-size: 1.15rem; line-height: 1; }
+  .status-bad  { color: #b91c1c; font-size: 1.15rem; line-height: 1; }
+
+  /* ── Tier banners ── */
+  .tier-banner {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    border-radius: var(--radius);
+    margin-bottom: var(--space-6);
+  }
+  .tier-banner-1 { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+  .tier-banner-2 { background: #fff8e1; border-left: 5px solid #b45309; }
+  .tier-banner-3 { background: #fef2f2; border-left: 5px solid #b91c1c; }
+  .tier-banner-icon { font-size: 1.75rem; line-height: 1; }
+  .tier-banner-text { flex: 1; }
+  .tier-banner-text strong { display: block; font-size: 1.1rem; margin-bottom: 0.15rem; }
+  .tier-banner-text span { font-size: 0.9rem; color: var(--muted); }
+
+  /* ── District cards ── */
+  .district-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-bottom: var(--space-8);
+  }
+  .district-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+  }
+  .district-card-header-t1 { background: #e8f5e9; border-bottom: 2px solid #2e7d32; }
+  .district-card-header-t2 { background: #fff8e1; border-bottom: 2px solid #b45309; }
+  .district-card-header-t3 { background: #fef2f2; border-bottom: 2px solid #b91c1c; }
+  .district-card-header h3 { margin: 0; font-size: 1.1rem; }
+  .score-pills { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+  .score-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .pill-ok   { background: #dcfce7; color: #166534; }
+  .pill-warn { background: #fef9c3; color: #854d0e; }
+  .pill-bad  { background: #fee2e2; color: #991b1b; }
+
+  /* ── Advocacy note ── */
+  .advocacy-note {
+    padding: 0.85rem 1.25rem;
+    background: color-mix(in srgb, var(--accent) 8%, var(--surface));
+    border-top: 1px solid var(--border);
+    font-size: 0.93rem;
+    display: flex;
+    gap: 0.6rem;
+  }
+  .advocacy-note-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.1rem; }
+
+  /* ── Jump nav ── */
+  .jump-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    padding: 1rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: var(--space-6);
+  }
+  .jump-nav a {
+    padding: 0.25rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    border: 1px solid var(--border);
+    text-decoration: none;
+    color: var(--text);
+    white-space: nowrap;
+  }
+  .jump-nav a:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .jump-nav-label { font-size: 0.8rem; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.05em; color: var(--muted); align-self: center; margin-right: 0.25rem; }
+
+  /* ── Legend ── */
+  .legend-row {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    padding: 0.85rem 1.1rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: var(--space-6);
+    font-size: 0.9rem;
+  }
+  .legend-item { display: flex; align-items: center; gap: 0.4rem; }
+
+  /* ── Image break ── */
+  .tier-image-break {
+    margin: var(--space-10) 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-6);
+    align-items: center;
+  }
+  .tier-image-break img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: var(--radius);
+  }
+  .tier-image-break .break-text { padding: var(--space-2); }
+  .tier-image-break .break-text h3 { margin-bottom: var(--space-3); }
+  @media (max-width: 700px) {
+    .tier-image-break { grid-template-columns: 1fr; }
+    .district-card-header { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+
+
+<!-- ═══════════════════════ HERO ═══════════════════════ -->
+
+<section class="hero" aria-label="Utah hero" style="background: linear-gradient(rgba(7,25,38,0.6),rgba(7,25,38,0.6)), url({{ '/assets/images/utah-arch.jpg' | url }}) center/cover no-repeat;">
+  <div class="container">
+    <div class="hero-content">
+      <div class="eyebrow">Utah</div>
+      <h1>No ICE in Utah Schools</h1>
+      <p>
+        No Utah district fully meets all criteria for a complete protective policy.
+        Change happens at the district level — through organized, coordinated community action.
+      </p>
+      <p>
+        This campaign is focused on building coalitions in key districts to develop strategy,
+        recruit community members, and work directly with school boards to adopt clear protections.
+      </p>
+      <div class="button-row">
+        <a class="button button-primary" href="{{ '/stay-informed/email-updates.html' | url }}?state=Utah">Sign Up for Updates</a>
+        <a class="button button-light" href="{{ '/states/ut/scorecard.html' | url }}">View District Scorecard</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="split">
+      <div class="panel">
+        <h3>State context</h3>
+        <p>
+          Utah took a nationally notable step with the Utah Compact (2010) — a statement of
+          principles signed by law enforcement, business, faith, and civic leaders — calling
+          for a humane and measured approach to immigration enforcement. The LDS Church's
+          moderating influence and a history of bipartisan civic engagement have made Utah
+          somewhat more open to advocacy than other conservative states.
+        </p>
+        <p>
+          However, the state legislature has <strong>not enacted any law</strong> requiring school
+          districts to adopt protective policies. Every district makes its own choices. Most
+          have not made any formal choice at all.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3>ICE activity in Utah</h3>
+        <p>
+          ICE is active across the Salt Lake Valley and in communities tied to construction,
+          services, and food processing. Local law enforcement has generally maintained a
+          cooperative posture with federal enforcement, facilitating operations across the
+          Wasatch Front.
+        </p>
+        <h3 style="margin-top: var(--space-4);">What this means for families</h3>
+        <p>
+          Because Utah places no requirements on districts, a family's protection depends
+          entirely on which district their child attends. <strong>No Utah district currently
+          meets all criteria for a complete protective policy.</strong> Even the strongest
+          districts have significant gaps.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════ HOW CHANGE HAPPENS ════════════════════════════════════════ -->
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2>How change happens in Utah</h2>
+      <p>
+        There is no state law requiring action. Every protection in Utah is the result of
+        organized, local advocacy at the district level.
+      </p>
+    </div>
+
+    <div class="cards-grid">
+      <article class="card">
+        <h3>1. Build a base</h3>
+        <p>
+          Recruit parents, students, educators, and community members within a district.
+          A small, committed group is enough to begin.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>2. Form a coalition</h3>
+        <p>
+          Connect organizations — faith groups, immigrant support organizations,
+          parent groups, and educators — into a coordinated effort.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>3. Develop a strategy</h3>
+        <p>
+          Align on messaging, prepare speakers, and define a clear, written policy ask.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>4. Engage the board</h3>
+        <p>
+          Meet with board members and show up to public meetings with a unified,
+          coordinated request for policy adoption.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════ SCORECARD LINK ════════════════════════════════════════ -->
+
+<section class="section">
+  <div class="container">
+    <div class="panel panel-spaced" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+      <div>
+        <strong style="display: block; margin-bottom: 0.25rem;">District Scorecard</strong>
+        <span style="font-size: 0.92rem; color: var(--muted);">See how each Utah district scores on the five core protections.</span>
+      </div>
+      <a class="button button-primary" href="{{ '/states/ut/scorecard.html' | url }}">View Scorecard →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════ TAKEAWAYS ════════════════════════════════════════ -->
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Key takeaways for Utah advocates</h2>
+    </div>
+
+    <div class="cards-grid">
+      <article class="card">
+        <h3>Even the best districts are incomplete</h3>
+        <p>
+          No Utah district fully meets all nine criteria. The most common gaps statewide are
+          training, emergency protocols, and formal board adoption. There is room to push in
+          every district.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Most districts are starting from zero</h3>
+        <p>
+          This is powerful for advocacy. The ask is not to overhaul a hostile system — it is
+          to create basic protections where none exist. You are not asking them to change
+          direction. You are asking them to start.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Utah leaves it to districts</h3>
+        <p>
+          Every protection in Utah is the result of local organizing. Every unprotected
+          district is a direct advocacy opportunity with a reachable decision-maker: your
+          local school board.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>The Utah Compact is an asset</h3>
+        <p>
+          Utah's history of bipartisan civic engagement — the Compact, LDS Church positions,
+          business community support — makes cross-party advocacy more viable here than in
+          most conservative states.
+        </p>
+      </article>
+    </div>
+
+    <div class="split" style="margin-top: var(--space-8);">
+      <div class="panel">
+        <h3>The five highest-impact asks for any Utah district</h3>
+        <ul class="styled-list">
+          <li><strong>Require a judicial warrant</strong> before any immigration enforcement officer enters non-public school areas</li>
+          <li><strong>Train front office staff</strong> with a clear, written script for what to do and who to call</li>
+          <li><strong>Adopt a formal board policy</strong> — not a FAQ, not informal guidance, but a policy the board has voted on</li>
+          <li><strong>Protect student records</strong> — make explicit that FERPA applies to immigration enforcement requests</li>
+          <li><strong>Create a public emergency response plan</strong> for when enforcement officers arrive on campus</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════ FOR ORGANIZATIONS ════════════════════════════════════════ -->
+
+<section class="section">
+  <div class="container">
+    <div class="panel panel-spaced">
+      <h2>For organizations and partners</h2>
+      <p>
+        This is a coordinated, statewide effort built through district-level coalitions.
+        The goal is to bring organizations together to pass clear policies through local school boards.
+      </p>
+
+      <p><strong>Current focus:</strong></p>
+      <ul>
+        <li><a href="{{ '/states/ut/jordan/' | url }}">Jordan School District</a></li>
+        <li><a href="{{ '/states/ut/alpine/' | url }}">Alpine School District</a></li>
+        <li><a href="{{ '/states/ut/davis/' | url }}">Davis School District</a></li>
+      </ul>
+
+      <p><strong>How organizations can engage:</strong></p>
+      <ul>
+        <li>Join coalition planning efforts in a target district</li>
+        <li>Help recruit community members</li>
+        <li>Coordinate messaging and outreach</li>
+        <li>Provide speakers for school board meetings</li>
+        <li>Partner with other organizations instead of working independently</li>
+      </ul>
+
+      <div class="button-row" style="margin-top:1rem;">
+        <a class="button button-primary" href="{{ '/stay-informed/email-updates.html' | url }}?state=Utah">Join the Utah Coalition</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Utah campaign goals</h2>
+      <p>
+        This is a coordinated campaign focused on three key districts where policy change is both needed and achievable:
+        Jordan, Alpine, and Davis. Each district effort follows the same coalition-based model.
+      </p>
+    </div>
+
+    <div class="cards-grid">
+      <article class="card">
+        <h3>1. Recruit and build a base</h3>
+        <p>
+          Build a coalition of parents, educators, faith leaders, and community members across
+          the three target districts. A group of five to ten active people per district is
+          enough to begin.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>2. Build a coalition</h3>
+        <p>
+          Partner with existing organizations in Utah — immigration legal services, faith
+          communities, parent advocacy groups — who share the goal of keeping schools safe.
+          A broader coalition amplifies the ask.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>3. Develop a strategy and policy ask</h3>
+        <p>
+          Draft a specific, written policy request for each district. Use the
+          <a href="{{ '/policy/policy-statement.html' | url }}">model policy language</a>
+          as a starting point. Specific requests are harder to defer than vague ones.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>4. Engage decision-makers</h3>
+        <p>
+          Before appearing at a public meeting, request a one-on-one meeting with sympathetic
+          board members or the superintendent. Many will be receptive — especially with
+          prepared research and a draft policy in hand.
+        </p>
+      </article>
+    </div>
+
+    <div class="panel panel-spaced" style="margin-top: 2rem;">
+      <h3>5. Speak at upcoming board meetings</h3>
+      <p>
+        This is most effective when done as a coordinated coalition effort, with multiple speakers representing different perspectives.
+      </p>
+      <p>
+        Public comment at board meetings is a direct line to decision-makers. Plan to attend
+        the following upcoming meetings and bring supporters. Consistent presence across
+        multiple meetings signals that this is not a one-time concern.
+      </p>
+      <table class="scorecard-table" style="margin-top: 1rem;">
+        <thead>
+          <tr>
+            <th>District</th>
+            <th>Next meeting</th>
+            <th>More info</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><a href="{{ '/states/ut/jordan/' | url }}">Jordan School District</a></strong></td>
+            <td>May 26, 2026</td>
+            <td><a href="https://jordandistrict.org/board/meetings/" target="_blank" rel="noopener">Board meetings</a></td>
+          </tr>
+          <tr>
+            <td><strong><a href="{{ '/states/ut/alpine/' | url }}">Alpine School District</a></strong></td>
+            <td>June 16, 2026</td>
+            <td><a href="https://www.alpineschools.org/o/asd/page/board" target="_blank" rel="noopener">Board meetings</a></td>
+          </tr>
+          <tr>
+            <td><strong><a href="{{ '/states/ut/davis/' | url }}">Davis School District</a></strong></td>
+            <td>June 2, 2026</td>
+            <td><a href="https://www.davis.k12.ut.us/o/dsd/page/board-meetings" target="_blank" rel="noopener">Board meetings</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="panel">
+      <h3>General resources</h3>
+      <ul class="styled-list">
+        <li><a href="{{ '/policy-solutions.html' | url }}">Policy solutions schools can adopt</a></li>
+        <li><a href="{{ '/policy/policy-statement.html' | url }}">Model policy language for districts</a></li>
+        <li><a href="{{ '/learning/know-your-rights.html' | url }}">Know your rights</a></li>
+        <li><a href="{{ '/campaigns/organize-a-campaign.html' | url }}">How to organize a campaign in your district</a></li>
+        <li><a href="{{ '/take-action.html' | url }}">Take action</a></li>
+        <li><a href="{{ '/stay-informed/email-updates.html' | url }}?state=Utah">Sign up to stay informed</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="cta" aria-label="Closing call to action">
+  <div class="container cta-inner">
+    <h2>Your school board makes the call.</h2>
+    <p>
+      In Utah, there is no state law to wait for. Change happens when organized groups
+      of community members and organizations work together to make a clear, coordinated ask.
+    </p>
+    <p>
+      Every district is reachable — and coalition-based advocacy can move policy forward.
+    </p>
+    <div class="button-row">
+      <a class="button button-primary" href="{{ '/campaigns/organize-a-campaign.html' | url }}">Organize a Campaign</a>
+      <a class="button button-light" href="{{ '/learning/state-information.html' | url }}">All States</a>
+    </div>
+  </div>
+</section>

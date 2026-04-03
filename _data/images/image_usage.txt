@@ -16,6 +16,9 @@ contact.html
 faq.html
   (no images)
 
+image-attributions.html
+  (no images)
+
 index.html
   closeup-of-student-writing.jpg
   high-school-study-group.jpg
@@ -96,6 +99,7 @@ why-schools-should-be-safe.html
 
 UNUSED IMAGES  (in assets/images but not referenced by any page)
 ----------------------------------------------------------------------
+  advocacy-group-celebrates-success.jpg
   aerial-view-kids-doing-homework-table.jpg
   and-child-drawing-together-at-a-table-r.jpg
   and-children-sitting-in-a-classroom-setting.jpg
@@ -115,6 +119,7 @@ UNUSED IMAGES  (in assets/images but not referenced by any page)
   group-of-young-people-sitting-next-to-each-other.jpg
   helps-grandson-with-homework-at-table.jpg
   hero-classroom.jpg
+  high-five.jpg
   high-school-basketball.jpg
   high-school-cafeteria.jpg
   high-school-football-field.jpg
@@ -149,6 +154,7 @@ UNUSED IMAGES  (in assets/images but not referenced by any page)
   teacher-lecture.jpg
   teacher-parents-classroom.jpg
   teacher-posing-by-empty-classroom.jpg
+  utah-arch.jpg
   worried-hispanic-kid-with-head-in-hands.jpg
   worried-white-kid.jpg
   young-girls-making-funny-faces.jpg

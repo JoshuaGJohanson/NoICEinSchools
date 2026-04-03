@@ -356,6 +356,20 @@ permalink: /stay-informed/email-updates.html
 
   initSubscriptionForm({ stateSelect, districtInput, datalist, activityNote });
 
+  // Prefill state and district from URL query params (e.g. ?state=Utah&district=Jordan+School+District)
+  (function () {
+    const params = new URLSearchParams(window.location.search);
+    const state    = params.get('state');
+    const district = params.get('district');
+    if (state) {
+      stateSelect.value = state;
+      stateSelect.dispatchEvent(new Event('change'));
+    }
+    if (district) {
+      districtInput.value = district;
+    }
+  })();
+
   function validateEmail(val) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val.trim());
   }

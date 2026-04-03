@@ -1,0 +1,165 @@
+/* ─────────────────────────────────────────────
+   District page styles
+   Used by all district landing pages via the
+   "district" layout.
+───────────────────────────────────────────── */
+
+/* ── Highlight grid ── */
+.highlight-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+@media (max-width: 680px) { .highlight-grid { grid-template-columns: 1fr; } }
+
+.highlight-block {
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--blue);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  background: #fff;
+}
+.highlight-block h3 {
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--navy);
+}
+.highlight-block ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+.highlight-block li { margin-bottom: 0.4rem; }
+
+/* ── Step blocks (How we win) ── */
+.step-grid .highlight-block {
+  border-left: 3px solid var(--navy);
+  padding-top: 1.5rem;
+}
+.step-grid .highlight-block h3 {
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.step-num {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--navy);
+  opacity: 0.12;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+/* ── Status strip ── */
+.status-strip {
+  display: flex;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  padding: 1.1rem 1.5rem;
+  background: #fef2f2;
+  border: 1px solid #fca5a5;
+  border-radius: var(--radius);
+  margin-bottom: 2rem;
+}
+.status-strip-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: #fff;
+  border: 1.5px solid #fca5a5;
+  border-radius: 999px;
+  padding: 0.3rem 0.85rem;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #991b1b;
+}
+.status-strip-item span { font-size: 0.7rem; }
+
+/* ── Action cards ── */
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+.action-card {
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--blue);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.25rem 1.1rem;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: box-shadow 0.18s, transform 0.18s;
+}
+.action-card:hover {
+  box-shadow: 0 6px 20px rgba(10,34,51,0.1);
+  transform: translateY(-2px);
+}
+.action-card h4 { margin: 0; font-size: 0.97rem; color: var(--navy); }
+.action-card p  { margin: 0; font-size: 0.88rem; color: var(--muted); flex: 1; }
+.action-card a  { align-self: flex-start; margin-top: 0.25rem; }
+
+/* ── Accordion ── */
+.accordion { margin-top: 1rem; }
+.accordion details {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+}
+.accordion details[open] summary { border-bottom: 1px solid var(--border); }
+.accordion summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 1.1rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.97rem;
+  list-style: none;
+  background: #f8fbfe;
+  user-select: none;
+}
+.accordion summary::-webkit-details-marker { display: none; }
+.accordion summary::after {
+  content: "+";
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--muted);
+  flex-shrink: 0;
+}
+.accordion details[open] summary::after { content: "−"; }
+.accordion .accordion-body {
+  padding: 1rem 1.25rem;
+  font-size: 0.95rem;
+}
+.accordion .accordion-body p  { margin-top: 0; }
+.accordion .accordion-body ul { padding-left: 1.25rem; }
+.accordion .accordion-body li { margin-bottom: 0.35rem; }
+
+/* ── Organizer strip ── */
+.organizer-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--navy);
+  border-radius: var(--radius);
+  background: #f4f8fc;
+}
+.organizer-strip-text strong { display: block; margin-bottom: 0.2rem; color: var(--navy); }
+.organizer-strip-text span  { font-size: 0.9rem; color: var(--muted); }
+
+/* ── Section tint ── */
+.section-tinted { background: #f4f8fc; }

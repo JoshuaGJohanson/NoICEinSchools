@@ -1,0 +1,32 @@
+<nav class="utah-nav" aria-label="Utah section navigation">
+  <div class="utah-nav-inner">
+    <span class="utah-nav-label">Utah</span>
+
+    <a href="{{ '/states/ut/' | url }}"
+      class="{% if page.url == '/states/ut/' %}utah-nav-active{% endif %}">
+      Overview
+    </a>
+
+    <a href="{{ '/states/ut/scorecard.html' | url }}"
+      class="{% if page.url == '/states/ut/scorecard.html' %}utah-nav-active{% endif %}">
+      Scorecard
+    </a>
+
+    <span class="utah-nav-divider" aria-hidden="true"></span>
+
+    <a href="{{ '/states/ut/jordan/' | url }}"
+      class="{% if '/states/ut/jordan' in page.url %}utah-nav-active{% endif %}">
+      Jordan
+    </a>
+
+    <a href="{{ '/states/ut/alpine/' | url }}"
+      class="{% if '/states/ut/alpine' in page.url %}utah-nav-active{% endif %}">
+      Alpine
+    </a>
+
+    <a href="{{ '/states/ut/davis/' | url }}"
+      class="{% if '/states/ut/davis' in page.url %}utah-nav-active{% endif %}">
+      Davis
+    </a>
+  </div>
+</nav>
