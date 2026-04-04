@@ -1,0 +1,119 @@
+<style>
+  .guide-section {
+    margin-bottom: 2.5rem;
+  }
+  .guide-section h2 {
+    font-size: 1.35rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border);
+    margin-bottom: 1.25rem;
+  }
+
+  .step-list {
+    counter-reset: step-counter;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .step-list li {
+    counter-increment: step-counter;
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    align-items: flex-start;
+  }
+  .step-list li::before {
+    content: counter(step-counter);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2rem;
+    height: 2rem;
+    background: #2563eb;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 0.85rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+
+  .tip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .tip-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 1rem 1.1rem;
+    background: #f4f8fc;
+  }
+  .tip-card h4 {
+    margin: 0 0 0.4rem;
+    font-size: 0.97rem;
+  }
+  .tip-card p {
+    margin: 0;
+    font-size: 0.92rem;
+    color: var(--muted);
+  }
+
+  .talking-points-block {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+  .talking-points-header {
+    padding: 0.7rem 1.1rem;
+    background: #12324a;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  .talking-points-body {
+    padding: 1rem 1.25rem;
+    font-size: 0.93rem;
+  }
+  .talking-points-body ul {
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+  .talking-points-body li {
+    margin-bottom: 0.4rem;
+  }
+
+  .example-comment {
+    padding: 1.1rem 1.25rem;
+    background: #f4f8fc;
+    border-left: 4px solid #2563eb;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    font-style: italic;
+    font-size: 0.95rem;
+    margin: 1rem 0;
+  }
+
+  .info-row {
+    display: flex;
+    gap: 0.6rem;
+    align-items: flex-start;
+    margin-bottom: 0.6rem;
+    font-size: 0.95rem;
+  }
+  .info-label {
+    font-weight: 600;
+    min-width: 8rem;
+    flex-shrink: 0;
+  }
+
+  .callout-note {
+    padding: 1rem 1.25rem;
+    background: #fffbeb;
+    border-left: 4px solid #d97706;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    margin: 1.25rem 0;
+    font-size: 0.95rem;
+  }
+</style>

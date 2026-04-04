@@ -1,0 +1,513 @@
+---
+layout: default
+title: Judicial vs. ICE Administrative Warrants
+description: A practical guide for school staff on the difference between judicial warrants and ICE administrative warrants — what each allows, how to recognize them, and why the distinction matters in schools.
+permalink: /learning/judicial-vs-administrative.html
+---
+
+<style>
+  .warrant-compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  @media (max-width: 700px) {
+    .warrant-compare { grid-template-columns: 1fr; }
+  }
+  .warrant-card {
+    border-radius: 10px;
+    padding: 1.75rem;
+    border: 2px solid transparent;
+  }
+  .warrant-card.judicial {
+    background: #eaf4ee;
+    border-color: #2d8a50;
+  }
+  .warrant-card.administrative {
+    background: #fef3ec;
+    border-color: #c9601a;
+  }
+  .warrant-card h3 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    letter-spacing: 0.01em;
+  }
+  .warrant-card.judicial h3 { color: #1a5e34; }
+  .warrant-card.administrative h3 { color: #9b4a12; }
+  .warrant-badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  .warrant-badge.judicial { background: #2d8a50; color: #fff; }
+  .warrant-badge.administrative { background: #c9601a; color: #fff; }
+  .warrant-card ul { margin: 0.75rem 0 0; padding-left: 1.2rem; }
+  .warrant-card li { margin-bottom: 0.5rem; line-height: 1.55; }
+  .allow-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    font-size: 0.95rem;
+  }
+  .allow-icon { font-size: 1.2rem; flex-shrink: 0; line-height: 1.4; }
+  .doc-sample {
+    background: #fff;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    font-size: 0.88rem;
+    font-family: Georgia, serif;
+    line-height: 1.7;
+    margin-top: 1rem;
+  }
+  .doc-sample .doc-header {
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #d1d5db;
+    padding-bottom: 0.6rem;
+    margin-bottom: 0.75rem;
+  }
+  .doc-sample .doc-field {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.3rem;
+  }
+  .doc-sample .doc-label { color: #6b7280; width: 7rem; flex-shrink: 0; }
+  .callout-key {
+    background: #1e3a5f;
+    color: #fff;
+    border-radius: 10px;
+    padding: 1.5rem 1.75rem;
+    margin-top: 1.5rem;
+  }
+  .callout-key h3 { color: #93c5fd; margin-top: 0; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  .callout-key p { margin: 0.5rem 0 0; line-height: 1.65; }
+  .checklist li { margin-bottom: 0.6rem; }
+  .step-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+  .step-num {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: #2563eb;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+</style>
+
+
+<!-- ═══════════════════════ HERO ═══════════════════════ -->
+
+<section class="hero" style="background: linear-gradient(rgba(7,25,38,0.7),rgba(7,25,38,0.7)), url({{ '/assets/images/law-enforcement-entering-a-home.jpg' | url }}) center/cover no-repeat;" aria-label="Warrants guide hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="eyebrow">Understanding Warrants</div>
+      <h1>Judicial vs. ICE Administrative Warrants: What Schools Need to Know</h1>
+      <p>
+        Not all warrants are the same. ICE regularly presents documents that look
+        official but carry very different legal authority than a court-issued warrant.
+        Understanding the difference is critical for anyone working in a school.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════ KEY DIFFERENCE ═══════════════════════ -->
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2>The core distinction — in plain language</h2>
+      <p style="max-width: 720px;">Two documents. Both may be called a "warrant." Only one is issued by a judge.</p>
+    </div>
+
+    <div style="max-width: 820px;">
+      <div class="panel" style="margin-bottom: 1.25rem;">
+        <h3 style="color: #1a5e34; margin-top: 0;">A judicial warrant is signed by a judge.</h3>
+        <p style="margin: 0;">
+          It is issued by a state or federal court, based on probable cause, and gives officers legal
+          authority to enter private spaces — including areas inside a building that are not open to
+          the public. This is the type of warrant the Fourth Amendment requires for most searches.
+        </p>
+      </div>
+
+      <div class="panel" style="margin-bottom: 1.25rem;">
+        <h3 style="color: #9b4a12; margin-top: 0;">An administrative warrant is issued by ICE or DHS — not a judge.</h3>
+        <p style="margin: 0;">
+          These documents are generated internally by immigration officers. They do not meet the legal
+          standard of a judicial warrant and do <strong>not</strong> give officers the authority to
+          enter non-public areas without consent.
+          According to the <a href="https://www.nilc.org/wp-content/uploads/2025/01/2025-Subpoenas-Warrants_.pdf" target="_blank" rel="noopener">National Immigration Law Center</a>,
+          administrative warrants are issued by immigration officers, not courts.
+          The <a href="https://www.aclupa.org/news/schools-must-protect-students-and-follow-law-if-ice-shows/" target="_blank" rel="noopener">ACLU of Pennsylvania</a>
+          confirms that only judicial warrants authorize entry into non-public areas without consent.
+        </p>
+      </div>
+
+      <div class="callout-key">
+        <h3>Why this matters immediately</h3>
+        <p>
+          ICE agents typically use administrative warrants, not judicial ones
+          (<a href="https://www.ilrc.org/community-resources/protecting-children-schools-against-immigration-enforcement" target="_blank" rel="noopener" style="color: #93c5fd;">Immigrant Legal Resource Center</a>).
+          These documents may be presented confidently and look entirely official.
+          Staff who are not trained may assume they must comply when they are not legally required to.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════ VISUAL COMPARISON ═══════════════════════ -->
+
+<section class="section" style="background: var(--card);">
+  <div class="container">
+    <div class="section-header">
+      <h2>Side-by-side comparison</h2>
+      <p style="max-width: 680px;">Review both types before a situation arises — not during one.</p>
+    </div>
+
+    <div class="warrant-compare">
+
+      <!-- JUDICIAL -->
+      <div class="warrant-card judicial">
+        <span class="warrant-badge judicial">Judicial Warrant</span>
+        <h3>Issued by a court — full legal authority</h3>
+        <ul>
+          <li>Signed by a <strong>judge or magistrate</strong></li>
+          <li>Issued by a <strong>state or federal court</strong></li>
+          <li>Based on <strong>probable cause</strong></li>
+          <li>Identifies a specific location, person, and timeframe</li>
+          <li>Can authorize entry into <strong>non-public, private areas</strong></li>
+          <li>Examples: search warrant, arrest warrant from a court</li>
+        </ul>
+        <div class="allow-row">
+          <span class="allow-icon">✅</span>
+          <span><strong>Allows entry</strong> into private and non-public areas of a building, including school offices and classrooms, without consent.</span>
+        </div>
+
+        <div class="doc-sample">
+          <div class="doc-header">UNITED STATES DISTRICT COURT<br><span style="font-weight:400; font-size:0.85rem;">District of [State]</span></div>
+          <div class="doc-field"><span class="doc-label">Document:</span><span>Search Warrant / Arrest Warrant</span></div>
+          <div class="doc-field"><span class="doc-label">Issued by:</span><span>U.S. District Court Judge [Name]</span></div>
+          <div class="doc-field"><span class="doc-label">Signed by:</span><span>Judge's signature + court seal</span></div>
+          <div class="doc-field"><span class="doc-label">Location:</span><span>Specific address listed</span></div>
+          <div class="doc-field"><span class="doc-label">Subject:</span><span>Named individual</span></div>
+        </div>
+      </div>
+
+      <!-- ADMINISTRATIVE -->
+      <div class="warrant-card administrative">
+        <span class="warrant-badge administrative">ICE Administrative Warrant</span>
+        <h3>Issued by ICE/DHS — limited authority</h3>
+        <ul>
+          <li>Signed by an <strong>immigration officer</strong>, not a judge</li>
+          <li>Issued by <strong>ICE or the Department of Homeland Security</strong></li>
+          <li>Internal administrative document</li>
+          <li>Form <strong>I-200</strong> (Warrant for Arrest of Alien) or <strong>I-205</strong> (Warrant of Removal/Deportation) (<a href="https://www.beluminus.org/warrants/" target="_blank" rel="noopener">Luminus Network</a>)</li>
+          <li>Does <strong>not</strong> authorize entry into non-public areas</li>
+        </ul>
+        <div class="allow-row">
+          <span class="allow-icon">⛔</span>
+          <span><strong>Does not allow entry</strong> into private or non-public areas of a building without consent. Schools are not required to let officers in based on this document alone.
+          (<a href="https://www.presidentsalliance.org/wp-content/uploads/2025/02/UPDATED-FAQ-Immigration-Enforcement-on-Campuses-Feb-25-2025.pdf" target="_blank" rel="noopener">Presidents' Alliance</a>)</span>
+        </div>
+
+        <div class="doc-sample">
+          <div class="doc-header">U.S. DEPARTMENT OF HOMELAND SECURITY<br><span style="font-weight:400; font-size:0.85rem;">Immigration and Customs Enforcement</span></div>
+          <div class="doc-field"><span class="doc-label">Document:</span><span>Form I-200 or I-205</span></div>
+          <div class="doc-field"><span class="doc-label">Issued by:</span><span>ICE Field Office</span></div>
+          <div class="doc-field"><span class="doc-label">Signed by:</span><span>ICE officer (not a judge)</span></div>
+          <div class="doc-field"><span class="doc-label">Authority:</span><span>Administrative — not a court order</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════ VISUAL RECOGNITION ═══════════════════════ -->
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2>How to tell the difference at a glance</h2>
+      <p style="max-width: 680px;">
+        In a real situation, there may be limited time to review a document. Know these signals before you need them.
+      </p>
+    </div>
+
+    <div class="split" style="align-items: flex-start;">
+      <div>
+        <h3 style="color: #1a5e34;">Signs it is a judicial warrant</h3>
+        <ul class="styled-list checklist">
+          <li>Header reads <strong>"U.S. District Court,"</strong> "Superior Court," or similar court name</li>
+          <li>Contains a <strong>judge's name and signature</strong></li>
+          <li>May include a <strong>court seal or stamp</strong></li>
+          <li>Lists a specific address, named individual, and date range</li>
+          <li>Formatted as a formal legal court document</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 style="color: #9b4a12;">Signs it is an administrative warrant</h3>
+        <ul class="styled-list checklist">
+          <li>Header reads <strong>"Department of Homeland Security"</strong> or <strong>"U.S. Immigration and Customs Enforcement"</strong></li>
+          <li>Signed by an <strong>ICE officer</strong> — no judge named</li>
+          <li>Form number visible: <strong>I-200</strong> or <strong>I-205</strong></li>
+          <li>May look official and formal — it is still not a court order</li>
+          <li>No court name, no judicial seal</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout-note" style="margin-top: 1.5rem;">
+      <strong>Key question to ask:</strong> Is there a judge's name and signature on this document?
+      If not, it is not a judicial warrant — regardless of how official it looks.
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════ REAL-WORLD CONTEXT ═══════════════════════ -->
+
+<section class="section" style="background: var(--card);">
+  <div class="container">
+    <div class="section-header">
+      <h2>What happens in real situations</h2>
+    </div>
+
+    <div style="max-width: 820px;">
+      <p>
+        According to the <a href="https://www.ilrc.org/community-resources/protecting-children-schools-against-immigration-enforcement" target="_blank" rel="noopener">Immigrant Legal Resource Center</a>,
+        ICE typically uses administrative warrants — not judicial ones — when approaching schools and other locations.
+        These documents are routinely presented in ways that suggest the same authority as a court order.
+      </p>
+
+      <div class="panel" style="margin: 1.25rem 0;">
+        <h3 style="margin-top: 0;">How confusion happens</h3>
+        <ul class="styled-list">
+          <li>An agent may say "I have a warrant" without specifying the type.</li>
+          <li>Administrative warrants are printed on official government letterhead and look authoritative.</li>
+          <li>Staff without training may not know the distinction exists.</li>
+          <li>In a high-pressure moment, it is easy to assume compliance is required when it is not.</li>
+        </ul>
+      </div>
+
+      <p>
+        The <a href="https://www.socialworkers.org/About/Legal-Defense-Fund/Legal-Issues/Navigating-ICE-Presence-in-School-and-Healthcare-Facilities" target="_blank" rel="noopener">National Association of Social Workers</a>
+        notes that administrative warrants do not require schools to allow entry.
+        The <a href="https://www.presidentsalliance.org/wp-content/uploads/2025/02/UPDATED-FAQ-Immigration-Enforcement-on-Campuses-Feb-25-2025.pdf" target="_blank" rel="noopener">Presidents' Alliance</a>
+        guidance for campuses confirms that ICE cannot enter non-public areas based solely on an administrative document.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════ WHY IT MATTERS FOR SCHOOLS ═══════════════════════ -->
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Why this distinction matters specifically in schools</h2>
+    </div>
+
+    <div class="split" style="align-items: flex-start;">
+      <div>
+        <p>
+          Most areas inside a school building are <strong>non-public spaces</strong> — classrooms,
+          hallways, offices, and counseling rooms are not open to the general public.
+          Entry into these spaces requires either a judicial warrant or the voluntary consent of an authorized school official.
+        </p>
+        <p>
+          An ICE administrative warrant <strong>does not meet that standard</strong>.
+          (<a href="https://www.socialworkers.org/About/Legal-Defense-Fund/Legal-Issues/Navigating-ICE-Presence-in-School-and-Healthcare-Facilities" target="_blank" rel="noopener">NASW</a>)
+        </p>
+        <p>
+          When front office staff, security personnel, or administrators have not been trained on this
+          distinction, three problems emerge:
+        </p>
+        <ul class="styled-list">
+          <li>Entry may be permitted when it legally does not need to be</li>
+          <li>Responses become inconsistent across staff and situations</li>
+          <li>The school may inadvertently create legal and policy exposure</li>
+        </ul>
+      </div>
+
+      <div class="panel" style="background: #f0f7ff; border-left: 4px solid #2563eb;">
+        <h3 style="margin-top: 0;">Training closes the gap</h3>
+        <p>
+          The goal is not to obstruct law enforcement. The goal is to ensure that school staff
+          respond <em>correctly and consistently</em> — which means understanding what each type
+          of document actually requires.
+        </p>
+        <p style="margin-bottom: 0;">
+          See <a href="{{ '/policy/policy-statement.html' | url }}">our policy statement</a> and
+          <a href="https://www.ctschoollaw.com/2025/01/what-schools-should-know-about-ice-enforcement-actions/" target="_blank" rel="noopener">this school law guidance</a>
+          for more on how districts can prepare.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════ PRACTICAL STEPS ═══════════════════════ -->
+
+<section class="section" style="background: var(--card);">
+  <div class="container">
+    <div class="section-header">
+      <h2>Practical steps for school staff</h2>
+      <p style="max-width: 640px;">If officers arrive and present a warrant, these steps help ensure a correct response.</p>
+    </div>
+
+    <div style="max-width: 720px;">
+      <div class="step-row">
+        <div class="step-num">1</div>
+        <div>
+          <strong>Ask to see the document.</strong> You have the right to review it before making any decision. Do not rely on verbal descriptions alone.
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">2</div>
+        <div>
+          <strong>Check who signed it.</strong> Is there a judge's name and signature? If not, it is an administrative document — not a judicial warrant.
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">3</div>
+        <div>
+          <strong>Check the issuing authority.</strong> Does it say "U.S. District Court" or does it say "Department of Homeland Security" or "ICE"? Only the former is a court order.
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">4</div>
+        <div>
+          <strong>Do not consent to entry prematurely.</strong> If you are unsure, you are not required to allow access to non-public areas while you review the document.
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">5</div>
+        <div>
+          <strong>Escalate immediately.</strong> Contact your school's principal, district administration, or legal counsel. Do not handle this alone if there is any uncertainty.
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">6</div>
+        <div>
+          <strong>Document the encounter.</strong> Note the time, the officer's name and badge number, and what was presented. This protects the school and creates an accurate record.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════ KEY INSIGHT CALLOUT ═══════════════════════ -->
+
+<section class="section">
+  <div class="container">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <div class="callout-key">
+        <h3>Why training matters</h3>
+        <p>
+          In real situations, the difference between a judicial warrant and an ICE administrative
+          document is not obvious — especially under pressure.
+        </p>
+        <p>
+          Because administrative warrants are common and look official, staff may believe they must
+          comply when they are not legally required to.
+        </p>
+        <p style="margin-bottom: 0;">
+          Clear training ensures schools respond correctly, consistently, and within the law.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════ SOURCES ═══════════════════════ -->
+
+<section class="section" style="background: var(--card);">
+  <div class="container">
+    <div style="max-width: 820px;">
+      <h2>Sources</h2>
+      <ul class="styled-list" style="font-size: 0.93rem; line-height: 1.75;">
+        <li>
+          <a href="https://www.nilc.org/wp-content/uploads/2025/01/2025-Subpoenas-Warrants_.pdf" target="_blank" rel="noopener">National Immigration Law Center — Warrants and Subpoenas guidance</a>
+        </li>
+        <li>
+          <a href="https://www.aclusc.org/immigration-enforcement-administrative-vs-judicial-warrants/" target="_blank" rel="noopener">ACLU of South Carolina — Administrative vs. Judicial Warrants</a>
+        </li>
+        <li>
+          <a href="https://www.aclupa.org/news/schools-must-protect-students-and-follow-law-if-ice-shows/" target="_blank" rel="noopener">ACLU of Pennsylvania — Schools must protect students if ICE shows</a>
+        </li>
+        <li>
+          <a href="https://www.beluminus.org/warrants/" target="_blank" rel="noopener">Luminus Network — Judicial Warrant vs. Administrative Warrant</a>
+        </li>
+        <li>
+          <a href="https://www.presidentsalliance.org/wp-content/uploads/2025/02/UPDATED-FAQ-Immigration-Enforcement-on-Campuses-Feb-25-2025.pdf" target="_blank" rel="noopener">Presidents' Alliance — Immigration Enforcement on Campuses (Feb. 2025)</a>
+        </li>
+        <li>
+          <a href="https://www.ilrc.org/community-resources/protecting-children-schools-against-immigration-enforcement" target="_blank" rel="noopener">Immigrant Legal Resource Center — Protecting Children in Schools Against Immigration Enforcement</a>
+        </li>
+        <li>
+          <a href="https://www.socialworkers.org/About/Legal-Defense-Fund/Legal-Issues/Navigating-ICE-Presence-in-School-and-Healthcare-Facilities" target="_blank" rel="noopener">National Association of Social Workers — Navigating ICE Presence in Schools</a>
+        </li>
+        <li>
+          <a href="https://www.ctschoollaw.com/2025/01/what-schools-should-know-about-ice-enforcement-actions/" target="_blank" rel="noopener">CT School Law — What Schools Should Know About ICE Enforcement Actions</a>
+        </li>
+      </ul>
+
+      <div class="panel" style="margin-top: 1.5rem;">
+        <p style="margin: 0; color: var(--muted); font-size: 0.93rem;">
+          <strong>Disclaimer:</strong> This page provides general educational information, not legal advice.
+          Policies and enforcement practices can change. Schools should consult qualified legal counsel
+          to understand their specific obligations and develop appropriate response protocols.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════ FOOTER NAV ═══════════════════════ -->
+
+<section class="section">
+  <div class="container">
+    <div class="panel" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+      <div>
+        <strong style="display: block; margin-bottom: 0.2rem;">Ready to take action?</strong>
+        <span style="font-size: 0.92rem; color: var(--muted);">See how schools can build formal policy protections.</span>
+      </div>
+      <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+        <a class="button button-primary" href="{{ '/policy/policy-statement.html' | url }}">View Policy Statement →</a>
+        <a class="button button-light" href="{{ '/learning/know-your-rights.html' | url }}">Know Your Rights</a>
+      </div>
+    </div>
+  </div>
+</section>
