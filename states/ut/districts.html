@@ -53,21 +53,9 @@ permalink: /states/ut/districts/
     font-size: 0.9rem;
     color: var(--muted);
   }
-  @media (max-width: 600px) {
-    .district-item {
-      flex-direction: column;
-      gap: 0.25rem;
-    }
-    .district-item h3 {
-      min-width: 0;
-    }
-  }
 </style>
 
-
-<!-- ═══════════════════════ HEADER ═══════════════════════ -->
-
-<section class="section" style="padding-bottom: 1rem;">
+<section class="section">
   <div class="container">
     <div class="section-header">
       <h1>Find Your School District</h1>
@@ -76,40 +64,37 @@ permalink: /states/ut/districts/
         Find your district below and take action locally.
       </p>
       <p style="font-size: 0.92rem; color: var(--muted);">
-        Districts with a dedicated campaign page are highlighted. If your district is not yet
-        active, <a href="{{ '/stay-informed/email-updates.html' | url }}?state=Utah">sign up for updates</a>
-        and help us expand.
+        Some cities (like Draper) are split across multiple districts.
       </p>
     </div>
   </div>
 </section>
 
-
-<!-- ═══════════════════════ SALT LAKE COUNTY ═══════════════════════ -->
-
-<section class="section" style="padding-top: 0;">
+<section class="section">
   <div class="container">
+
+    <!-- SALT LAKE COUNTY -->
     <div class="district-county">
       <h2>Salt Lake County</h2>
       <div class="district-list">
 
         <div class="district-item has-page">
-          <h3><a href="{{ '/states/ut/jordan/' | url }}">Jordan School District</a></h3>
+          <h3><a href="/states/ut/jordan/">Jordan School District</a></h3>
           <p>West Jordan, South Jordan, Herriman, Riverton, Bluffdale</p>
         </div>
 
         <div class="district-item has-page">
-          <h3><a href="{{ '/states/ut/canyons/' | url }}">Canyons School District</a></h3>
+          <h3><a href="/states/ut/canyons/">Canyons School District</a></h3>
           <p>Sandy, Draper (partial), Midvale, Cottonwood Heights</p>
         </div>
 
         <div class="district-item has-page">
-          <h3><a href="{{ '/states/ut/granite/' | url }}">Granite School District</a></h3>
+          <h3><a href="/states/ut/granite/">Granite School District</a></h3>
           <p>West Valley City, Taylorsville, Kearns, Magna, Millcreek</p>
         </div>
 
         <div class="district-item has-page">
-          <h3><a href="{{ '/states/ut/salt-lake-city/' | url }}">Salt Lake City School District</a></h3>
+          <h3><a href="/states/ut/salt-lake-city/">Salt Lake City School District</a></h3>
           <p>Salt Lake City</p>
         </div>
 
@@ -121,16 +106,14 @@ permalink: /states/ut/districts/
       </div>
     </div>
 
-
-<!-- ═══════════════════════ UTAH COUNTY ═══════════════════════ -->
-
+    <!-- UTAH COUNTY -->
     <div class="district-county">
       <h2>Utah County</h2>
       <div class="district-list">
 
         <div class="district-item has-page">
-          <h3><a href="{{ '/states/ut/alpine/' | url }}">Alpine School District</a></h3>
-          <p>Lehi, American Fork, Pleasant Grove, Orem, Highland</p>
+          <h3><a href="/states/ut/alpine/">Alpine School District</a></h3>
+          <p>Lehi, Orem, American Fork, Pleasant Grove</p>
         </div>
 
         <div class="district-item">
@@ -140,37 +123,36 @@ permalink: /states/ut/districts/
 
         <div class="district-item">
           <h3>Nebo School District</h3>
-          <p>Spanish Fork, Springville, Payson, Mapleton</p>
+          <p>Spanish Fork, Payson, Springville</p>
+        </div>
+
+        <div class="district-item">
+          <h3>Tintic School District</h3>
+          <p>Eureka, rural west Utah County</p>
         </div>
 
       </div>
     </div>
 
-
-<!-- ═══════════════════════ DAVIS COUNTY ═══════════════════════ -->
-
+    <!-- DAVIS -->
     <div class="district-county">
       <h2>Davis County</h2>
       <div class="district-list">
-
         <div class="district-item has-page">
-          <h3><a href="{{ '/states/ut/davis/' | url }}">Davis School District</a></h3>
-          <p>Layton, Kaysville, Farmington, Bountiful, Syracuse, Clearfield, Centerville</p>
+          <h3><a href="/states/ut/davis/">Davis School District</a></h3>
+          <p>Layton, Bountiful, Farmington, Clearfield</p>
         </div>
-
       </div>
     </div>
 
-
-<!-- ═══════════════════════ WEBER COUNTY ═══════════════════════ -->
-
+    <!-- WEBER -->
     <div class="district-county">
       <h2>Weber County</h2>
       <div class="district-list">
 
         <div class="district-item has-page">
-          <h3><a href="{{ '/states/ut/weber/' | url }}">Weber School District</a></h3>
-          <p>Roy, North Ogden, surrounding Weber County areas</p>
+          <h3><a href="/states/ut/weber/">Weber School District</a></h3>
+          <p>Roy, North Ogden, surrounding areas</p>
         </div>
 
         <div class="district-item">
@@ -181,62 +163,62 @@ permalink: /states/ut/districts/
       </div>
     </div>
 
-
-<!-- ═══════════════════════ OTHER DISTRICTS ═══════════════════════ -->
-
+    <!-- SUMMIT -->
     <div class="district-county">
-      <h2>Other Utah Districts</h2>
+      <h2>Summit County</h2>
       <div class="district-list">
-
-        <div class="district-item">
-          <h3>Cache School District</h3>
-          <p>Smithfield, surrounding Cache Valley</p>
-        </div>
-
-        <div class="district-item">
-          <h3>Logan School District</h3>
-          <p>Logan</p>
-        </div>
-
-        <div class="district-item">
-          <h3>Box Elder School District</h3>
-          <p>Brigham City, surrounding areas</p>
-        </div>
-
-        <div class="district-item">
-          <h3>Tooele School District</h3>
-          <p>Tooele</p>
-        </div>
-
-        <div class="district-item">
-          <h3>Washington County School District</h3>
-          <p>St. George, surrounding areas</p>
-        </div>
 
         <div class="district-item">
           <h3>Park City School District</h3>
           <p>Park City</p>
         </div>
 
+        <div class="district-item">
+          <h3>North Summit School District</h3>
+          <p>Coalville</p>
+        </div>
+
+        <div class="district-item">
+          <h3>South Summit School District</h3>
+          <p>Kamas</p>
+        </div>
+
       </div>
     </div>
 
-  </div>
-</section>
+    <!-- OTHER -->
+    <div class="district-county">
+      <h2>Other Utah Districts</h2>
+      <div class="district-list">
 
+        <div class="district-item"><h3>Beaver School District</h3><p>Beaver County</p></div>
+        <div class="district-item"><h3>Box Elder School District</h3><p>Brigham City</p></div>
+        <div class="district-item"><h3>Cache School District</h3><p>Logan area</p></div>
+        <div class="district-item"><h3>Logan School District</h3><p>Logan</p></div>
+        <div class="district-item"><h3>Tooele School District</h3><p>Tooele</p></div>
+        <div class="district-item"><h3>Wasatch County School District</h3><p>Heber City</p></div>
+        <div class="district-item"><h3>Carbon School District</h3><p>Price</p></div>
+        <div class="district-item"><h3>Daggett School District</h3><p>Manila</p></div>
+        <div class="district-item"><h3>Duchesne School District</h3><p>Roosevelt</p></div>
+        <div class="district-item"><h3>Emery School District</h3><p>Castle Dale</p></div>
+        <div class="district-item"><h3>Garfield School District</h3><p>Panguitch</p></div>
+        <div class="district-item"><h3>Grand School District</h3><p>Moab</p></div>
+        <div class="district-item"><h3>Iron County School District</h3><p>Cedar City</p></div>
+        <div class="district-item"><h3>Juab School District</h3><p>Nephi</p></div>
+        <div class="district-item"><h3>Kane County School District</h3><p>Kanab</p></div>
+        <div class="district-item"><h3>Millard School District</h3><p>Delta</p></div>
+        <div class="district-item"><h3>Morgan School District</h3><p>Morgan</p></div>
+        <div class="district-item"><h3>North Sanpete School District</h3><p>Mt. Pleasant</p></div>
+        <div class="district-item"><h3>South Sanpete School District</h3><p>Manti</p></div>
+        <div class="district-item"><h3>Rich School District</h3><p>Randolph</p></div>
+        <div class="district-item"><h3>San Juan School District</h3><p>Blanding</p></div>
+        <div class="district-item"><h3>Sevier School District</h3><p>Richfield</p></div>
+        <div class="district-item"><h3>Uintah School District</h3><p>Vernal</p></div>
+        <div class="district-item"><h3>Washington County School District</h3><p>St. George</p></div>
+        <div class="district-item"><h3>Wayne School District</h3><p>Bicknell</p></div>
 
-<!-- ═══════════════════════ CTA ═══════════════════════ -->
-
-<section class="cta" aria-label="Closing call to action">
-  <div class="container cta-inner">
-    <h2>Your district is where change happens.</h2>
-    <p>
-      In Utah, school boards make the decision. Find your district, connect with others,
-      and help push for clear protections for students and families.
-    </p>
-    <div class="button-row">
-      <a class="button button-primary" href="{{ '/stay-informed/email-updates.html' | url }}?state=Utah">Get Involved</a>
-      <a class="button button-light" href="{{ '/states/ut/' | url }}">← Back to Utah Overview</a>
+      </div>
     </div>
+
   </div>
 </section>
