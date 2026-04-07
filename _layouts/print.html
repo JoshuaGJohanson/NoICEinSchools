@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% if title %}{{ title }}{% endif %}</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 11pt;
+      line-height: 1.6;
+      color: #111;
+      background: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ── Screen wrapper ── */
+    .print-shell {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 2rem 2rem 4rem;
+    }
+
+    /* ── Screen-only bar ── */
+    .screen-bar {
+      background: #1e3a5f;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.9rem;
+    }
+    .screen-bar a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.85rem;
+    }
+    .screen-bar a:hover { text-decoration: underline; }
+    .print-btn {
+      background: #fff;
+      color: #1e3a5f;
+      border: none;
+      padding: 0.45rem 1.1rem;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .print-btn:hover { background: #dbeafe; }
+
+    /* ── Document header ── */
+    .doc-header {
+      border-bottom: 2px solid #111;
+      padding-bottom: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .doc-org {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #555;
+      margin-bottom: 0.4rem;
+    }
+    .doc-title {
+      font-size: 17pt;
+      font-weight: 700;
+      margin: 0 0 0.5rem;
+      line-height: 1.2;
+    }
+    .doc-meta {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.8rem;
+      color: #555;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .doc-badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      background: #fef9c3;
+      color: #854d0e;
+      border: 1px solid #fde047;
+      padding: 0.15rem 0.55rem;
+      border-radius: 3px;
+    }
+
+    /* ── Policy sections ── */
+    .policy-section {
+      margin-bottom: 2rem;
+      page-break-inside: avoid;
+    }
+    .policy-section-title {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 10pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #1e3a5f;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 0.3rem;
+      margin-bottom: 0.85rem;
+    }
+    .policy-section p { margin: 0 0 0.6rem; }
+    .policy-section ul {
+      margin: 0.4rem 0 0.6rem;
+      padding-left: 1.4rem;
+    }
+    .policy-section li { margin-bottom: 0.3rem; }
+    .policy-subsection-title {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-weight: 700;
+      font-size: 10pt;
+      margin-top: 1rem;
+      margin-bottom: 0.35rem;
+    }
+
+    /* ── Signature block ── */
+    .sig-block {
+      margin-top: 3rem;
+      border-top: 1px solid #ccc;
+      padding-top: 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .sig-field {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 9pt;
+      color: #555;
+    }
+    .sig-line {
+      border-bottom: 1px solid #999;
+      height: 2rem;
+      margin-bottom: 0.3rem;
+    }
+
+    /* ── Document footer ── */
+    .doc-footer {
+      margin-top: 3rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid #ddd;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 8pt;
+      color: #888;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* ── Print media ── */
+    @media print {
+      .screen-bar { display: none; }
+      .print-shell { padding: 0; max-width: none; }
+      body { font-size: 10.5pt; }
+      .policy-section { page-break-inside: avoid; }
+    }
+
+    @page {
+      margin: 1.1in 1in 1in 1in;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="screen-bar">
+    <div>
+      <a href="{{ '/states/ut/draft-policy/' | url }}">← Back to draft policy page</a>
+    </div>
+    <div style="display:flex; align-items:center; gap:0.75rem;">
+      <span style="opacity:0.75;">To save as PDF: File → Print → Save as PDF</span>
+      <button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
+    </div>
+  </div>
+
+  <div class="print-shell">
+    {{ content | safe }}
+  </div>
+
+  <script>
+    // Auto-populate today's date if placeholder present
+    document.querySelectorAll('.js-date').forEach(el => {
+      el.textContent = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    });
+  </script>
+</body>
+</html>
