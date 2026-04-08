@@ -36,10 +36,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v5
-
       - name: Build with Eleventy
         run: npm run build
         env:
