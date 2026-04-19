@@ -8,3 +8,5 @@ _config.yml
 .github
 work
 scripts
+.venv
+MIGRATION.md

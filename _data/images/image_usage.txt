@@ -5,16 +5,161 @@ IMAGE USAGE REPORT
 PAGES AND THEIR IMAGES
 ----------------------------------------------------------------------
 
+_includes/footer.html
+  (no images)
+
+_includes/header.html
+  (no images)
+
+_includes/utah/ut-board-guide-choose-focus.html
+  (no images)
+
+_includes/utah/ut-board-guide-effective-speaker.html
+  (no images)
+
+_includes/utah/ut-board-guide-points-and-facts.html
+  (no images)
+
+_includes/utah/ut-board-guide-strategic-tips.html
+  (no images)
+
+_includes/utah/ut-board-guide-styles.html
+  (no images)
+
+_includes/utah/ut-board-guide-supporting-facts.html
+  (no images)
+
+_includes/utah/ut-board-guide-talking-points.html
+  (no images)
+
+_includes/utah/ut-board-guide-what-to-expect.html
+  (no images)
+
+_includes/utah/ut-faq-287g.html
+  (no images)
+
+_includes/utah/ut-faq-legal.html
+  (no images)
+
+_includes/utah/ut-faq-policy-what.html
+  (no images)
+
+_includes/utah/ut-strategy-toolkit-protocol.html
+  (no images)
+
+_includes/utah-nav.html
+  (no images)
+
+_layouts/default.html
+  (no images)
+
+_layouts/district.html
+  (no images)
+
+_layouts/print.html
+  (no images)
+
+_layouts/utah-district.html
+  (no images)
+
+_layouts/utah.html
+  (no images)
+
 about-us.html
-  notepads-with-ideas.jpg
-  people-meeting-classroom.jpg
+  hispanic-kid-raising-hand-in-class.jpg
+  kids-taking-test.jpg
   school-exterior.jpg
 
 contact.html
   (no images)
 
-faq.html
-  (no images)
+districts/examples.html
+  teacher-parents-classroom.jpg
+  two-people-making-plans.jpg
+
+districts/full-framework.html
+  black-kid-being-comforted.jpg
+  discuss-concerns-principal.jpg
+  helps-grandson-with-homework-at-table.jpg
+  school-exterior.jpg
+  teacher-parents-classroom.jpg
+
+districts/model-policy.html
+  parents-discussing-concerns.jpg
+  school-admin-safety-plans.jpg
+  teacher-student-serious-meeting.jpg
+
+districts/safety-protocol.html
+  school-admin-safety-plans.jpg
+  students-parents-meeting-2.jpg
+
+districts/student-education.html
+  and-children-sitting-in-a-classroom-setting.jpg
+  high-school-raising-hand.jpg
+
+districts/understanding.html
+  law-enforcement-entering-a-home.jpg
+  teacher-by-whiteboard.jpg
+
+educators/guide.html
+  parent-teacher-talking-student.jpg
+  students-listening-to-teacher.jpg
+
+educators/teach-rights.html
+  high-school-raising-hand.jpg
+  parents-in-classroom.jpg
+  students-listening-to-teacher.jpg
+
+educators/when-district-wont-lead.html
+  review-plans-principal.jpg
+  students-gathered-around-teacher-looking-at-book.jpg
+  teacher-helping-student-in-classroom.jpg
+  teacher-student-serious-meeting.jpg
+
+everyone/building-coalition.html
+  high-school-study-group.jpg
+  holding-fight-today-for-a-better-tomorrow-sign.jpg
+  students-in-circle-with-hands-in-center-coolaboration.jpg
+
+everyone/how-to-organize-a-protest.html
+  holding-fight-today-for-a-better-tomorrow-sign.jpg
+  holding-sign-about-children-needing-voice.jpg
+  man-with-sign-protesting-ice-is-not-a-crime.jpg
+  notepads-with-ideas.jpg
+  people-meeting-classroom.jpg
+  protest-with-a-sign-that-reads-hands-off-our-children.jpg
+
+everyone/organize-a-campaign.html
+  aerial-view-kids-doing-homework-table.jpg
+  immigrants-make-america-great-sign.jpg
+  parent-speaking-to-group.jpg
+  parents-meeting-with-admin.jpg
+  people-meeting-classroom.jpg
+  people-shaking-hands.jpg
+  planning-advocacy-group.jpg
+  welcoming-new-members-student-group.jpg
+  youth-protesting.jpg
+
+everyone/raise-awareness.html
+  group-meeting-parents.jpg
+  handing-out-flyer.jpg
+  holding-generic-flyers-action.jpg
+  parent-speaking-to-group.jpg
+
+everyone/speak-at-board-meetings.html
+  speaking-informal-group-classroom.jpg
+
+everyone/take-action.html
+  child-protests-for-her-school.jpg
+  listening-to-a-speaker.jpg
+  parent-speaking-advocacy-group.jpg
+  students-in-circle-with-hands-in-center-coolaboration.jpg
+
+everyone/talking-to-the-school-board.html
+  parent-speaking-to-group.jpg
+
+everyone/talking-to-your-pta.html
+  parents-in-classroom.jpg
 
 image-attributions.html
   (no images)
@@ -23,140 +168,479 @@ index.html
   closeup-of-student-writing.jpg
   high-school-study-group.jpg
   hispanic-student-focused-on-learning.jpg
-  holding-sign-about-children-needing-voice.jpg
+  immigrant-mother-child-confident.jpg
   in-red-uniform-walks-towards-yellow-bus.jpg
   parent-teacher-conference.jpg
   school-hallway.jpg
   students-going-to-high-school.jpg
   teacher-student-serious-meeting.jpg
 
-policy-solutions.html
-  child-protests-for-her-school.jpg
-  high-school-study-group.jpg
-  indian-faculty-meeting.jpg
-  innocent-hispanic-kid.jpg
-  parent-teacher-conference.jpg
+learning/links.html
+  (no images)
+
+learning/states/utah/287g-agreements.html
+  utah-arch.jpg
+
+local/by-state.html
+  students-gathered-around-teacher-looking-at-book.jpg
+
+news/policy-changes.html
+  caution-sign-by-empty-classroom.jpg
+  parents-discuss-concerns-teacher.jpg
   school-admin-safety-plans.jpg
-  school-building-exterior.jpg
-  school-hallway.jpg
-  stop-sign-attached-to-the-side-of-a-school-bus.jpg
-  students-going-to-high-school.jpg
-  teacher-helping-kid-read.jpg
-  two-people-making-plans.jpg
+
+news/protests.html
+  no-human-is-illegal-sign.jpg
+  protect-immigrants-capitol.jpg
+  protest-with-a-sign-that-reads-hands-off-our-children.jpg
+  protester-sign-save-the-children.jpg
+
+news/school-incidents.html
+  empty-school-desks.jpg
+  empty-school-hallway-grayscale.jpg
+  review-plans-principal.jpg
+  worried-hispanic-kid-with-head-in-hands.jpg
+
+news/success-stories.html
+  boys-looking-at-the-camera.jpg
+  elementary-school-group-project.jpg
+  smiling-students-taking-a-selfie-in-a-classroom.jpg
+
+privacy/index.html
+  (no images)
 
 sources.html
   (no images)
 
-take-action.html
+states/ak.html
+  bike-rack-outside-of-school.jpg
+
+states/al.html
+  bike-rack-outside-of-school.jpg
+
+states/ar.html
+  bike-rack-outside-of-school.jpg
+
+states/az.html
+  bike-rack-outside-of-school.jpg
+
+states/ca.html
+  (no images)
+
+states/co.html
+  (no images)
+
+states/ct.html
+  bike-rack-outside-of-school.jpg
+
+states/de.html
+  bike-rack-outside-of-school.jpg
+
+states/fl.html
+  bike-rack-outside-of-school.jpg
+
+states/ga.html
+  bike-rack-outside-of-school.jpg
+
+states/hi.html
+  bike-rack-outside-of-school.jpg
+
+states/ia.html
+  bike-rack-outside-of-school.jpg
+
+states/id.html
+  bike-rack-outside-of-school.jpg
+
+states/il.html
+  bike-rack-outside-of-school.jpg
+
+states/in.html
+  bike-rack-outside-of-school.jpg
+
+states/ks.html
+  bike-rack-outside-of-school.jpg
+
+states/ky.html
+  bike-rack-outside-of-school.jpg
+
+states/la.html
+  bike-rack-outside-of-school.jpg
+
+states/ma.html
+  bike-rack-outside-of-school.jpg
+
+states/md.html
+  bike-rack-outside-of-school.jpg
+
+states/me.html
+  bike-rack-outside-of-school.jpg
+
+states/mi.html
+  bike-rack-outside-of-school.jpg
+
+states/mn.html
+  bike-rack-outside-of-school.jpg
+
+states/mo.html
+  bike-rack-outside-of-school.jpg
+
+states/ms.html
+  bike-rack-outside-of-school.jpg
+
+states/mt.html
+  bike-rack-outside-of-school.jpg
+
+states/nc.html
+  bike-rack-outside-of-school.jpg
+
+states/nd.html
+  bike-rack-outside-of-school.jpg
+
+states/ne.html
+  bike-rack-outside-of-school.jpg
+
+states/nh.html
+  bike-rack-outside-of-school.jpg
+
+states/nj.html
+  bike-rack-outside-of-school.jpg
+
+states/nm.html
+  bike-rack-outside-of-school.jpg
+
+states/nv.html
+  bike-rack-outside-of-school.jpg
+
+states/ny.html
+  bike-rack-outside-of-school.jpg
+
+states/oh.html
+  bike-rack-outside-of-school.jpg
+
+states/ok.html
+  bike-rack-outside-of-school.jpg
+
+states/or.html
+  bike-rack-outside-of-school.jpg
+
+states/pa.html
+  bike-rack-outside-of-school.jpg
+
+states/ri.html
+  bike-rack-outside-of-school.jpg
+
+states/sc.html
+  bike-rack-outside-of-school.jpg
+
+states/sd.html
+  bike-rack-outside-of-school.jpg
+
+states/tn.html
+  bike-rack-outside-of-school.jpg
+
+states/tx.html
+  bike-rack-outside-of-school.jpg
+
+states/ut/alpine/how-to-speak-at-board-meetings.html
+  (no images)
+
+states/ut/alpine/index.html
+  advocacy-group-celebrates-success.jpg
+  parents-meeting-with-admin.jpg
+  utah-arch.jpg
+
+states/ut/alpine/strategy.html
+  (no images)
+
+states/ut/canyons/index.html
+  advocacy-group-celebrates-success.jpg
+  parents-meeting-with-admin.jpg
+  utah-arch.jpg
+
+states/ut/canyons/strategy.html
+  (no images)
+
+states/ut/davis/how-to-speak-at-board-meetings.html
+  (no images)
+
+states/ut/davis/index.html
+  advocacy-group-celebrates-success.jpg
+  parents-meeting-with-admin.jpg
+  utah-arch.jpg
+
+states/ut/davis/strategy.html
+  (no images)
+
+states/ut/districts.html
+  (no images)
+
+states/ut/draft-policy-print.html
+  (no images)
+
+states/ut/draft-policy.html
+  (no images)
+
+states/ut/granite/index.html
+  advocacy-group-celebrates-success.jpg
+  parents-meeting-with-admin.jpg
+  utah-arch.jpg
+
+states/ut/granite/strategy.html
+  (no images)
+
+states/ut/index.html
+  utah-arch.jpg
+
+states/ut/jordan/how-to-speak-at-board-meetings.html
+  (no images)
+
+states/ut/jordan/index.html
+  advocacy-group-celebrates-success.jpg
+  parents-meeting-with-admin.jpg
+  utah-arch.jpg
+
+states/ut/jordan/strategy.html
+  (no images)
+
+states/ut/resources.html
+  utah-arch.jpg
+
+states/ut/salt-lake-city/index.html
+  advocacy-group-celebrates-success.jpg
+  parents-meeting-with-admin.jpg
+  utah-arch.jpg
+
+states/ut/salt-lake-city/strategy.html
+  (no images)
+
+states/ut/scorecard.html
+  (no images)
+
+states/ut/weber/index.html
+  advocacy-group-celebrates-success.jpg
+  parents-meeting-with-admin.jpg
+  utah-arch.jpg
+
+states/ut/weber/strategy.html
+  (no images)
+
+states/va.html
+  bike-rack-outside-of-school.jpg
+
+states/vt.html
+  bike-rack-outside-of-school.jpg
+
+states/wa.html
+  bike-rack-outside-of-school.jpg
+
+states/wi.html
+  bike-rack-outside-of-school.jpg
+
+states/wv.html
+  bike-rack-outside-of-school.jpg
+
+states/wy.html
+  bike-rack-outside-of-school.jpg
+
+stay-informed/email-confirmed.html
+  (no images)
+
+stay-informed/email-updates.html
+  (no images)
+
+stay-informed/faq.html
+  (no images)
+
+stay-informed/manage-preferences.html
+  (no images)
+
+stay-informed/social-media.html
+  (no images)
+
+stay-informed/volunteer.html
+  elementary-school-group-project.jpg
+  group-meeting-parents.jpg
+  kids-working-on-art-project.jpg
+  notepads-with-ideas.jpg
+  of-children-pulling-brown-rope.jpg
+  parents-in-classroom.jpg
+  writing-on-printer-paper-near-girl.jpg
+  young-people-with-headphones-outdoors.jpg
+
+students/family-detained.html
+  parents-and-admin-serious-discussion.jpg
+
+students/free-speech.html
+  boy-holding-sign-our-future-matter.jpg
+  high-school-raising-hand.jpg
+  school-bus-with-use-your-voice-spray-painted.jpg
+  students-listening-to-teacher.jpg
+
+students/keeping-classmates-safe.html
+  high-five.jpg
+  school-bus-with-use-your-voice-spray-painted.jpg
+  students-going-to-high-school.jpg
+
+students/know-your-rights.html
+  aerial-view-kids-doing-homework-table.jpg
+  boy-holding-sign-our-future-matter.jpg
+  group-of-young-people-sitting-next-to-each-other.jpg
+  innocent-hispanic-kid.jpg
+  law-enforcement-entering-a-home.jpg
+  parents-helping-kid-laptop.jpg
+  teacher-helping-kid-read.jpg
+
+students/share-with-classmates.html
+  smiling-teenager-on-cell-phone.jpg
+
+students/student-mental-health-support.html
+  black-kid-being-comforted.jpg
+  parent-explaining-worried-kid.jpg
+
+students/student-protests.html
   boy-holding-sign-our-future-matter.jpg
   child-protests-for-her-school.jpg
-  parents-discuss-concerns-teacher.jpg
-  parents-meeting-with-admin.jpg
-  people-shaking-hands.jpg
-  school-library.jpg
-  two-people-making-plans.jpg
+  high-school-cafeteria.jpg
+  holding-sign-about-children-needing-voice.jpg
+  protest-with-a-sign-that-reads-hands-off-our-children.jpg
+  school-hallway.jpg
+  smiling-students-taking-a-selfie-in-a-classroom.jpg
+  students-going-to-high-school.jpg
+  students-in-circle-with-hands-in-center-coolaboration.jpg
 
-threats-to-school-safety.html
-  aerial-view-of-school.jpg
-  caution-sign-by-empty-classroom.jpg
-  high-school-study-group.jpg
-  in-red-uniform-walks-towards-yellow-bus.jpg
-  innocent-hispanic-kid.jpg
-  kids-going-to-elementary-school.jpg
-  parent-teacher-conference.jpg
-  school-admin-safety-plans.jpg
-  school-building-exterior.jpg
-  students-not-being-welcoming.jpg
-  teacher-helping-kid-read.jpg
+ut.html
+  (no images)
+
+utah.html
+  (no images)
 
 volunteer-signup.html
   (no images)
 
-volunteer.html
-  notepads-with-ideas.jpg
-  of-children-pulling-brown-rope.jpg
-  parents-in-classroom.jpg
-  people-meeting-classroom.jpg
-  students-in-circle-with-hands-in-center-coolaboration.jpg
-  two-people-making-plans.jpg
-  writing-on-printer-paper-near-girl.jpg
-  young-people-with-headphones-outdoors.jpg
-
-why-it-matters.html
-  high-school-study-group.jpg
-  innocent-hispanic-kid.jpg
-  school-hallway.jpg
-  teacher-helping-kid-read.jpg
+why-it-matters/index.html
+  aerial-view-kids-doing-homework-table.jpg
+  empty-school-hallway-grayscale.jpg
+  parent-explaining-worried-kid.jpg
+  teacher-by-whiteboard.jpg
   teacher-helping-student-in-classroom.jpg
 
-why-schools-should-be-safe.html
+why-it-matters/policy-solutions.html
+  discuss-concerns-principal.jpg
+  girl-going-to-school.jpg
+  high-school-cafeteria.jpg
+  indian-faculty-meeting.jpg
+  innocent-hispanic-kid.jpg
+  little-girl-holding-a-sign-that-says-peace-fET-sQI.jpg
+  parents-helping-kid-laptop.jpg
+  sign-in-spanish.jpg
+  silhouette-of-child-reading.jpg
+  stop-sign-attached-to-the-side-of-a-school-bus.jpg
+  students-gathered-around-teacher-looking-at-book.jpg
+  teacher-helping-kid-read.jpg
+
+why-it-matters/threats-to-school-safety.html
+  aerial-view-of-school.jpg
+  bike-rack-outside-of-school.jpg
+  caution-sign-by-empty-classroom.jpg
+  kids-going-to-elementary-school.jpg
+  parent-resolve-issue-principal.jpg
+  school-bus-with-use-your-voice-spray-painted.jpg
+  students-listening-to-teacher.jpg
+  students-not-being-welcoming.jpg
+  teacher-lecture.jpg
+  teacher-parents-classroom.jpg
+  worried-teenager-going-to-school.jpg
+
+why-it-matters/why-schools-should-be-safe.html
   black-kid-being-comforted.jpg
+  happy-immigrant-family.jpg
   safe-in-scrabble-letters.jpg
   smiling-students-taking-a-selfie-in-a-classroom.jpg
-  students-in-circle-with-hands-in-center-coolaboration.jpg
   teacher-reading-kids.jpg
+
+
+IMAGES USED ON MULTIPLE PAGES
+----------------------------------------------------------------------
+  bike-rack-outside-of-school.jpg  (48 pages)
+  utah-arch.jpg  (10 pages)
+  parents-meeting-with-admin.jpg  (8 pages)
+  advocacy-group-celebrates-success.jpg  (7 pages)
+  students-listening-to-teacher.jpg  (4 pages)
+  aerial-view-kids-doing-homework-table.jpg  (3 pages)
+  black-kid-being-comforted.jpg  (3 pages)
+  boy-holding-sign-our-future-matter.jpg  (3 pages)
+  high-school-raising-hand.jpg  (3 pages)
+  parent-speaking-to-group.jpg  (3 pages)
+  parents-in-classroom.jpg  (3 pages)
+  protest-with-a-sign-that-reads-hands-off-our-children.jpg  (3 pages)
+  school-admin-safety-plans.jpg  (3 pages)
+  school-bus-with-use-your-voice-spray-painted.jpg  (3 pages)
+  smiling-students-taking-a-selfie-in-a-classroom.jpg  (3 pages)
+  students-gathered-around-teacher-looking-at-book.jpg  (3 pages)
+  students-going-to-high-school.jpg  (3 pages)
+  students-in-circle-with-hands-in-center-coolaboration.jpg  (3 pages)
+  teacher-parents-classroom.jpg  (3 pages)
+  teacher-student-serious-meeting.jpg  (3 pages)
+  caution-sign-by-empty-classroom.jpg  (2 pages)
+  child-protests-for-her-school.jpg  (2 pages)
+  discuss-concerns-principal.jpg  (2 pages)
+  elementary-school-group-project.jpg  (2 pages)
+  empty-school-hallway-grayscale.jpg  (2 pages)
+  group-meeting-parents.jpg  (2 pages)
+  high-school-cafeteria.jpg  (2 pages)
+  high-school-study-group.jpg  (2 pages)
+  holding-fight-today-for-a-better-tomorrow-sign.jpg  (2 pages)
+  holding-sign-about-children-needing-voice.jpg  (2 pages)
+  innocent-hispanic-kid.jpg  (2 pages)
+  law-enforcement-entering-a-home.jpg  (2 pages)
+  notepads-with-ideas.jpg  (2 pages)
+  parent-explaining-worried-kid.jpg  (2 pages)
+  parents-helping-kid-laptop.jpg  (2 pages)
+  people-meeting-classroom.jpg  (2 pages)
+  review-plans-principal.jpg  (2 pages)
+  school-exterior.jpg  (2 pages)
+  school-hallway.jpg  (2 pages)
+  teacher-by-whiteboard.jpg  (2 pages)
+  teacher-helping-kid-read.jpg  (2 pages)
+  teacher-helping-student-in-classroom.jpg  (2 pages)
 
 
 UNUSED IMAGES  (in assets/images but not referenced by any page)
 ----------------------------------------------------------------------
-  advocacy-group-celebrates-success.jpg
-  aerial-view-kids-doing-homework-table.jpg
   and-child-drawing-together-at-a-table-r.jpg
-  and-children-sitting-in-a-classroom-setting.jpg
   apple-fruit-on-four-pyle-books.jpg
-  bike-rack-outside-of-school.jpg
   black-kid-looking-serious.jpg
   boy-doing-assignment-in-class.jpg
   boy-holding-a-stuffed-animal-in-black-and-white-YFh_.jpg
-  boys-looking-at-the-camera.jpg
-  discuss-concerns-principal.jpg
+  closeup-listening-meeting.jpg
+  closeup-teenagers-shoes.jpg
   elementary-kid-doing-math.jpg
-  elementary-school-group-project.jpg
   empty-elementary-school-classroom.jpg
-  empty-school-desks.jpg
-  empty-school-hallway-grayscale.jpg
-  girl-going-to-school.jpg
-  group-of-young-people-sitting-next-to-each-other.jpg
-  helps-grandson-with-homework-at-table.jpg
+  everyone-is-welcome-sign.jpg
+  handing-flyer.jpg
   hero-classroom.jpg
-  high-five.jpg
   high-school-basketball.jpg
-  high-school-cafeteria.jpg
   high-school-football-field.jpg
-  high-school-raising-hand.jpg
   hispanic-kid-crying.jpg
-  hispanic-kid-raising-hand-in-class.jpg
   hispanic-kid-sitting-alone.jpg
-  holding-fight-today-for-a-better-tomorrow-sign.jpg
+  hispanic-teenager-skateboard.jpg
+  immigrant-mother-worried-car.jpg
   in-white-tank-top-beside-girl-in-yellow-dress.jpg
   kid-alone-on-bench.jpg
-  kids-taking-test.jpg
   kids-waiting-to-play-basketball.jpg
-  kids-working-on-art-project.jpg
-  law-enforcement-entering-a-home.jpg
-  little-girl-holding-a-sign-that-says-peace-fET-sQI.jpg
   little-girl-with-her-hands-painted-blue.jpg
   man-arrested-by-ice.jpg
   man-being-arrested.jpg
-  man-with-sign-protesting-ice-is-not-a-crime.jpg
-  parent-resolve-issue-principal.jpg
-  parents-and-admin-serious-discussion.jpg
-  parents-helping-kid-laptop.jpg
-  protest-with-a-sign-that-reads-hands-off-our-children.jpg
-  protester-sign-save-the-children.jpg
-  school-bus-with-use-your-voice-spray-painted.jpg
-  silhouette-of-child-reading.jpg
+  person-reading-flyer.jpg
+  school-building-exterior.jpg
+  school-library.jpg
   sitting-on-swing-chair.jpg
-  smiling-teenager-on-cell-phone.jpg
-  students-gathered-around-teacher-looking-at-book.jpg
-  students-listening-to-teacher.jpg
-  teacher-by-whiteboard.jpg
-  teacher-lecture.jpg
-  teacher-parents-classroom.jpg
+  student-parents-meeting.jpg
   teacher-posing-by-empty-classroom.jpg
-  utah-arch.jpg
-  worried-hispanic-kid-with-head-in-hands.jpg
+  teacher-with-child.jpg
+  teacher-with-young-students.jpg
   worried-white-kid.jpg
+  young-child-reading.jpg
   young-girls-making-funny-faces.jpg
   young-kids-reading-a-book.jpg
 

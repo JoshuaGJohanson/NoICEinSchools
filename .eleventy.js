@@ -10,6 +10,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("**/*.svg");
 
   // Add filters
+  eleventyConfig.addFilter("isoDate", (date) => date instanceof Date ? date.toISOString().substring(0, 10) : "");
+
   eleventyConfig.addFilter("relative_url", function(url) {
     // Handle undefined, null, or empty values
     if (!url) {

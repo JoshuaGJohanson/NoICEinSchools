@@ -1,0 +1,515 @@
+---
+layout: default
+title: Take Action
+description: Practical ways to support protective school policies — contact your school board, spread awareness, know your rights, and organize in your community.
+permalink: /everyone/take-action.html
+---
+
+<style>
+  /* ── Action cards ── */
+  .action-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+  .action-card:hover {
+    box-shadow: var(--shadow-soft);
+    transform: translateY(-2px);
+  }
+  .action-card-stripe { height: 4px; }
+  .action-card-body {
+    padding: 1.25rem 1.4rem 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .action-card-body h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.05rem;
+  }
+  .action-card-body h3 a {
+    color: var(--text);
+    text-decoration: none;
+  }
+  .action-card-body h3 a:hover { color: var(--blue); }
+  .action-card-body p {
+    font-size: 0.91rem;
+    color: var(--muted);
+    margin: 0;
+    line-height: 1.6;
+    flex: 1;
+  }
+  .action-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-top: 1rem;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--blue);
+    text-decoration: none;
+  }
+  .action-card-link:hover { color: var(--blue-dark); text-decoration: underline; }
+
+  /* ── Stripe colors by category ── */
+  .stripe-organize { background: #2563eb; }
+  .stripe-engage   { background: #0891b2; }
+  .stripe-rights   { background: #7c3aed; }
+  .stripe-mobilize { background: #dc2626; }
+  .stripe-grow     { background: #059669; }
+
+  /* ── Action grids ── */
+  .action-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  .action-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  /* ── Section label with colored bar ── */
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-bottom: 0.4rem;
+  }
+  .section-label-bar {
+    width: 4px;
+    height: 1.4rem;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  .section-label span {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--muted);
+  }
+
+  /* ── District check banner ── */
+  .district-check {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: var(--radius);
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .district-check-text strong {
+    display: block;
+    font-size: 1.05rem;
+    color: #1e3a8a;
+    margin-bottom: 0.25rem;
+  }
+  .district-check-text p {
+    margin: 0;
+    font-size: 0.92rem;
+    color: #1d4ed8;
+  }
+
+  /* ── Mobilize split ── */
+  .mobilize-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    align-items: stretch;
+  }
+  .mobilize-cta {
+    background: linear-gradient(135deg, #0f172a, #1e3a5f);
+    border-radius: var(--radius);
+    padding: 2rem 2.25rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .mobilize-cta h3 { margin: 0 0 0.6rem; color: #fff; font-size: 1.15rem; }
+  .mobilize-cta p  { margin: 0 0 1.4rem; color: rgba(255,255,255,0.78); font-size: 0.92rem; line-height: 1.6; }
+
+  @media (max-width: 980px) {
+    .action-grid-3,
+    .action-grid-4 { grid-template-columns: repeat(2, 1fr); }
+    .mobilize-split { grid-template-columns: 1fr; }
+    .district-check { flex-direction: column; align-items: flex-start; }
+  }
+  @media (max-width: 640px) {
+    .action-grid-3,
+    .action-grid-4 { grid-template-columns: 1fr; }
+    .district-check { padding: 1.25rem 1.25rem; }
+  }
+</style>
+
+
+<!-- ═══════════════════════ HERO ═══════════════════════ -->
+
+<section class="hero" aria-label="Take action hero" style="background: linear-gradient(rgba(7,25,38,0.58),rgba(7,25,38,0.58)), url({{ '/assets/images/parent-speaking-advocacy-group.jpg' | url }}) center/cover no-repeat;">
+  <div class="container">
+    <div class="hero-content">
+      <div class="eyebrow">Get involved</div>
+      <h1>Take action to protect students in your community.</h1>
+      <p>
+        Every protective school policy starts with community members making the case
+        to their local school board. These guides show you how.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════ DISTRICT CHECK ═══════════════════════ -->
+
+<section class="section" style="padding-bottom: 0;">
+  <div class="container">
+    <div class="district-check">
+      <div class="district-check-text">
+        <strong>Is there already a campaign in your district?</strong>
+        <p>Find your state to see active campaigns, district scorecards, and local contacts.</p>
+      </div>
+      <a class="button button-primary" href="{{ '/local/by-state.html' | url }}">Find Your State →</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════ ENGAGE ═══════════════════════ -->
+
+<section class="section">
+  <div class="container">
+
+    <div class="section-label">
+      <div class="section-label-bar stripe-engage"></div>
+      <span>Engage decision-makers</span>
+    </div>
+    <h2 style="margin: 0 0 0.4rem;">Reach the people who can adopt policy</h2>
+    <p style="color: var(--muted); font-size: 1.05rem; margin: 0;">
+      School boards adopt district policy. These guides help you reach them effectively.
+    </p>
+
+    <div class="action-grid-3">
+
+      <div class="action-card">
+        <div class="action-card-stripe stripe-engage"></div>
+        <div class="action-card-body">
+          <h3><a href="{{ '/everyone/talking-to-the-school-board.html' | url }}">Talk to Your School Board</a></h3>
+          <p>
+            How to contact board members directly, request meetings, and follow up after
+            public comment to keep the issue moving forward.
+          </p>
+          <a class="action-card-link" href="{{ '/everyone/talking-to-the-school-board.html' | url }}">Board contact guide →</a>
+        </div>
+      </div>
+
+      <div class="action-card">
+        <div class="action-card-stripe stripe-engage"></div>
+        <div class="action-card-body">
+          <h3><a href="{{ '/everyone/speak-at-board-meetings.html' | url }}">Speak at a Board Meeting</a></h3>
+          <p>
+            How to find your district's meeting schedule, prepare your comments, and make
+            the most of your two to three minutes at the microphone.
+          </p>
+          <a class="action-card-link" href="{{ '/everyone/speak-at-board-meetings.html' | url }}">Board meeting guide →</a>
+        </div>
+      </div>
+
+      <div class="action-card">
+        <div class="action-card-stripe stripe-engage"></div>
+        <div class="action-card-body">
+          <h3><a href="{{ '/everyone/talking-to-your-pta.html' | url }}">Talk to Your PTA</a></h3>
+          <p>
+            How to raise school safety and immigration enforcement policy at PTA meetings —
+            and how to move a PTA from awareness to action.
+          </p>
+          <a class="action-card-link" href="{{ '/everyone/talking-to-your-pta.html' | url }}">PTA guide →</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════ KNOW YOUR RIGHTS ═══════════════════════ -->
+
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+
+    <div class="section-label">
+      <div class="section-label-bar stripe-rights"></div>
+      <span>Know your rights</span>
+    </div>
+    <h2 style="margin: 0 0 0.4rem;">Share rights information with your community</h2>
+    <p style="color: var(--muted); font-size: 1.05rem; margin: 0;">
+      One of the most direct things you can do is make sure the people around you know their rights.
+    </p>
+
+    <div class="action-grid-4">
+
+      <div class="action-card">
+        <div class="action-card-stripe stripe-rights"></div>
+        <div class="action-card-body">
+          <h3><a href="{{ '/students/know-your-rights.html' | url }}">Know Your Rights</a></h3>
+          <p>
+            What students, families, and school staff need to know about constitutional rights
+            in encounters with immigration enforcement.
+          </p>
+          <a class="action-card-link" href="{{ '/students/know-your-rights.html' | url }}">Rights guide →</a>
+        </div>
+      </div>
+
+      <div class="action-card">
+        <div class="action-card-stripe stripe-rights"></div>
+        <div class="action-card-body">
+          <h3><a href="{{ '/students/share-with-classmates.html' | url }}">Share With Classmates</a></h3>
+          <p>
+            How students can help friends understand their rights and feel safer — using
+            accurate information from trusted organizations.
+          </p>
+          <a class="action-card-link" href="{{ '/students/share-with-classmates.html' | url }}">Sharing guide →</a>
+        </div>
+      </div>
+
+      <div class="action-card">
+        <div class="action-card-stripe stripe-rights"></div>
+        <div class="action-card-body">
+          <h3><a href="{{ '/students/keeping-classmates-safe.html' | url }}">Keeping Classmates Safe</a></h3>
+          <p>
+            Real, practical steps students, families, and schools are taking to protect
+            each other from immigration enforcement in and around school.
+          </p>
+          <a class="action-card-link" href="{{ '/students/keeping-classmates-safe.html' | url }}">Practical steps →</a>
+        </div>
+      </div>
+
+      <div class="action-card">
+        <div class="action-card-stripe stripe-rights"></div>
+        <div class="action-card-body">
+          <h3><a href="{{ '/students/family-detained.html' | url }}">If a Family Member Is Detained</a></h3>
+          <p>
+            A clear step-by-step guide for what to do in the first hours after a family
+            member may have been detained by immigration enforcement.
+          </p>
+          <a class="action-card-link" href="{{ '/students/family-detained.html' | url }}">Step-by-step guide →</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════ MOBILIZE ═══════════════════════ -->
+
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+
+    <div class="section-label">
+      <div class="section-label-bar stripe-mobilize"></div>
+      <span>Mobilize</span>
+    </div>
+    <h2 style="margin: 0 0 0.4rem;">Visible action builds momentum</h2>
+    <p style="color: var(--muted); font-size: 1.05rem; margin: 0;">
+      Public demonstrations build community, attract media attention, and signal that this issue has broad support.
+    </p>
+
+    <div class="mobilize-split">
+
+      <article class="feature" style="margin-top: 0;">
+        <img
+          src="{{ '/assets/images/child-protests-for-her-school.jpg' | url }}"
+          alt="Child holding a sign at a protest in support of school safety"
+          loading="lazy"
+        />
+        <div class="feature-body">
+          <h3><a href="{{ '/everyone/how-to-organize-a-protest.html' | url }}">Organize a Protest</a></h3>
+          <p>
+            A practical guide to planning a peaceful, effective public demonstration
+            in support of protective school policies.
+          </p>
+          <a class="action-card-link" href="{{ '/everyone/how-to-organize-a-protest.html' | url }}">Protest guide →</a>
+        </div>
+      </article>
+
+      <div class="mobilize-cta">
+        <h3>Stay connected to the campaign</h3>
+        <p>
+          Get updates on actions in your area, new resources, and district-level
+          campaign news delivered to your inbox.
+        </p>
+        <a class="button button-secondary" href="{{ '/stay-informed/email-updates.html' | url }}">Sign Up for Updates</a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════ GROW THE MOVEMENT ═══════════════════════ -->
+
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+
+    <div class="section-label">
+      <div class="section-label-bar stripe-grow"></div>
+      <span>Grow the movement</span>
+    </div>
+    <h2 style="margin: 0 0 0.4rem;">Recruit people and expand your reach</h2>
+    <p style="color: var(--muted); font-size: 1.05rem; margin: 0;">
+      Campaigns succeed when more people show up. Every person you bring in multiplies the impact.
+    </p>
+
+    <div class="action-grid-4">
+
+      <div class="action-card">
+        <div class="action-card-stripe stripe-grow"></div>
+        <div class="action-card-body">
+          <h3><a href="{{ '/everyone/raise-awareness.html' | url }}">Raise Awareness</a></h3>
+          <p>
+            Practical, repeatable tactics for spreading the word — from direct conversation
+            and local events to social media and working with local media.
+          </p>
+          <a class="action-card-link" href="{{ '/everyone/raise-awareness.html' | url }}">Awareness guide →</a>
+        </div>
+      </div>
+
+      <div class="action-card">
+        <div class="action-card-stripe stripe-grow"></div>
+        <div class="action-card-body">
+          <h3><a href="{{ '/stay-informed/email-updates.html' | url }}">Sign Up for Updates</a></h3>
+          <p>
+            Stay current on campaign developments, upcoming board meetings, and new
+            resources. Share the signup link with others in your community.
+          </p>
+          <a class="action-card-link" href="{{ '/stay-informed/email-updates.html' | url }}">Sign up →</a>
+        </div>
+      </div>
+
+      <div class="action-card">
+        <div class="action-card-stripe stripe-grow"></div>
+        <div class="action-card-body">
+          <h3><a href="{{ '/stay-informed/volunteer.html' | url }}">Volunteer</a></h3>
+          <p>
+            Campaigns need people for outreach, translation, social media, research,
+            and community organizing. Find out how to contribute beyond attending meetings.
+          </p>
+          <a class="action-card-link" href="{{ '/stay-informed/volunteer.html' | url }}">Get involved →</a>
+        </div>
+      </div>
+
+      <div class="action-card">
+        <div class="action-card-stripe stripe-grow"></div>
+        <div class="action-card-body">
+          <h3><a href="{{ '/stay-informed/social-media.html' | url }}">Follow &amp; Share</a></h3>
+          <p>
+            Follow on Instagram and Facebook for updates, actions, and shareable content
+            that helps recruit new supporters and keeps the issue visible.
+          </p>
+          <a class="action-card-link" href="{{ '/stay-informed/social-media.html' | url }}">Follow us →</a>
+        </div>
+      </div>
+
+      <div class="action-card">
+        <div class="action-card-stripe stripe-grow"></div>
+        <div class="action-card-body">
+          <h3><a href="{{ '/local/by-state.html' | url }}">Share State Resources</a></h3>
+          <p>
+            Send your state's page to parents, educators, and community members — it has
+            district scorecards, active campaigns, and local contacts in one place.
+          </p>
+          <a class="action-card-link" href="{{ '/local/by-state.html' | url }}">Find your state →</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════ ORGANIZE ═══════════════════════ -->
+
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+
+    <div class="section-label">
+      <div class="section-label-bar stripe-organize"></div>
+      <span>Organize</span>
+    </div>
+    <h2 style="margin: 0 0 0.4rem;">Build a sustained effort in your district</h2>
+    <p style="color: var(--muted); font-size: 1.05rem; margin: 0 0 0.25rem;">
+      Ready to go deeper than a single meeting? These guides walk you through building
+      a campaign from the ground up.
+    </p>
+
+    <div class="feature-grid" style="margin-top: 1.75rem;">
+
+      <article class="feature">
+        <img
+          src="{{ '/assets/images/listening-to-a-speaker.jpg' | url }}"
+          alt="Community members listening to a speaker at a public meeting"
+          loading="lazy"
+        />
+        <div class="feature-body">
+          <h3><a href="{{ '/everyone/organize-a-campaign.html' | url }}">Organize a Campaign</a></h3>
+          <p>
+            How campaigns to adopt protective school policies work — from identifying your
+            district to making a coordinated ask to the school board.
+          </p>
+          <a class="action-card-link" href="{{ '/everyone/organize-a-campaign.html' | url }}">Campaign guide →</a>
+        </div>
+      </article>
+
+      <article class="feature">
+        <img
+          src="{{ '/assets/images/students-in-circle-with-hands-in-center-coolaboration.jpg' | url }}"
+          alt="People joining hands in a circle, representing coalition building"
+          loading="lazy"
+        />
+        <div class="feature-body">
+          <h3><a href="{{ '/everyone/building-coalition.html' | url }}">Build a Coalition</a></h3>
+          <p>
+            How to find partners, build relationships across organizations, and work together
+            toward a shared policy goal.
+          </p>
+          <a class="action-card-link" href="{{ '/everyone/building-coalition.html' | url }}">Coalition guide →</a>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════ CTA ═══════════════════════ -->
+
+<section class="cta" aria-label="Closing call to action">
+  <div class="container cta-inner">
+    <h2>Clear policies start with community advocacy.</h2>
+    <p>
+      School boards respond to their communities. Consistent, informed, respectful advocacy
+      is how districts adopt protective policies.
+    </p>
+    <div class="button-row">
+      <a class="button button-primary" href="{{ '/stay-informed/email-updates.html' | url }}">Sign Up for Updates</a>
+      <a class="button button-light" href="{{ '/why-it-matters/policy-solutions.html' | url }}">Review the Policy</a>
+    </div>
+  </div>
+</section>
