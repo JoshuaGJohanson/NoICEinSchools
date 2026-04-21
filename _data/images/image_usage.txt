@@ -77,6 +77,10 @@ districts/examples.html
   teacher-parents-classroom.jpg
   two-people-making-plans.jpg
 
+districts/family-communications.html
+  parents-meeting-with-admin.jpg
+  students-parents-meeting-2.jpg
+
 districts/full-framework.html
   black-kid-being-comforted.jpg
   discuss-concerns-principal.jpg
@@ -92,6 +96,10 @@ districts/model-policy.html
 districts/safety-protocol.html
   school-admin-safety-plans.jpg
   students-parents-meeting-2.jpg
+
+districts/staff-trainings.html
+  parents-meeting-with-admin.jpg
+  school-admin-safety-plans.jpg
 
 districts/student-education.html
   and-children-sitting-in-a-classroom-setting.jpg
@@ -380,12 +388,18 @@ states/ut/draft-policy-print.html
 states/ut/draft-policy.html
   (no images)
 
+states/ut/granite/background.html
+  (no images)
+
 states/ut/granite/index.html
   advocacy-group-celebrates-success.jpg
   parents-meeting-with-admin.jpg
   utah-arch.jpg
 
 states/ut/granite/strategy.html
+  (no images)
+
+states/ut/granite/working-with-the-school-board.html
   (no images)
 
 states/ut/index.html
@@ -415,6 +429,9 @@ states/ut/salt-lake-city/strategy.html
 
 states/ut/scorecard.html
   (no images)
+
+states/ut/utah-compact.html
+  utah-arch.jpg
 
 states/ut/weber/index.html
   advocacy-group-celebrates-success.jpg
@@ -562,9 +579,10 @@ why-it-matters/why-schools-should-be-safe.html
 IMAGES USED ON MULTIPLE PAGES
 ----------------------------------------------------------------------
   bike-rack-outside-of-school.jpg  (48 pages)
-  utah-arch.jpg  (10 pages)
-  parents-meeting-with-admin.jpg  (8 pages)
+  utah-arch.jpg  (11 pages)
+  parents-meeting-with-admin.jpg  (10 pages)
   advocacy-group-celebrates-success.jpg  (7 pages)
+  school-admin-safety-plans.jpg  (4 pages)
   students-listening-to-teacher.jpg  (4 pages)
   aerial-view-kids-doing-homework-table.jpg  (3 pages)
   black-kid-being-comforted.jpg  (3 pages)
@@ -573,7 +591,6 @@ IMAGES USED ON MULTIPLE PAGES
   parent-speaking-to-group.jpg  (3 pages)
   parents-in-classroom.jpg  (3 pages)
   protest-with-a-sign-that-reads-hands-off-our-children.jpg  (3 pages)
-  school-admin-safety-plans.jpg  (3 pages)
   school-bus-with-use-your-voice-spray-painted.jpg  (3 pages)
   smiling-students-taking-a-selfie-in-a-classroom.jpg  (3 pages)
   students-gathered-around-teacher-looking-at-book.jpg  (3 pages)
@@ -600,6 +617,7 @@ IMAGES USED ON MULTIPLE PAGES
   review-plans-principal.jpg  (2 pages)
   school-exterior.jpg  (2 pages)
   school-hallway.jpg  (2 pages)
+  students-parents-meeting-2.jpg  (2 pages)
   teacher-by-whiteboard.jpg  (2 pages)
   teacher-helping-kid-read.jpg  (2 pages)
   teacher-helping-student-in-classroom.jpg  (2 pages)
