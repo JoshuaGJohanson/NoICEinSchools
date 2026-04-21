@@ -68,6 +68,7 @@ _layouts/utah.html
 about-us.html
   hispanic-kid-raising-hand-in-class.jpg
   kids-taking-test.jpg
+  school-building-exterior.jpg
   school-exterior.jpg
 
 contact.html
@@ -132,6 +133,7 @@ everyone/building-coalition.html
 everyone/how-to-organize-a-protest.html
   holding-fight-today-for-a-better-tomorrow-sign.jpg
   holding-sign-about-children-needing-voice.jpg
+  little-girl-with-her-hands-painted-blue.jpg
   man-with-sign-protesting-ice-is-not-a-crime.jpg
   notepads-with-ideas.jpg
   people-meeting-classroom.jpg
@@ -251,109 +253,109 @@ states/ga.html
   bike-rack-outside-of-school.jpg
 
 states/hi.html
-  bike-rack-outside-of-school.jpg
+  school-building-exterior.jpg
 
 states/ia.html
-  bike-rack-outside-of-school.jpg
+  school-building-exterior.jpg
 
 states/id.html
-  bike-rack-outside-of-school.jpg
+  school-building-exterior.jpg
 
 states/il.html
-  bike-rack-outside-of-school.jpg
+  school-building-exterior.jpg
 
 states/in.html
-  bike-rack-outside-of-school.jpg
+  school-building-exterior.jpg
 
 states/ks.html
-  bike-rack-outside-of-school.jpg
+  school-building-exterior.jpg
 
 states/ky.html
-  bike-rack-outside-of-school.jpg
+  school-building-exterior.jpg
 
 states/la.html
-  bike-rack-outside-of-school.jpg
+  school-building-exterior.jpg
 
 states/ma.html
-  bike-rack-outside-of-school.jpg
+  hero-classroom.jpg
 
 states/md.html
-  bike-rack-outside-of-school.jpg
+  hero-classroom.jpg
 
 states/me.html
-  bike-rack-outside-of-school.jpg
+  hero-classroom.jpg
 
 states/mi.html
-  bike-rack-outside-of-school.jpg
+  hero-classroom.jpg
 
 states/mn.html
-  bike-rack-outside-of-school.jpg
+  hero-classroom.jpg
 
 states/mo.html
-  bike-rack-outside-of-school.jpg
+  hero-classroom.jpg
 
 states/ms.html
-  bike-rack-outside-of-school.jpg
+  hero-classroom.jpg
 
 states/mt.html
-  bike-rack-outside-of-school.jpg
+  hero-classroom.jpg
 
 states/nc.html
-  bike-rack-outside-of-school.jpg
+  empty-elementary-school-classroom.jpg
 
 states/nd.html
-  bike-rack-outside-of-school.jpg
+  empty-elementary-school-classroom.jpg
 
 states/ne.html
-  bike-rack-outside-of-school.jpg
+  empty-elementary-school-classroom.jpg
 
 states/nh.html
-  bike-rack-outside-of-school.jpg
+  empty-elementary-school-classroom.jpg
 
 states/nj.html
-  bike-rack-outside-of-school.jpg
+  empty-elementary-school-classroom.jpg
 
 states/nm.html
-  bike-rack-outside-of-school.jpg
+  empty-elementary-school-classroom.jpg
 
 states/nv.html
-  bike-rack-outside-of-school.jpg
+  empty-elementary-school-classroom.jpg
 
 states/ny.html
-  bike-rack-outside-of-school.jpg
+  empty-elementary-school-classroom.jpg
 
 states/oh.html
-  bike-rack-outside-of-school.jpg
+  school-library.jpg
 
 states/ok.html
-  bike-rack-outside-of-school.jpg
+  school-library.jpg
 
 states/or.html
-  bike-rack-outside-of-school.jpg
+  school-library.jpg
 
 states/pa.html
-  bike-rack-outside-of-school.jpg
+  school-library.jpg
 
 states/ri.html
-  bike-rack-outside-of-school.jpg
+  school-library.jpg
 
 states/sc.html
-  bike-rack-outside-of-school.jpg
+  school-library.jpg
 
 states/sd.html
-  bike-rack-outside-of-school.jpg
+  school-library.jpg
 
 states/tn.html
-  bike-rack-outside-of-school.jpg
+  school-library.jpg
 
 states/tx.html
-  bike-rack-outside-of-school.jpg
+  teacher-posing-by-empty-classroom.jpg
 
 states/ut/alpine/how-to-speak-at-board-meetings.html
   (no images)
 
 states/ut/alpine/index.html
-  advocacy-group-celebrates-success.jpg
+  handing-flyer.jpg
   parents-meeting-with-admin.jpg
   utah-arch.jpg
 
@@ -361,8 +363,8 @@ states/ut/alpine/strategy.html
   (no images)
 
 states/ut/canyons/index.html
-  advocacy-group-celebrates-success.jpg
-  parents-meeting-with-admin.jpg
+  person-reading-flyer.jpg
+  student-parents-meeting.jpg
   utah-arch.jpg
 
 states/ut/canyons/strategy.html
@@ -372,8 +374,8 @@ states/ut/davis/how-to-speak-at-board-meetings.html
   (no images)
 
 states/ut/davis/index.html
-  advocacy-group-celebrates-success.jpg
-  parents-meeting-with-admin.jpg
+  closeup-listening-meeting.jpg
+  everyone-is-welcome-sign.jpg
   utah-arch.jpg
 
 states/ut/davis/strategy.html
@@ -442,22 +444,22 @@ states/ut/weber/strategy.html
   (no images)
 
 states/va.html
-  bike-rack-outside-of-school.jpg
+  teacher-posing-by-empty-classroom.jpg
 
 states/vt.html
-  bike-rack-outside-of-school.jpg
+  teacher-posing-by-empty-classroom.jpg
 
 states/wa.html
-  bike-rack-outside-of-school.jpg
+  teacher-posing-by-empty-classroom.jpg
 
 states/wi.html
-  bike-rack-outside-of-school.jpg
+  teacher-posing-by-empty-classroom.jpg
 
 states/wv.html
-  bike-rack-outside-of-school.jpg
+  teacher-posing-by-empty-classroom.jpg
 
 states/wy.html
-  bike-rack-outside-of-school.jpg
+  teacher-posing-by-empty-classroom.jpg
 
 stay-informed/email-confirmed.html
   (no images)
@@ -506,6 +508,7 @@ students/know-your-rights.html
   law-enforcement-entering-a-home.jpg
   parents-helping-kid-laptop.jpg
   teacher-helping-kid-read.jpg
+  teacher-with-child.jpg
 
 students/share-with-classmates.html
   smiling-teenager-on-cell-phone.jpg
@@ -578,10 +581,15 @@ why-it-matters/why-schools-should-be-safe.html
 
 IMAGES USED ON MULTIPLE PAGES
 ----------------------------------------------------------------------
-  bike-rack-outside-of-school.jpg  (48 pages)
   utah-arch.jpg  (11 pages)
-  parents-meeting-with-admin.jpg  (10 pages)
-  advocacy-group-celebrates-success.jpg  (7 pages)
+  bike-rack-outside-of-school.jpg  (9 pages)
+  school-building-exterior.jpg  (9 pages)
+  empty-elementary-school-classroom.jpg  (8 pages)
+  hero-classroom.jpg  (8 pages)
+  parents-meeting-with-admin.jpg  (8 pages)
+  school-library.jpg  (8 pages)
+  teacher-posing-by-empty-classroom.jpg  (7 pages)
+  advocacy-group-celebrates-success.jpg  (4 pages)
   school-admin-safety-plans.jpg  (4 pages)
   students-listening-to-teacher.jpg  (4 pages)
   aerial-view-kids-doing-homework-table.jpg  (3 pages)
@@ -623,6 +631,11 @@ IMAGES USED ON MULTIPLE PAGES
   teacher-helping-student-in-classroom.jpg  (2 pages)
 
 
+SAME IMAGE USED MULTIPLE TIMES ON ONE PAGE
+----------------------------------------------------------------------
+  (none)
+
+
 UNUSED IMAGES  (in assets/images but not referenced by any page)
 ----------------------------------------------------------------------
   and-child-drawing-together-at-a-table-r.jpg
@@ -630,13 +643,8 @@ UNUSED IMAGES  (in assets/images but not referenced by any page)
   black-kid-looking-serious.jpg
   boy-doing-assignment-in-class.jpg
   boy-holding-a-stuffed-animal-in-black-and-white-YFh_.jpg
-  closeup-listening-meeting.jpg
   closeup-teenagers-shoes.jpg
   elementary-kid-doing-math.jpg
-  empty-elementary-school-classroom.jpg
-  everyone-is-welcome-sign.jpg
-  handing-flyer.jpg
-  hero-classroom.jpg
   high-school-basketball.jpg
   high-school-football-field.jpg
   hispanic-kid-crying.jpg
@@ -646,16 +654,9 @@ UNUSED IMAGES  (in assets/images but not referenced by any page)
   in-white-tank-top-beside-girl-in-yellow-dress.jpg
   kid-alone-on-bench.jpg
   kids-waiting-to-play-basketball.jpg
-  little-girl-with-her-hands-painted-blue.jpg
   man-arrested-by-ice.jpg
   man-being-arrested.jpg
-  person-reading-flyer.jpg
-  school-building-exterior.jpg
-  school-library.jpg
   sitting-on-swing-chair.jpg
-  student-parents-meeting.jpg
-  teacher-posing-by-empty-classroom.jpg
-  teacher-with-child.jpg
   teacher-with-young-students.jpg
   worried-white-kid.jpg
   young-child-reading.jpg
