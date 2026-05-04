@@ -69,6 +69,32 @@ permalink: /districts/safety-protocol.html
   }
   .key-principle p { margin: 0.4rem 0 0; color: #cbd5e1; line-height: 1.65; }
   .key-principle strong { color: #93c5fd; }
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    margin: var(--space-5) 0;
+  }
+  .stat-item {
+    background: #f8faff;
+    border: 1px solid #dbeafe;
+    border-radius: var(--radius);
+    padding: 1rem;
+    text-align: center;
+  }
+  .stat-number {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #2563eb;
+    line-height: 1;
+    display: block;
+  }
+  .stat-label {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 0.25rem;
+    display: block;
+  }
   @media (max-width: 600px) {
     .safe-dismissal-flow { flex-direction: column; }
     .flow-step { border-radius: 0; width: 100%; }
@@ -106,6 +132,34 @@ permalink: /districts/safety-protocol.html
       <strong>This is a student safety protocol</strong> — comparable to lockdown, fire, or
       emergency dismissal procedures.
       <p>The goal is to prevent chaos, protect students, and ensure safe reunification with families.</p>
+    </div>
+
+    <h3 style="font-size: 1.05rem; margin: var(--space-6) 0 0.5rem;">What the research shows</h3>
+    <p style="font-size: 0.93rem; margin-bottom: 0.75rem;">
+      Immigration enforcement activity near schools creates measurable harm to students and families — even when enforcement does not target students directly. These effects are documented in national studies.
+    </p>
+
+    <div class="stat-grid">
+      <div class="stat-item">
+        <span class="stat-number">22%</span>
+        <span class="stat-label">increase in student absences during intensified enforcement activity
+          (<a href="https://ed.stanford.edu/news/student-absences-increased-under-threat-deportation-efforts-stanford-study-finds" target="_blank" rel="noopener">Stanford GSE</a>)</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">10%</span>
+        <span class="stat-label">decline in Hispanic student enrollment where ICE partnerships intensified
+          (<a href="https://siepr.stanford.edu/publications/working-paper/vanished-classmates-effects-local-immigration-enforcement-student" target="_blank" rel="noopener">Stanford SIEPR</a>)</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">6.1M</span>
+        <span class="stat-label">U.S.-citizen children under 18 living with an undocumented family member
+          (<a href="https://www.americanimmigrationcouncil.org/fact-sheet/us-citizen-children-impacted-immigration-enforcement/" target="_blank" rel="noopener">American Immigration Council</a>)</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">63.8%</span>
+        <span class="stat-label">of high school principals report immigrant students missing school due to enforcement or rhetoric
+          (<a href="https://newsroom.ucla.edu/stories/bullying-missed-school-effects-immigration-enforcement-high-schools-ucla" target="_blank" rel="noopener">UCLA</a>)</span>
+      </div>
     </div>
 
     <p style="font-size: 0.92rem; margin-top: var(--space-4);">
@@ -148,6 +202,40 @@ permalink: /districts/safety-protocol.html
         />
       </div>
     </div>
+
+    <div class="protocol-block" style="margin-top: var(--space-5);">
+      <h4>Student Know-Your-Rights training</h4>
+      <ul>
+        <li>Students have the right to remain silent — they are not required to answer questions from agents</li>
+        <li>Students should refuse to consent to searches or entry into private spaces without a judicial warrant</li>
+        <li>Students should not sign any documents without speaking to a parent or lawyer first</li>
+        <li>Students should memorize a trusted adult's phone number in case they are separated from family</li>
+      </ul>
+      <p style="font-size: 0.88rem; color: var(--muted); margin: 0.5rem 0 0;">
+        Partner with legal aid organizations to provide accessible, multilingual Know-Your-Rights materials for students and families.
+        (<a href="https://www.ilrc.org/community-resources/protecting-children-schools-against-immigration-enforcement" target="_blank" rel="noopener">Immigrant Legal Resource Center</a>)
+      </p>
+    </div>
+
+    <div class="protocol-block">
+      <h4>Family emergency planning</h4>
+      <ul>
+        <li>Help families identify alternative caregivers who can pick up children if a parent is detained</li>
+        <li>Provide guidance on how to locate a detained relative (ICE detainee locator, local legal aid contacts)</li>
+        <li>Encourage families to designate someone with legal authority to make decisions for children in an emergency</li>
+        <li>Distribute written emergency planning guides in families' home languages</li>
+      </ul>
+    </div>
+
+    <div class="protocol-block">
+      <h4>Community escort programs</h4>
+      <ul>
+        <li>Coordinate walking buses, carpools, and bike buses during arrival and dismissal when enforcement activity is elevated</li>
+        <li>Partner with community organizations and parent groups to organize and staff escort programs</li>
+        <li>Communicate proactively when escort programs are available so families can plan accordingly</li>
+      </ul>
+    </div>
+
   </div>
 </section>
 
@@ -332,6 +420,10 @@ permalink: /districts/safety-protocol.html
         <h3>Document the incident</h3>
         <p>Record what happened, who was involved, what was requested, and how staff responded. Documentation protects the district and informs future training.</p>
       </article>
+      <article class="card">
+        <h3>Conduct "Belonging" surveys</h3>
+        <p>Survey students and families after significant incidents to measure whether fear, anxiety, or bullying has intensified. Culture audits help identify which students need additional support and whether school policies are working.</p>
+      </article>
     </div>
   </div>
 </section>
@@ -450,6 +542,19 @@ permalink: /districts/safety-protocol.html
       <blockquote>"in the event a student's parent is detained"</blockquote>
     </div>
 
+    <div class="protocol-block">
+      <h4>Minnesota (Columbia Heights): Teachers as bodyguards — what happens without a clear plan</h4>
+      <ul>
+        <li>When ICE agents swarmed near a suburban Minnesota school district, teachers physically positioned themselves between agents and students</li>
+        <li>Parents sheltered in place and were detained; teachers acted as chauffeurs and bodyguards to get children safely to class</li>
+        <li>Even when agents remained off campus, their presence in nearby parking lots created fear and chaos for the entire school community</li>
+      </ul>
+      <p style="font-size: 0.88rem; color: var(--muted);">
+        (<a href="https://www.newyorker.com/news/the-lede/ices-assault-on-a-minnesota-school-district" target="_blank" rel="noopener">The New Yorker</a>)
+      </p>
+      <blockquote>"teachers acting as chauffeurs and bodyguards to get children safely to class… physically positioning themselves between agents and students"</blockquote>
+    </div>
+
     <div class="key-principle">
       <strong>Across districts, nearby ICE activity triggers real operational changes</strong>
       <p>
@@ -514,6 +619,18 @@ permalink: /districts/safety-protocol.html
         (<a href="https://www.healthychildren.org/English/safety-prevention/all-around/Pages/actions-schools-are-taking-to-make-themselves-safer.aspx" target="_blank" rel="noopener">American Academy of Pediatrics</a>)
       </p>
       <blockquote>"All schools should have… an emergency operations plan"</blockquote>
+    </div>
+
+    <div class="protocol-block">
+      <h4>Safe-zone policies improve academic outcomes</h4>
+      <ul>
+        <li>Research on California school districts that adopted safe-zone policies found positive impacts on standardized test scores and high school graduation rates</li>
+        <li>Effects were largest among vulnerable and immigrant student populations</li>
+        <li>When families trust that schools will protect their children, students stay enrolled — reversing the attendance and enrollment declines driven by enforcement-related fear</li>
+      </ul>
+      <p style="font-size: 0.88rem; color: var(--muted);">
+        (<a href="https://www.thecgo.org/research/assessing-the-role-of-safe-zone-policies-in-promoting-academic-achievement/" target="_blank" rel="noopener">The CGO — Assessing the Role of Safe-Zone Policies in Promoting Academic Achievement</a>)
+      </p>
     </div>
 
     <div class="key-principle">
