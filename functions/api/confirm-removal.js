@@ -44,7 +44,13 @@ export async function onRequestGet(context) {
     }
 
     if (!brevoRes.ok) {
-      return Response.redirect(`${removalPage}?error=removal-failed&status=${brevoRes.status}`, 302);
+      const debugParams = new URLSearchParams({
+        error: 'removal-failed',
+        status: brevoRes.status,
+        list: listId,
+        addr: email,
+      });
+      return Response.redirect(`${removalPage}?${debugParams}`, 302);
     }
   }
 
