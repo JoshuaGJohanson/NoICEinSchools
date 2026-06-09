@@ -31,13 +31,13 @@ export async function onRequestGet(context) {
   if (listId) {
     let brevoRes;
     try {
-      brevoRes = await fetch(`https://api.brevo.com/v3/contacts/lists/${listId}/contacts/delete`, {
-        method: 'POST',
+      brevoRes = await fetch(`https://api.brevo.com/v3/contacts/${encodeURIComponent(email)}`, {
+        method: 'PUT',
         headers: {
           'api-key': env.BREVO_API_KEY,
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ emails: [email] }),
+        body: JSON.stringify({ unlinkListIds: [listId] }),
       });
     } catch {
       return Response.redirect(`${removalPage}?error=removal-failed`, 302);
