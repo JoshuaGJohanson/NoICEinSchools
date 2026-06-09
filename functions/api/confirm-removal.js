@@ -44,7 +44,7 @@ export async function onRequestGet(context) {
     }
 
     if (!brevoRes.ok) {
-      return Response.redirect(`${removalPage}?error=removal-failed`, 302);
+      return Response.redirect(`${removalPage}?error=removal-failed&status=${brevoRes.status}`, 302);
     }
   }
 
