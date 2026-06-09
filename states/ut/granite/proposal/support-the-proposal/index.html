@@ -1,0 +1,723 @@
+---
+layout: utah-district
+title: Sign the Proposal — Granite School District
+description: Add your name to the Student Safety and Immigration Enforcement proposal submitted to Granite School District. Signatures will be presented at the July 7, 2026 board meeting.
+permalink: /states/ut/granite/proposal/support-the-proposal/
+---
+
+<style>
+  .proposal-hero {
+    background: linear-gradient(135deg, #07192680 0%, #07192699 100%),
+                linear-gradient(135deg, #1e3a5f 0%, #0f2744 100%);
+    color: #fff;
+    padding: 3rem 0 2.5rem;
+    text-align: center;
+  }
+
+  .proposal-hero .eyebrow {
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.8;
+    margin-bottom: 0.6rem;
+  }
+
+  .proposal-hero h1 {
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 800;
+    margin: 0 auto 0.75rem;
+    max-width: 640px;
+    line-height: 1.2;
+  }
+
+  .proposal-hero p {
+    font-size: 1rem;
+    opacity: 0.88;
+    max-width: 540px;
+    margin: 0 auto 1.5rem;
+    line-height: 1.6;
+  }
+
+  .meeting-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(245, 158, 11, 0.15);
+    border: 1px solid rgba(245, 158, 11, 0.5);
+    border-radius: 9999px;
+    padding: 0.4rem 1rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #fcd34d;
+  }
+
+  .countdown-strip {
+    background: #fef3c7;
+    border-bottom: 2px solid #f59e0b;
+    padding: 0.75rem 0;
+    text-align: center;
+  }
+
+  .countdown-strip p {
+    margin: 0;
+    font-size: 0.92rem;
+    color: #78350f;
+  }
+
+  .countdown-strip strong {
+    color: #92400e;
+  }
+
+  #days-remaining {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #b45309;
+  }
+
+  /* Proposal summary cards */
+  .proposal-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .proposal-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+  }
+
+  .proposal-card .card-num {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.4rem;
+  }
+
+  .proposal-card h3 {
+    font-size: 1rem;
+    margin: 0 0 0.5rem;
+  }
+
+  .proposal-card p {
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  /* Signature form */
+  .sig-wrap {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .name-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    .name-row { grid-template-columns: 1fr; }
+  }
+
+  .field {
+    margin-bottom: 1.25rem;
+  }
+
+  .field label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .field select,
+  .field input[type="email"],
+  .field input[type="text"] {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    font-size: 0.95rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--text);
+    box-sizing: border-box;
+    transition: border-color 0.15s;
+  }
+
+  .field select:focus,
+  .field input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 15%, transparent);
+  }
+
+  .field input.invalid {
+    border-color: #b91c1c;
+  }
+
+  .field-error {
+    font-size: 0.82rem;
+    color: #b91c1c;
+    margin-top: 0.3rem;
+    display: none;
+  }
+
+  .field-error.visible { display: block; }
+
+  .form-error {
+    padding: 0.75rem 1rem;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: var(--radius);
+    color: #991b1b;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    display: none;
+  }
+
+  .form-error.visible { display: block; }
+
+  .privacy-note {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  #sig-form button[type="submit"] {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  #sig-form button[type="submit"]:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  .success-state {
+    text-align: center;
+    padding: 3rem 0;
+    display: none;
+  }
+
+  .success-state.visible { display: block; }
+
+  .success-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .success-state h2 { margin-bottom: 0.5rem; }
+
+  .success-state p {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+  }
+
+  /* Call section */
+  .call-script {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+    font-size: 0.92rem;
+    line-height: 1.7;
+    margin: 1rem 0;
+    font-style: italic;
+    color: var(--text);
+  }
+</style>
+
+
+<!-- ═══════════════════════ HERO ═══════════════════════ -->
+
+<div class="proposal-hero">
+  <div class="container">
+    <div class="eyebrow">Granite School District · Utah</div>
+    <h1>Add your name to the proposal</h1>
+    <p>
+      We submitted a formal proposal to the Granite School District Board of Education.
+      Sign in support — we will present these signatures at the next board meeting.
+    </p>
+    <div class="meeting-badge">
+      <span>📅</span>
+      <span>Board Meeting: July 7, 2026 · 7:00 PM</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════ COUNTDOWN ═══════════════════════ -->
+
+<div class="countdown-strip" aria-live="polite">
+  <p>The July 7 board meeting is <span id="days-remaining"></span> — add your name to be included.</p>
+</div>
+
+
+<!-- ═══════════════════════ WHAT THE PROPOSAL ASKS ═══════════════════════ -->
+
+<section class="section">
+  <div class="container">
+
+    <div class="section-header">
+      <h2>What the proposal asks for</h2>
+      <p>
+        Three practical areas — grounded in student safety, staff clarity, and family trust.
+        The proposal does not ask Granite to adopt a sanctuary policy or take a partisan position.
+      </p>
+    </div>
+
+    <div class="proposal-summary-grid">
+      <div class="proposal-card">
+        <div class="card-num">01</div>
+        <h3>Student Safety &amp; Well-Being</h3>
+        <p>Approved educational materials on safe, lawful conduct. Clear safety and privacy procedures. Transportation guidance when enforcement is near a school or bus stop.</p>
+      </div>
+      <div class="proposal-card">
+        <div class="card-num">02</div>
+        <h3>Staff Guidance &amp; Training</h3>
+        <p>A district-approved resource list staff can share. Written guidance on what staff may and may not say. Optional training on responding to immigration-related concerns and bullying.</p>
+      </div>
+      <div class="proposal-card">
+        <div class="card-num">03</div>
+        <h3>Family Resources</h3>
+        <p>District-approved links to nonprofit legal services, community organizations, and translation support. General emergency-planning guidance so families can prepare.</p>
+      </div>
+    </div>
+
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem;">
+      <a class="button button-light" href="{{ '/states/ut/granite/proposal/highlights/' | url }}">
+        Read Highlights →
+      </a>
+      <a class="button button-light" href="{{ '/states/ut/granite/proposal/contact-the-board/' | url }}">
+        Contact the Board →
+      </a>
+      <a class="button button-light" href="{{ '/assets/docs/StudentSafetyAndImmigrationEnforcement.pdf' | url }}" target="_blank" rel="noopener">
+        Full Proposal (PDF) →
+      </a>
+      <a class="button button-light" href="{{ '/states/ut/granite/' | url }}">
+        ← Back to Granite Overview
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════ SIGNATURE FORM ═══════════════════════ -->
+
+<section class="section section-tinted" id="sign">
+  <div class="container">
+    <div class="sig-wrap">
+
+      <div id="success-state" class="success-state" aria-live="polite" tabindex="-1">
+        <div class="success-icon">✓</div>
+        <h2>Your name has been added.</h2>
+        <p>Check your email — we sent a confirmation. The next board presentation is July 7.</p>
+        <p>Help grow the list by sharing this page with others who care about Granite students.</p>
+        <div style="display: flex; flex-direction: column; gap: 0.75rem; align-items: center;">
+          <a class="button button-primary" href="{{ '/states/ut/granite/proposal/support-the-proposal/' | url }}">Share this page →</a>
+          <a class="button button-light" href="{{ '/states/ut/granite/' | url }}">Back to Granite overview</a>
+          <a style="font-size: 0.82rem; color: var(--muted); margin-top: 0.5rem;" href="{{ '/states/ut/granite/proposal/remove-signature/' | url }}">Changed your mind? Remove your name</a>
+        </div>
+      </div>
+
+      <div id="form-wrap">
+        <h2 style="margin-bottom: 0.3rem;">Sign in support</h2>
+        <p style="font-size: 0.92rem; color: var(--muted); margin-bottom: 1.5rem;">
+          Your name will be included in the list of supporters. Sign before July 7 to be included at the first board presentation.
+        </p>
+
+        <div id="form-error" class="form-error" role="alert"></div>
+
+        <form id="sig-form" novalidate>
+
+          <div class="name-row">
+            <div class="field">
+              <label for="firstName">First name <span style="color:#b91c1c;">*</span></label>
+              <input type="text" id="firstName" name="firstName" required autocomplete="given-name" placeholder="First" />
+              <div id="firstName-error" class="field-error">First name is required.</div>
+            </div>
+            <div class="field">
+              <label for="lastName">Last name <span style="color:#b91c1c;">*</span></label>
+              <input type="text" id="lastName" name="lastName" required autocomplete="family-name" placeholder="Last" />
+              <div id="lastName-error" class="field-error">Last name is required.</div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="email">Email address <span style="color:#b91c1c;">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com" />
+            <div id="email-error" class="field-error">Please enter a valid email address.</div>
+          </div>
+
+          <div class="field">
+            <label for="district">School district <span style="color:#b91c1c;">*</span></label>
+            <input type="text" id="district" name="district" value="Granite School District" list="district-suggestions" autocomplete="organization" required />
+            <div id="district-error" class="field-error">Please enter your school district.</div>
+            <a href="{{ '/states/ut/districts/' | url }}" style="font-size:0.8rem; color:var(--muted);">Not sure which district? Look it up →</a>
+            <div id="district-warning" style="display:none; margin-top:0.6rem; padding:0.75rem 1rem; background:#fefce8; border:1px solid #fde68a; border-left:3px solid #f59e0b; border-radius:var(--radius); font-size:0.88rem; color:#78350f; line-height:1.5;">
+              We haven't submitted a proposal to <strong id="district-warning-name"></strong> yet. If you sign, your name will be included when we do — we are building a list of supporters now, and will submit a proposal to your district built around the same student safety principles.
+            </div>
+            <datalist id="district-suggestions">
+              <option>Granite School District</option>
+              <option>Jordan School District</option>
+              <option>Salt Lake City School District</option>
+              <option>Canyons School District</option>
+              <option>Murray City School District</option>
+              <option>Nebo School District</option>
+              <option>Alpine School District</option>
+            </datalist>
+          </div>
+
+          <div id="affiliation-wrap">
+            <div class="field">
+              <label for="affiliation">Relationship to school district <span style="color:#b91c1c;">*</span></label>
+              <select id="affiliation" name="affiliation" required>
+                <option value="">— Select one —</option>
+                <option value="Student">Student</option>
+                <option value="Parent/Guardian">Parent/Guardian</option>
+                <option value="Family Member">Family Member</option>
+                <option value="School District Employee">School District Employee</option>
+                <option value="Community Member (inside district)">Community Member (inside district)</option>
+                <option value="Community Member (outside district)">Community Member (outside district)</option>
+              </select>
+              <div id="affiliation-error" class="field-error">Please select your relationship to the school district.</div>
+            </div>
+          </div>
+
+          <div id="school-wrap">
+            <div class="field">
+              <label for="school">
+              School
+              <span style="font-weight: 400; color: var(--muted);">(optional)</span>
+            </label>
+            <input type="text" id="school" name="school" placeholder="e.g. Valley Jr. High, Skyline High" list="school-suggestions" autocomplete="off" />
+            <datalist id="school-suggestions">
+              <option>Academy Park Elementary</option>
+              <option>Arcadia Elementary</option>
+              <option>Armstrong Academy Elementary</option>
+              <option>Bacchus, Thomas W. Elementary</option>
+              <option>Beehive Elementary</option>
+              <option>Bennion Elementary</option>
+              <option>Bennion Jr. High</option>
+              <option>Bonneville Jr. High</option>
+              <option>Bridger, Jim Elementary</option>
+              <option>Brockbank STEM Jr. High</option>
+              <option>Calvin Smith Elementary</option>
+              <option>Churchill Jr. High</option>
+              <option>Copper Hills Elementary</option>
+              <option>Cottonwood Elementary</option>
+              <option>Cottonwood High School</option>
+              <option>Crestview Elementary</option>
+              <option>Cyprus High School</option>
+              <option>Diamond Ridge Elementary</option>
+              <option>Dos Mundos Academy Elementary</option>
+              <option>Driggs, Howard R. Elementary</option>
+              <option>Eastwood Elementary</option>
+              <option>Eisenhower Jr. High</option>
+              <option>Elk Run Elementary</option>
+              <option>Evergreen Jr. High</option>
+              <option>Farnsworth, Philo T. Elementary</option>
+              <option>Fox Hills Elementary</option>
+              <option>Fremont, John C. Elementary</option>
+              <option>Frost, Robert Elementary</option>
+              <option>Gourley, David Elementary</option>
+              <option>Granger Elementary</option>
+              <option>Granger High School</option>
+              <option>Granite Connection High School</option>
+              <option>Granite Park Jr. High</option>
+              <option>Granite Peaks</option>
+              <option>Granite Technical Institute</option>
+              <option>Granite Transition Services</option>
+              <option>Hartvigsen School</option>
+              <option>Hillsdale Elementary</option>
+              <option>Hillside Elementary</option>
+              <option>Hunter Elementary</option>
+              <option>Hunter High School</option>
+              <option>Hunter Jr. High</option>
+              <option>Jackling Elementary</option>
+              <option>Jefferson, Thomas Jr. High</option>
+              <option>Kearns High School</option>
+              <option>Kearns Jr. High</option>
+              <option>Kennedy, John F. Jr. High</option>
+              <option>Lake Ridge Elementary</option>
+              <option>Lincoln Elementary</option>
+              <option>Magna Elementary</option>
+              <option>Matheson, Scott M. Jr. High</option>
+              <option>Monroe Elementary</option>
+              <option>Morningside Elementary</option>
+              <option>Moss, James E. Elementary</option>
+              <option>Oakridge Elementary</option>
+              <option>Oakwood Elementary</option>
+              <option>Olympus High School</option>
+              <option>Olympus Jr. High</option>
+              <option>Penn, William Elementary</option>
+              <option>Pioneer Elementary</option>
+              <option>Pleasant Green Elementary</option>
+              <option>Plymouth Elementary</option>
+              <option>Rolling Meadows Elementary</option>
+              <option>Roosevelt Continuation School</option>
+              <option>Rosecrest Elementary</option>
+              <option>Silver Hills Elementary</option>
+              <option>Skyline High School</option>
+              <option>South Kearns Elementary</option>
+              <option>Stansbury Elementary</option>
+              <option>Taylorsville Elementary</option>
+              <option>Taylorsville High School</option>
+              <option>Truman, Harry S. Elementary</option>
+              <option>Upland Terrace Elementary</option>
+              <option>Valley Jr. High</option>
+              <option>Vista Elementary</option>
+              <option>Walker Elementary</option>
+              <option>Wasatch Jr. High</option>
+              <option>West Kearns Elementary</option>
+              <option>West Lake STEM Jr. High</option>
+              <option>West Valley Elementary</option>
+              <option>Whittier Elementary</option>
+              <option>Wilson, Woodrow Elementary</option>
+              <option>Woodstock Elementary</option>
+              <option>Wright, Gearld L. Elementary</option>
+              <option>Youth Educational Support School (YESS)</option>
+            </datalist>
+            </div>
+          </div>
+
+
+          <div class="privacy-note">
+            <span>🔒</span>
+            <span>Your email is used only to send your confirmation. We will not share your contact information.</span>
+          </div>
+
+          <div class="field">
+            <button type="submit" class="button button-primary">Add My Name</button>
+          </div>
+
+          <p style="font-size: 0.8rem; color: var(--muted); margin-top: 0.75rem; text-align: center;">
+            By signing, you agree to our <a href="{{ '/privacy/' | url }}">Privacy Policy</a>.
+          </p>
+
+          <p style="font-size: 0.8rem; color: var(--muted); margin-top: 0.5rem; text-align: center;">
+            Changed your mind after signing? <a href="{{ '/states/ut/granite/proposal/remove-signature/' | url }}">Remove your name →</a>
+          </p>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════ CONTACT THE BOARD ═══════════════════════ -->
+
+<section class="section">
+  <div class="container">
+    <div class="panel panel-spaced" style="max-width: 640px; margin: 0 auto;">
+
+      <h2>Contact the board</h2>
+      <p>
+        A personal email or call from a constituent — especially before July 7 — makes a real
+        difference. We have put together a dedicated page with every board member's phone
+        number and email, a pre-written message you can copy, a phone script, and talking points.
+      </p>
+
+      <div class="button-row" style="margin-top: 1rem;">
+        <a class="button button-primary" href="{{ '/states/ut/granite/proposal/contact-the-board/' | url }}">Contact the Board →</a>
+        <a class="button button-light" href="{{ '/states/ut/granite/working-with-the-school-board/' | url }}">Board Engagement Guide →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════ CTA ═══════════════════════ -->
+
+<section class="cta" aria-label="Closing call to action">
+  <div class="container cta-inner">
+    <h2>Every name counts — aim for July 7.</h2>
+    <p>
+      Share this page with parents, teachers, and community members across Granite School District.
+      A longer list of supporters sends a clearer signal to the board.
+    </p>
+    <div class="button-row">
+      <a class="button button-primary" href="#sign">Add Your Name</a>
+      <a class="button button-light" href="{{ '/states/ut/granite/' | url }}">← Granite Overview</a>
+    </div>
+  </div>
+</section>
+
+
+<script>
+(function () {
+  // Countdown to July 7, 2026 7pm MT (UTC-6)
+  const meeting = new Date('2026-07-07T19:00:00-06:00');
+  const el = document.getElementById('days-remaining');
+  if (el) {
+    const now  = new Date();
+    const diff = Math.ceil((meeting - now) / (1000 * 60 * 60 * 24));
+    if (diff > 1)        el.textContent = diff + ' days away';
+    else if (diff === 1) el.textContent = 'tomorrow';
+    else if (diff === 0) el.textContent = 'today';
+    else                 el.textContent = 'past';
+  }
+
+  // District warning + conditional fields
+  const districtInput      = document.getElementById('district');
+  const districtWarning    = document.getElementById('district-warning');
+  const districtName       = document.getElementById('district-warning-name');
+  const schoolWrap         = document.getElementById('school-wrap');
+
+  function isGranite() {
+    return districtInput.value.trim().toLowerCase() === 'granite school district';
+  }
+
+  function updateDistrictFields() {
+    const granite = isGranite();
+    const val = districtInput.value.trim();
+
+    if (!granite && val) {
+      districtName.textContent = val;
+      districtWarning.style.display = 'block';
+    } else {
+      districtWarning.style.display = 'none';
+    }
+
+    schoolWrap.style.display = granite ? '' : 'none';
+  }
+
+  districtInput.addEventListener('input', updateDistrictFields);
+  districtInput.addEventListener('change', updateDistrictFields);
+
+  // Form submission
+  const form       = document.getElementById('sig-form');
+  const formWrap   = document.getElementById('form-wrap');
+  const successEl  = document.getElementById('success-state');
+  const formError  = document.getElementById('form-error');
+
+  function validateEmail(v) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim());
+  }
+
+  function setError(inputId, errorId, show) {
+    const input = document.getElementById(inputId);
+    const err   = document.getElementById(errorId);
+    if (!input || !err) return;
+    if (show) {
+      input.classList.add('invalid');
+      err.classList.add('visible');
+    } else {
+      input.classList.remove('invalid');
+      err.classList.remove('visible');
+    }
+  }
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const firstName   = document.getElementById('firstName').value;
+    const lastName    = document.getElementById('lastName').value;
+    const email       = document.getElementById('email').value;
+    const affiliation = document.getElementById('affiliation').value;
+    const district    = document.getElementById('district').value;
+    const school      = document.getElementById('school').value;
+
+
+    let valid = true;
+
+    if (!firstName.trim()) {
+      setError('firstName', 'firstName-error', true);
+      valid = false;
+    } else {
+      setError('firstName', 'firstName-error', false);
+    }
+
+    if (!lastName.trim()) {
+      setError('lastName', 'lastName-error', true);
+      valid = false;
+    } else {
+      setError('lastName', 'lastName-error', false);
+    }
+
+    if (!validateEmail(email)) {
+      setError('email', 'email-error', true);
+      if (valid) document.getElementById('email').focus();
+      valid = false;
+    } else {
+      setError('email', 'email-error', false);
+    }
+
+    if (!district.trim()) {
+      setError('district', 'district-error', true);
+      valid = false;
+    } else {
+      setError('district', 'district-error', false);
+    }
+
+    if (!affiliation.trim()) {
+      setError('affiliation', 'affiliation-error', true);
+      valid = false;
+    } else {
+      setError('affiliation', 'affiliation-error', false);
+    }
+
+    if (!valid) return;
+
+    const btn = form.querySelector('button[type="submit"]');
+    btn.disabled    = true;
+    btn.textContent = 'Adding your name…';
+    formError.classList.remove('visible');
+
+    const payload = {
+      firstName:   firstName.trim(),
+      lastName:    lastName.trim(),
+      email:       email.trim(),
+      affiliation: affiliation.trim() || null,
+      district:    district.trim() || null,
+      school:      school || null,
+
+    };
+
+    try {
+      const res = await fetch('/api/sign-proposal', {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body:    JSON.stringify(payload),
+      });
+
+      if (res.ok) {
+        formWrap.style.display = 'none';
+        successEl.classList.add('visible');
+        successEl.focus();
+      } else {
+        const data = await res.json().catch(() => ({}));
+        formError.textContent = data.message || 'Something went wrong. Please try again.';
+        formError.classList.add('visible');
+        btn.disabled    = false;
+        btn.textContent = 'Add My Name';
+      }
+    } catch {
+      formError.textContent = 'Unable to reach the server. Please check your connection and try again.';
+      formError.classList.add('visible');
+      btn.disabled    = false;
+      btn.textContent = 'Add My Name';
+    }
+  });
+})();
+</script>

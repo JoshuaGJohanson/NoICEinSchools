@@ -1,0 +1,315 @@
+---
+layout: utah-district
+title: Remove Your Name — Granite School District Proposal
+description: Remove your name from the list of supporters for the Student Safety and Immigration Enforcement proposal submitted to Granite School District.
+permalink: /states/ut/granite/proposal/remove-signature/
+---
+
+<style>
+  .removal-hero {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    color: #fff;
+    padding: 3rem 0 2.5rem;
+    text-align: center;
+  }
+
+  .removal-hero .eyebrow {
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 0.6rem;
+  }
+
+  .removal-hero h1 {
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    font-weight: 800;
+    margin: 0 auto 0.75rem;
+    max-width: 580px;
+    line-height: 1.2;
+  }
+
+  .removal-hero p {
+    font-size: 0.97rem;
+    opacity: 0.82;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .removal-wrap {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .field {
+    margin-bottom: 1.25rem;
+  }
+
+  .field label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .field input[type="email"] {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    font-size: 0.95rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--text);
+    box-sizing: border-box;
+    transition: border-color 0.15s;
+  }
+
+  .field input[type="email"]:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 15%, transparent);
+  }
+
+  .field input.invalid {
+    border-color: #b91c1c;
+  }
+
+  .field-error {
+    font-size: 0.82rem;
+    color: #b91c1c;
+    margin-top: 0.3rem;
+    display: none;
+  }
+
+  .field-error.visible { display: block; }
+
+  .form-error {
+    padding: 0.75rem 1rem;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: var(--radius);
+    color: #991b1b;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    display: none;
+  }
+
+  .form-error.visible { display: block; }
+
+  .state-panel {
+    text-align: center;
+    padding: 3rem 1rem;
+    display: none;
+  }
+
+  .state-panel.visible { display: block; }
+
+  .state-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .state-panel h2 { margin-bottom: 0.5rem; }
+
+  .state-panel p {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .distinction-note {
+    padding: 0.875rem 1rem;
+    background: #f0f9ff;
+    border: 1px solid #bae6fd;
+    border-left: 3px solid #0284c7;
+    border-radius: var(--radius);
+    font-size: 0.88rem;
+    color: #0c4a6e;
+    line-height: 1.55;
+    margin-bottom: 1.75rem;
+  }
+
+  #removal-form button[type="submit"] {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  #removal-form button[type="submit"]:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+</style>
+
+
+<!-- ═══════════════════════ HERO ═══════════════════════ -->
+
+<div class="removal-hero">
+  <div class="container">
+    <div class="eyebrow">Granite School District · Utah</div>
+    <h1>Remove your name from the proposal</h1>
+    <p>
+      Enter the email you used when you signed. We will send you a one-click link to confirm the removal.
+    </p>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════ FORM / STATES ═══════════════════════ -->
+
+<section class="section section-tinted">
+  <div class="container">
+    <div class="removal-wrap">
+
+      <!-- ── Confirmed state (redirected here after clicking email link) ── -->
+      <div id="state-confirmed" class="state-panel" aria-live="polite" tabindex="-1">
+        <div class="state-icon">✓</div>
+        <h2>Your name has been removed.</h2>
+        <p>
+          Your name has been removed from the list of supporters for the Granite School District proposal.
+          This does not affect any email subscriptions.
+        </p>
+        <a class="button button-light" href="{{ '/states/ut/granite/' | url }}">Back to Granite overview</a>
+      </div>
+
+      <!-- ── Error state (expired or invalid token) ── -->
+      <div id="state-error" class="state-panel" aria-live="polite" tabindex="-1">
+        <div class="state-icon" style="color:#b91c1c;">✕</div>
+        <h2 id="error-heading">Link expired</h2>
+        <p id="error-body">
+          This removal link has expired. Links are valid for 24 hours. Please submit the form again to receive a new link.
+        </p>
+        <a class="button button-primary" href="{{ '/states/ut/granite/proposal/remove-signature/' | url }}">Try again</a>
+      </div>
+
+      <!-- ── Email-sent state ── -->
+      <div id="state-sent" class="state-panel" aria-live="polite" tabindex="-1">
+        <div class="state-icon">✉️</div>
+        <h2>Check your email.</h2>
+        <p>
+          We sent a confirmation link to your email address. Click it to complete the removal.
+          The link expires in 24 hours.
+        </p>
+        <a class="button button-light" href="{{ '/states/ut/granite/' | url }}">Back to Granite overview</a>
+      </div>
+
+      <!-- ── Default form state ── -->
+      <div id="state-form">
+
+        <div class="distinction-note">
+          <strong>This removes your name from the proposal supporter list only.</strong>
+          It does not unsubscribe you from any emails. To manage email preferences,
+          visit the <a href="{{ '/stay-informed/manage-preferences.html' | url }}">email preferences page</a>.
+        </div>
+
+        <div id="form-error" class="form-error" role="alert"></div>
+
+        <form id="removal-form" novalidate>
+          <div class="field">
+            <label for="email">Email address you signed with <span style="color:#b91c1c;">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com" />
+            <div id="email-error" class="field-error">Please enter a valid email address.</div>
+          </div>
+
+          <div class="field">
+            <button type="submit" class="button button-primary">Send removal link</button>
+          </div>
+        </form>
+
+        <p style="font-size: 0.82rem; color: var(--muted); margin-top: 0.5rem; text-align: center;">
+          Changed your mind? <a href="{{ '/states/ut/granite/proposal/support-the-proposal/' | url }}">Sign in support instead →</a>
+        </p>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<script>
+(function () {
+  const params = new URLSearchParams(window.location.search);
+
+  function show(id) {
+    ['state-form', 'state-sent', 'state-confirmed', 'state-error'].forEach(function (s) {
+      document.getElementById(s).classList.remove('visible');
+    });
+    const el = document.getElementById(id);
+    el.classList.add('visible');
+    if (el.hasAttribute('tabindex')) el.focus();
+  }
+
+  if (params.get('confirmed') === '1') {
+    show('state-confirmed');
+  } else if (params.get('error') === 'expired') {
+    show('state-error');
+  } else if (params.get('error') === 'invalid') {
+    document.getElementById('error-heading').textContent = 'Invalid link';
+    document.getElementById('error-body').textContent =
+      'This removal link is not valid. Please submit the form again.';
+    show('state-error');
+  } else {
+    show('state-form');
+  }
+
+  const form      = document.getElementById('removal-form');
+  const formError = document.getElementById('form-error');
+
+  function validateEmail(v) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim());
+  }
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const emailInput = document.getElementById('email');
+    const emailErr   = document.getElementById('email-error');
+    const email      = emailInput.value;
+
+    if (!validateEmail(email)) {
+      emailInput.classList.add('invalid');
+      emailErr.classList.add('visible');
+      emailInput.focus();
+      return;
+    }
+    emailInput.classList.remove('invalid');
+    emailErr.classList.remove('visible');
+
+    const btn = form.querySelector('button[type="submit"]');
+    btn.disabled    = true;
+    btn.textContent = 'Sending link…';
+    formError.classList.remove('visible');
+
+    try {
+      const res = await fetch('/api/remove-signature', {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body:    JSON.stringify({ email: email.trim() }),
+      });
+
+      if (res.ok) {
+        show('state-sent');
+      } else {
+        const data = await res.json().catch(() => ({}));
+        formError.textContent = data.message || 'Something went wrong. Please try again.';
+        formError.classList.add('visible');
+        btn.disabled    = false;
+        btn.textContent = 'Send removal link';
+      }
+    } catch {
+      formError.textContent = 'Unable to reach the server. Please check your connection and try again.';
+      formError.classList.add('visible');
+      btn.disabled    = false;
+      btn.textContent = 'Send removal link';
+    }
+  });
+})();
+</script>

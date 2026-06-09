@@ -1,0 +1,639 @@
+---
+layout: utah-district
+title: Contact the Board — Granite School District
+description: Contact Granite School District board members directly. Email addresses, phone numbers, a pre-written message, and talking points supporting the Student Safety and Immigration Enforcement proposal.
+permalink: /states/ut/granite/proposal/contact-the-board/
+---
+
+<style>
+  .contact-hero {
+    background: var(--dark, #071926);
+    color: #fff;
+    padding: 2.5rem 0 2rem;
+  }
+
+  .contact-hero .eyebrow {
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-hero h1 {
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    font-weight: 800;
+    margin: 0 0 0.6rem;
+    line-height: 1.2;
+  }
+
+  .contact-hero p {
+    font-size: 0.97rem;
+    opacity: 0.85;
+    max-width: 580px;
+    line-height: 1.6;
+    margin: 0 0 1.25rem;
+  }
+
+  .meeting-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(245, 158, 11, 0.18);
+    border: 1px solid rgba(245, 158, 11, 0.45);
+    border-radius: 9999px;
+    padding: 0.35rem 0.9rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #fcd34d;
+  }
+
+  /* Board member cards */
+  .board-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+    margin-top: 1.25rem;
+  }
+
+  .board-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .board-card.priority {
+    border-top: 3px solid var(--accent);
+  }
+
+  .board-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .board-card h3 {
+    font-size: 1rem;
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  .board-title-badge {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+    color: var(--accent);
+    border-radius: 4px;
+    padding: 0.15rem 0.45rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .board-card .precinct {
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+
+  .board-card-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.25rem;
+  }
+
+  .board-card-actions a {
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.35rem 0.8rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    border: 1px solid var(--border);
+    color: var(--text);
+    background: var(--surface);
+    transition: border-color 0.15s, background 0.15s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .board-card-actions a:hover {
+    border-color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 8%, transparent);
+  }
+
+  .board-card-actions a.primary {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+  }
+
+  .board-card-actions a.primary:hover {
+    opacity: 0.9;
+  }
+
+  /* Message box */
+  .message-box {
+    position: relative;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    white-space: pre-wrap;
+    color: var(--text);
+    font-family: inherit;
+  }
+
+  .copy-btn {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.3rem 0.7rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg, #fff);
+    cursor: pointer;
+    color: var(--text);
+    transition: border-color 0.15s;
+  }
+
+  .copy-btn:hover { border-color: var(--accent); }
+  .copy-btn.copied { color: #15803d; border-color: #bbf7d0; background: #f0fdf4; }
+
+  /* Call script */
+  .call-script {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.4rem;
+    font-size: 0.92rem;
+    line-height: 1.75;
+    font-style: italic;
+    color: var(--text);
+    margin: 1rem 0;
+  }
+
+  /* Talking points */
+  .talking-point {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .talking-point:last-child { border-bottom: none; }
+
+  .tp-num {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 10%, transparent);
+    border-radius: 4px;
+    padding: 0.2rem 0.45rem;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+
+  .tp-body strong { display: block; font-size: 0.95rem; margin-bottom: 0.25rem; }
+  .tp-body p { margin: 0; font-size: 0.88rem; color: var(--muted); line-height: 1.55; }
+
+  .priority-note {
+    background: #fefce8;
+    border: 1px solid #fde68a;
+    border-radius: var(--radius);
+    padding: 0.75rem 1rem;
+    font-size: 0.87rem;
+    color: #78350f;
+    margin-bottom: 1rem;
+  }
+</style>
+
+
+<!-- ═══════════════════════ HERO ═══════════════════════ -->
+
+<div class="contact-hero">
+  <div class="container">
+    <div class="eyebrow">Granite School District · Utah</div>
+    <h1>Contact the Board</h1>
+    <p>
+      We submitted a formal proposal to the board. Hearing from constituents — especially before
+      the July 7 meeting — makes a real difference. Here is everything you need to reach them.
+    </p>
+    <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+      <div class="meeting-pill">📅 Board Meeting: July 7, 2026 · 7:00 PM</div>
+      <a class="button button-light" href="{{ '/states/ut/granite/proposal/support-the-proposal/' | url }}" style="font-size: 0.88rem;">Sign the proposal →</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════ BOARD MEMBERS ═══════════════════════ -->
+
+<section class="section">
+  <div class="container">
+
+    <div class="section-header">
+      <h2>Board members</h2>
+      <p>
+        Seven board members represent Granite's precincts. Board members from Precincts 5 and 6
+        represent West Valley City — the communities most directly affected by immigration enforcement
+        activity near schools.
+      </p>
+    </div>
+
+    <div class="board-grid" id="board-grid">
+
+      <div class="board-card priority">
+        <div class="board-card-header">
+          <h3>Nicole McDermott</h3>
+          <span class="board-title-badge">President</span>
+        </div>
+        <div class="precinct">Precinct 4 · Taylorsville · Term ends Dec. 2028</div>
+        <div class="precinct">nmmcdermott1@graniteschools.org</div>
+        <div class="board-card-actions">
+          <a href="tel:8015976902">📞 801-597-6902</a>
+          <a class="primary board-email-link" data-name="Nicole McDermott" data-email="nmmcdermott1@graniteschools.org" href="#">✉ Email</a>
+        </div>
+      </div>
+
+      <div class="board-card priority">
+        <div class="board-card-header">
+          <h3>Kris Nguyen</h3>
+          <span class="board-title-badge">Vice President</span>
+        </div>
+        <div class="precinct">Precinct 7 · Magna · Term ends Dec. 2026</div>
+        <div class="precinct">knguyen1@graniteschools.org</div>
+        <div class="board-card-actions">
+          <a href="tel:8018679732">📞 801-867-9732</a>
+          <a class="primary board-email-link" data-name="Kris Nguyen" data-email="knguyen1@graniteschools.org" href="#">✉ Email</a>
+        </div>
+      </div>
+
+      <div class="board-card priority">
+        <div class="board-card-header">
+          <h3>Kim Chandler</h3>
+          <span class="board-title-badge">Precinct 5</span>
+        </div>
+        <div class="precinct">Precinct 5 · West Valley City · Term ends Dec. 2026</div>
+        <div class="precinct">kchandler@graniteschools.org</div>
+        <div class="board-card-actions">
+          <a href="tel:8016694367">📞 801-669-4367</a>
+          <a class="primary board-email-link" data-name="Kim Chandler" data-email="kchandler@graniteschools.org" href="#">✉ Email</a>
+        </div>
+      </div>
+
+      <div class="board-card priority">
+        <div class="board-card-header">
+          <h3>Karyn Winder</h3>
+          <span class="board-title-badge">Precinct 6</span>
+        </div>
+        <div class="precinct">Precinct 6 · West Valley City · Term ends Dec. 2026</div>
+        <div class="precinct">kwinder@graniteschools.org</div>
+        <div class="board-card-actions">
+          <a href="tel:8015038147">📞 801-503-8147</a>
+          <a class="primary board-email-link" data-name="Karyn Winder" data-email="kwinder@graniteschools.org" href="#">✉ Email</a>
+        </div>
+      </div>
+
+      <div class="board-card">
+        <div class="board-card-header">
+          <h3>Connie Burgess</h3>
+        </div>
+        <div class="precinct">Precinct 3 · Taylorsville · Term ends Dec. 2026</div>
+        <div class="precinct">ccburgess@graniteschools.org</div>
+        <div class="board-card-actions">
+          <a href="tel:8019070910">📞 801-907-0910</a>
+          <a class="primary board-email-link" data-name="Connie Burgess" data-email="ccburgess@graniteschools.org" href="#">✉ Email</a>
+        </div>
+      </div>
+
+      <div class="board-card">
+        <div class="board-card-header">
+          <h3>Julie Jackson</h3>
+        </div>
+        <div class="precinct">Precinct 1 · Holladay · Term ends Dec. 2028</div>
+        <div class="precinct">jajackson1@graniteschools.org</div>
+        <div class="board-card-actions">
+          <a href="tel:3606289997">📞 360-628-9997</a>
+          <a class="primary board-email-link" data-name="Julie Jackson" data-email="jajackson1@graniteschools.org" href="#">✉ Email</a>
+        </div>
+      </div>
+
+      <div class="board-card">
+        <div class="board-card-header">
+          <h3>Clarke Nelson</h3>
+        </div>
+        <div class="precinct">Precinct 2 · Holladay · Term ends Dec. 2028</div>
+        <div class="precinct">cbnelson@graniteschools.org</div>
+        <div class="board-card-actions">
+          <a href="tel:8012323793">📞 801-232-3793</a>
+          <a class="primary board-email-link" data-name="Clarke Nelson" data-email="cbnelson@graniteschools.org" href="#">✉ Email</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="margin-top: 1.25rem;">
+      <a class="button button-primary" id="email-all-btn" href="#">✉ Email All 7 Board Members</a>
+      <p style="margin: 0.5rem 0 0; font-size: 0.82rem; color: var(--muted);">Opens your email client with all addresses and subject line filled in. Paste the message from the section below.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════ EMAIL SCRIPT ═══════════════════════ -->
+
+<section class="section section-tinted">
+  <div class="container">
+    <div class="panel panel-spaced" style="max-width: 720px;">
+
+      <h2>Sample email — make it yours</h2>
+      <p style="font-size: 0.92rem; color: var(--muted);">
+        This is a starting point. Change the wording, add your own story, or write something
+        completely different — a personal message in your own voice is far more powerful than
+        a copied form letter. What matters most is that a real constituent reached out.
+      </p>
+
+      <p style="font-size: 0.87rem; margin-bottom: 0.4rem;"><strong>Subject:</strong> Please support the Student Safety and Immigration Enforcement proposal — July 7 meeting</p>
+
+      <div style="position: relative;">
+        <pre id="email-body" class="message-box">Dear Granite School Board Member,
+
+I'm asking you to support the Student Safety and Immigration Enforcement proposal.
+
+Students and families in Granite need support dealing with ICE. Students are worried about getting to school or whether adults at school are safe. Teachers and staff need clear guidance so they can respond with care and consistency.
+
+Granite can take practical steps now:
+
+Help students know their rights and stay safe.
+
+Protect student privacy.
+
+Make travel to and from school safer.
+
+Allow teachers to share approved safety resources.
+
+Train staff who want to better support students and families.
+
+Help families prepare before there is a crisis.
+
+This is about student safety, family trust, and keeping kids connected to school.
+
+Please support the proposal.
+
+Thank you,
+[Your Name]</pre>
+        <button class="copy-btn" id="copy-email-btn" type="button" onclick="copyEmail()">Copy</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════ CALL SCRIPT ═══════════════════════ -->
+
+<section class="section">
+  <div class="container">
+    <div class="panel panel-spaced" style="max-width: 720px;">
+
+      <h2>Sample phone call — say it your way</h2>
+      <p style="font-size: 0.92rem; color: var(--muted);">
+        A 30-second call is enough. You do not need a script — just say why you care and ask
+        them to support the proposal. Board members' staff will take a message, so voicemail
+        counts too. Here is one way to start if you want it:
+      </p>
+
+      <div class="call-script">
+        "Hi, my name is [name] and I live in the Granite School District. I'm calling to ask
+        [Board Member Name] to support the Student Safety and Immigration Enforcement proposal
+        at the July 7 board meeting. Students are scared, and families need help now. I hope
+        [he/she/they] will support the proposal. Thank you."
+      </div>
+
+      <p style="font-size: 0.88rem; color: var(--muted);">
+        Feel free to skip the script entirely and just speak from the heart.
+        Use the phone numbers in the board member cards above.
+      </p>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════ TALKING POINTS ═══════════════════════ -->
+
+<section class="section section-tinted">
+  <div class="container">
+
+    <div class="section-header">
+      <h2>Talking points</h2>
+      <p>
+        Use one or two of these when you call or email the board. You do not need to say everything.
+        The most important message is simple: kids are already being hurt, and Granite needs to act now.
+      </p>
+    </div>
+
+    <div class="panel panel-spaced" style="max-width: 720px;">
+
+      <div class="talking-point">
+        <div class="tp-num">01</div>
+        <div class="tp-body">
+          <strong>Kids are already being hurt.</strong>
+          <p>This is not a future concern. Students are already scared. Families are already keeping
+          children home. Teachers have already described students being harmed by fear, family
+          separation, bullying, and confusion. Granite cannot wait until more children are hurt
+          before taking action.</p>
+        </div>
+      </div>
+
+      <div class="talking-point">
+        <div class="tp-num">02</div>
+        <div class="tp-body">
+          <strong>Fear is keeping students out of school.</strong>
+          <p>When families are afraid to send their children to school, that is a school safety
+          problem. Granite should not treat this as someone else's issue. The district has a
+          responsibility to help students stay safe, supported, and connected to school.</p>
+        </div>
+      </div>
+
+      <div class="talking-point">
+        <div class="tp-num">03</div>
+        <div class="tp-body">
+          <strong>No child should feel unsafe getting to school.</strong>
+          <p>Students should not have to worry about ICE while walking to school, waiting at a
+          bus stop, riding the bus, or getting picked up. Granite needs a clear plan for
+          dangerous conditions near schools, bus stops, and routes home.</p>
+        </div>
+      </div>
+
+      <div class="talking-point">
+        <div class="tp-num">04</div>
+        <div class="tp-body">
+          <strong>Students need rights and safety information now.</strong>
+          <p>Kids should not be left to panic, guess, or rely on rumors. They need accurate
+          information about their rights and how to stay safe during an encounter with ICE.
+          Information can prevent fear from turning into unsafe choices.</p>
+        </div>
+      </div>
+
+      <div class="talking-point">
+        <div class="tp-num">05</div>
+        <div class="tp-body">
+          <strong>Teachers should not be forced to guess.</strong>
+          <p>Teachers and school staff are being asked to comfort scared students without clear
+          guidance. That is unfair to staff and dangerous for students. Granite should give staff
+          approved resources and clear direction so they know how to help.</p>
+        </div>
+      </div>
+
+      <div class="talking-point">
+        <div class="tp-num">06</div>
+        <div class="tp-body">
+          <strong>ICE threats and racist bullying must be stopped.</strong>
+          <p>Immigration threats, racist comments, and false rumors are on the rise. Many students
+          and teachers believe some of the false ideas about immigration that are rampant in
+          today's political climate. Granite should help staff recognize and correct bullying and
+          misinformation, and facilitate extra trainings for teachers who want more information.</p>
+        </div>
+      </div>
+
+      <div class="talking-point">
+        <div class="tp-num">07</div>
+        <div class="tp-body">
+          <strong>Families need to know their information is safe.</strong>
+          <p>Families should not have to wonder whether school records could put them at risk.
+          Granite should clearly explain what information is private, what directory information
+          means, and how families can opt out. Protecting privacy protects students.</p>
+        </div>
+      </div>
+
+      <div class="talking-point">
+        <div class="tp-num">08</div>
+        <div class="tp-body">
+          <strong>Families should not face a crisis alone.</strong>
+          <p>Granite does not have to give legal advice to help families find support. The district
+          can share trusted legal and community resources so families know where to turn before
+          there is an emergency.</p>
+        </div>
+      </div>
+
+      <div class="talking-point">
+        <div class="tp-num">09</div>
+        <div class="tp-body">
+          <strong>Emergency planning protects children.</strong>
+          <p>If a parent or caregiver is detained, children still need safe adults, updated
+          contacts, and a plan. Granite can help families prepare before a crisis leaves a child
+          scared, stranded, or unsupported.</p>
+        </div>
+      </div>
+
+      <div class="talking-point">
+        <div class="tp-num">10</div>
+        <div class="tp-body">
+          <strong>This is student safety, not politics.</strong>
+          <p>This proposal is about protecting children. It does not ask Granite to interfere with
+          law enforcement, give legal advice, or adopt a sanctuary policy. It asks Granite to do
+          what schools should do: keep students safe.</p>
+        </div>
+      </div>
+
+      <div class="talking-point">
+        <div class="tp-num">11</div>
+        <div class="tp-body">
+          <strong>Granite needs to act now.</strong>
+          <p>Every delay leaves students more vulnerable. Kids are scared now. Families need help
+          now. Teachers need guidance now. The board should support the proposal and act before
+          more students are harmed.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════ NEXT STEPS ═══════════════════════ -->
+
+<section class="section">
+  <div class="container">
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+      <a class="button button-primary" href="{{ '/states/ut/granite/proposal/support-the-proposal/' | url }}">Sign the proposal →</a>
+      <a class="button button-light" href="{{ '/states/ut/granite/proposal/highlights/' | url }}">Read Highlights →</a>
+      <a class="button button-light" href="{{ '/assets/docs/StudentSafetyAndImmigrationEnforcement.pdf' | url }}" target="_blank" rel="noopener">Read the full proposal (PDF) →</a>
+      <a class="button button-light" href="{{ '/states/ut/granite/' | url }}">← Granite overview</a>
+    </div>
+  </div>
+</section>
+
+
+<script>
+(function () {
+  const subject = 'Please support the Student Safety and Immigration Enforcement proposal — July 7 meeting';
+  const allAddresses = [
+    'nmmcdermott1@graniteschools.org',
+    'knguyen1@graniteschools.org',
+    'kchandler@graniteschools.org',
+    'kwinder@graniteschools.org',
+    'ccburgess@graniteschools.org',
+    'jajackson1@graniteschools.org',
+    'cbnelson@graniteschools.org',
+  ].join(',');
+
+  // Wire up individual email links
+  document.querySelectorAll('.board-email-link').forEach(function (link) {
+    const name  = link.dataset.name;
+    const email = link.dataset.email;
+    link.href = 'mailto:' + email + '?subject=' + encodeURIComponent(subject);
+    link.removeAttribute('onclick');
+  });
+
+  // Wire up "Email all" button
+  const allBtn = document.getElementById('email-all-btn');
+  if (allBtn) {
+    allBtn.href = 'mailto:' + allAddresses + '?subject=' + encodeURIComponent(subject);
+  }
+})();
+
+function copyEmail() {
+  const text = document.getElementById('email-body').textContent;
+  const btn  = document.getElementById('copy-email-btn');
+  navigator.clipboard.writeText(text).then(function () {
+    btn.textContent = 'Copied!';
+    btn.classList.add('copied');
+    setTimeout(function () {
+      btn.textContent = 'Copy';
+      btn.classList.remove('copied');
+    }, 2500);
+  }).catch(function () {
+    // Fallback for older browsers
+    const range = document.createRange();
+    range.selectNode(document.getElementById('email-body'));
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+    document.execCommand('copy');
+    window.getSelection().removeAllRanges();
+    btn.textContent = 'Copied!';
+    btn.classList.add('copied');
+    setTimeout(function () {
+      btn.textContent = 'Copy';
+      btn.classList.remove('copied');
+    }, 2500);
+  });
+}
+</script>
