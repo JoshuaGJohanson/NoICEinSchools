@@ -29,8 +29,9 @@ export async function onRequestGet(context) {
     : null;
 
   if (listId) {
+    let brevoRes;
     try {
-      await fetch(`https://api.brevo.com/v3/contacts/lists/${listId}/contacts/delete`, {
+      brevoRes = await fetch(`https://api.brevo.com/v3/contacts/lists/${listId}/contacts/delete`, {
         method: 'POST',
         headers: {
           'api-key': env.BREVO_API_KEY,
@@ -39,7 +40,11 @@ export async function onRequestGet(context) {
         body: JSON.stringify({ emails: [email] }),
       });
     } catch {
-      // Non-fatal — contact may not have been in this list
+      return Response.redirect(`${removalPage}?error=removal-failed`, 302);
+    }
+
+    if (!brevoRes.ok) {
+      return Response.redirect(`${removalPage}?error=removal-failed`, 302);
     }
   }
 

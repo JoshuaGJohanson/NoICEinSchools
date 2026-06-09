@@ -500,6 +500,13 @@ permalink: /states/ut/granite/proposal/support-the-proposal/
           </div>
 
 
+          <div class="field" style="margin-bottom: 0.75rem;">
+            <label style="display: flex; align-items: flex-start; gap: 0.5rem; font-weight: 400; cursor: pointer;">
+              <input type="checkbox" id="subLocal" name="subLocal" style="margin-top: 0.2rem; flex-shrink: 0;" />
+              <span style="font-size: 0.9rem;">Keep me updated on local developments related to this proposal and Granite School District.</span>
+            </label>
+          </div>
+
           <div class="privacy-note">
             <span>🔒</span>
             <span>Your email is used only to send your confirmation. We will not share your contact information.</span>
@@ -637,6 +644,7 @@ permalink: /states/ut/granite/proposal/support-the-proposal/
     const affiliation = document.getElementById('affiliation').value;
     const district    = document.getElementById('district').value;
     const school      = document.getElementById('school').value;
+    const subLocal    = document.getElementById('subLocal').checked;
 
 
     let valid = true;
@@ -691,7 +699,7 @@ permalink: /states/ut/granite/proposal/support-the-proposal/
       affiliation: affiliation.trim() || null,
       district:    district.trim() || null,
       school:      school || null,
-
+      SUB_LOCAL:   subLocal ? true : undefined,
     };
 
     try {

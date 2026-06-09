@@ -256,6 +256,11 @@ permalink: /states/ut/granite/proposal/remove-signature/
     document.getElementById('error-body').textContent =
       'This removal link is not valid. Please submit the form again.';
     show('state-error');
+  } else if (params.get('error') === 'removal-failed') {
+    document.getElementById('error-heading').textContent = 'Removal failed';
+    document.getElementById('error-body').textContent =
+      'Your link was verified but we could not remove your name from the list. Please try again or contact us at hello@noiceinschools.org.';
+    show('state-error');
   } else {
     show('state-form');
   }
