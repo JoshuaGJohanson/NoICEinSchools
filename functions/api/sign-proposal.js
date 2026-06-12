@@ -32,7 +32,7 @@ export async function onRequestPost(context) {
     FIRSTNAME: firstName.trim(),
     LASTNAME:  lastName.trim(),
   };
-  if (affiliation) attributes.DISTRICT_RELATIONSHIP = affiliation.trim();
+  if (affiliation) attributes.DISTRICT_RELATIONSHIP = [affiliation.trim()];
   if (district)    attributes.DISTRICT    = district.trim();
   if (school)      attributes.SCHOOL      = school.trim();
   if (SUB_LOCAL)   attributes.SUB_LOCAL   = true;
