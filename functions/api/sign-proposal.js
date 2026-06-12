@@ -12,7 +12,7 @@ export async function onRequestPost(context) {
     return json({ message: "Invalid request body." }, 400);
   }
 
-  const { firstName, lastName, email, affiliation, district, school } = body;
+  const { firstName, lastName, email, affiliation, district, school, SUB_LOCAL } = body;
 
   if (!firstName || !firstName.trim()) {
     return json({ message: "First name is required." }, 400);
@@ -35,6 +35,7 @@ export async function onRequestPost(context) {
   if (affiliation) attributes.DISTRICT_RELATIONSHIP = affiliation.trim();
   if (district)    attributes.DISTRICT    = district.trim();
   if (school)      attributes.SCHOOL      = school.trim();
+  if (SUB_LOCAL)   attributes.SUB_LOCAL   = true;
 
   const brevoPayload = {
     email:         email.trim().toLowerCase(),
